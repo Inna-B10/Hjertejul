@@ -8,8 +8,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  /* min-width: 481px; */
 }
 
 header {
@@ -21,14 +20,27 @@ header {
 }
 
 main {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 2em;
+  flex-direction: column;
+  padding: 1em;
 }
 
 section {
   flex: 1;
-  margin: 0 1em;
+}
+
+search {
+  padding: 0 1em;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* #family-form, */
@@ -42,6 +54,15 @@ section {
   padding: 0;
 } */
 
+#output {
+  /* border: solid; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 1em;
+  justify-content: space-between;
+}
+
 .flex {
   display: flex;
 }
@@ -52,6 +73,39 @@ section {
 
 .card {
   border: 1px solid #000;
-  min-height: 100px;
-  min-width: 200px;
+  min-height: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 641px) {
+
+  search,
+  #output {
+    padding: 0 1.5em;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width:961px) {
+
+  search,
+  #output {
+    padding: 0 2em;
+  }
+
+  .card {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width:1440px) {
+
+  search,
+  #output {
+    padding: 0 3em;
+  }
 }
