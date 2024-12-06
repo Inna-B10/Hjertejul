@@ -1,25 +1,31 @@
+import { showModalCard } from './cardFamilyModal.js'
+import {
+	createDesc,
+	createImage,
+	createNode,
+	createTitle,
+} from './createElements.js'
 import { output } from './main.js'
-import createNode from './utils.js'
+import { truncateText } from './utils.js'
 
 export default function cardFamily(family) {
 	const card = createNode('div', {
 		class: 'flex column card',
 	})
-	const img = createNode('img', {
-		src: `../data/${family.image}`,
-		alt: `Bilde av ${family.name}`,
-		title: `Bilde av ${family.name}`,
-		width: '100%',
-		height: 'auto',
+	card.addEventListener('click', () => {
+		showModalCard(family)
 	})
-	const familyTitle = createNode('h3', {})
-	familyTitle.innerText = family.name
+	const img = createImage(
+		`../data/${family.image}`,
+		`Bilde av ${family.name}`,
+		`Bilde av ${family.name}`,
+		'100%',
+		'auto'
+	)
+	const familyTitle = createTitle('h3', family.name)
 
-	//*TODO SHORT DESC!
-	const desc = createNode('p', {
-		class: 'desc',
-	})
-	desc.innerText = family.description
+	const desc = createDesc(truncateText(family.description))
+
 	card.append(img, familyTitle, desc)
 	output.appendChild(card)
 }

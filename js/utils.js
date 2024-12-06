@@ -1,7 +1,6 @@
-export default function createNode(node, attributes) {
-	const el = document.createElement(node)
-	for (let key in attributes) {
-		el.setAttribute(key, attributes[key])
+export function truncateText(text, maxLength = 50) {
+	if (text.length <= maxLength) {
+		return text
 	}
-	return el
+	return text.slice(0, maxLength) + '[..]'
 }
