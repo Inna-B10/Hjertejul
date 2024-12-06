@@ -7,9 +7,14 @@ import {
 
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
+overlay.addEventListener('click', e => closeModalCard(e))
+
+const sendButton = document.getElementById('send-button')
+sendButton.addEventListener('click', sendForm)
 
 export function showModalCard(family) {
-	// modal.innerHTML = ''
+	const modalOutput = document.getElementById('modal-output')
+	modalOutput.innerHTML = ''
 
 	const img = createImage(
 		`../data/${family.image}`,
@@ -28,7 +33,7 @@ export function showModalCard(family) {
 	closeButton.innerText = 'X'
 	closeButton.addEventListener('click', closeModalCard)
 
-	modal.append(img, familyTitle, desc, closeButton)
+	modalOutput.append(img, familyTitle, desc, closeButton)
 
 	modal.style.display = 'block'
 	overlay.style.display = 'block'
@@ -37,4 +42,10 @@ export function showModalCard(family) {
 function closeModalCard() {
 	modal.style.display = 'none'
 	overlay.style.display = 'none'
+}
+
+function sendForm(event) {
+	event.preventDefault()
+	const textArea = document.getElementById('booking')
+	textArea.value = ''
 }

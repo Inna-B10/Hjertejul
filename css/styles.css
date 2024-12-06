@@ -43,6 +43,21 @@ img {
   user-select: none;
 }
 
+button {
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+#send-button {
+  margin: 1em auto 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #0A2C1D;
+}
+
 /* #family-form, */
 #filters {
   margin-bottom: 1em;
