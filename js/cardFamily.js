@@ -17,12 +17,12 @@ export default function cardFamily(family) {
 	})
 	const img = createImage(
 		`../data/${family.image}`,
-		`Bilde av ${family.name}`,
-		`Bilde av ${family.name}`,
+		`Bilde av familien ${family.surname}`,
+		`Bilde av familien ${family.surname}`,
 		'100%',
 		'auto'
 	)
-	const familyTitle = createTitle('h3', family.name)
+	const familyTitle = createTitle('h3', family.title)
 
 	const desc = createDesc(truncateText(family.description))
 
