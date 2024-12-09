@@ -1,7 +1,7 @@
 // import families from '../data/families.json' with {type:'json'}
 import cardFamily from './cardFamily.js'
 
-const API_URL = './Hjertejul/data/families.json'
+const API_URL = './data/families.json'
 let families
 export const output = document.getElementById('output')
 const searchInput = document.getElementById('search')
