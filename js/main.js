@@ -1,7 +1,7 @@
 // import families from '../data/families.json' with {type:'json'}
 import cardFamily from './cardFamily.js'
 
-const DATA_URL = '../data/families.json'
+const API_URL = './data/families.json'
 let families
 export const output = document.getElementById('output')
 const searchInput = document.getElementById('search')
@@ -11,7 +11,7 @@ searchInput.addEventListener('input', filterFamilies)
 
 async function fetchFamilies() {
 	try {
-		const response = await fetch(DATA_URL)
+		const response = await fetch(API_URL)
 		if (!response.ok) throw new Error('Error loading data!')
 		families = await response.json()
 		renderFamilies(families)
