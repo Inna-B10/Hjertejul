@@ -458,17 +458,69 @@
 			<h1>Gjør julen lysere for flere</h1>
 		</header>
 		<main>
+			<!-- ------------------------------- Filters ------------------------------- -->
 			<search role="search">
-				<label>Finn nye venner under juletreet</label>
-				<div id="filters">
+				<label for="search">Finn nye venner under juletreet</label>
+				<div id="filters" class="flex column">
 					<input type="text" id="search" placeholder="Søk etter nøkkelord..." />
-					<label><input type="checkbox" data-trait="smoker" /> Røyker</label>
-					<label
-						><input type="checkbox" data-trait="glutenfri" /> Glutenfri</label
-					>
-					<!-- flere filtere -->
+					<div>
+						<label for="vegetarian">Vegetarisk</label>
+						<input type="checkbox" id="vegetarian" data-trait="vegetarisk" />
+						<label for="halal">Halal</label>
+						<input type="checkbox" id="halal" data-trait="halal" />
+						<label for="lactosefree">Laktosefri</label>
+						<input type="checkbox" id="lactosefree" data-trait="laktosefri" />
+					</div>
+					<div>
+						<label for="smoker">Røyker</label>
+						<input type="checkbox" id="smoker" data-trait="røyker" />
+						<label for="smok-tolerance">Røyktoleranse</label>
+						<input
+							type="checkbox"
+							id="smok-tolerance"
+							data-trait="røyktoleranse" />
+						<label for="alcohol">Drikker alkohol</label>
+						<input type="checkbox" id="alcohol" data-trait="drikker alkohol" />
+						<label for="alcohol">Alkoholtoleranse</label>
+						<input type="checkbox" id="alcohol" data-trait="alkoholtoleranse" />
+					</div>
+					<div>
+						<label for="eggs">Eggs</label>
+						<input type="checkbox" id="eggs" data-allergies="eggs" />
+						<label for="shellfish">Skalldyr</label>
+						<input type="checkbox" id="shellfish" data-allergies="skalldyr" />
+						<label for="nuts">Nøtter</label>
+						<input type="checkbox" id="nuts" data-allergies="nøtter" />
+						<label for="gluten">Gluten</label>
+						<input type="checkbox" id="gluten" data-allergies="gluten" />
+						<label for="honey">Honning</label>
+						<input type="checkbox" id="honey" data-allergies="honning" />
+					</div>
+					<div>
+						<label for="0-3">0-3</label>
+						<input type="checkbox" id="0-3" data-childGroup="0-3" />
+						<label for="4-10">4-10</label>
+						<input type="checkbox" id="4-10" data-childGroup="4-10" />
+						<label for="11-17">11-17</label>
+						<input type="checkbox" id="11-17" data-childGroup="11-17" />
+					</div>
+					<div>
+						<label for="totalPeoples"
+							>Jeg har plass til (inkludert barn) kan du invitere?</label
+						>
+						<select id="totalPeoples">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7 or mer</option>
+						</select>
+					</div>
 				</div>
 			</search>
+			<!-- ----------------------------- End Filters ----------------------------- -->
 			<section>
 				<div id="overlay"></div>
 				<div id="modal">
