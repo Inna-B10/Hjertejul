@@ -464,6 +464,7 @@
 				<div id="filters" class="flex column">
 					<input type="text" id="search" placeholder="Søk etter nøkkelord..." />
 					<div>
+						<p>Gjester foretrekker mat som er:</p>
 						<label for="vegetarian">Vegetarisk</label>
 						<input type="checkbox" id="vegetarian" data-trait="vegetarisk" />
 						<label for="halal">Halal</label>
@@ -472,6 +473,7 @@
 						<input type="checkbox" id="lactosefree" data-trait="laktosefri" />
 					</div>
 					<div>
+						<p>Gjester har følgende vaner:</p>
 						<label for="smoker">Røyker</label>
 						<input type="checkbox" id="smoker" data-trait="røyker" />
 						<label for="smok-tolerance">Røyktoleranse</label>
@@ -485,6 +487,7 @@
 						<input type="checkbox" id="alcohol" data-trait="alkoholtoleranse" />
 					</div>
 					<div>
+						<p>Gjester som IKKE har allergi mot:</p>
 						<label for="eggs">Eggs</label>
 						<input type="checkbox" id="eggs" data-allergies="eggs" />
 						<label for="shellfish">Skalldyr</label>
@@ -497,26 +500,27 @@
 						<input type="checkbox" id="honey" data-allergies="honning" />
 					</div>
 					<div>
+						<p>Gjester som har barn i følgende aldersgrupper:</p>
 						<label for="0-3">0-3</label>
-						<input type="checkbox" id="0-3" data-childGroup="0-3" />
+						<input type="checkbox" id="0-3" data-group="0-3" />
 						<label for="4-10">4-10</label>
-						<input type="checkbox" id="4-10" data-childGroup="4-10" />
+						<input type="checkbox" id="4-10" data-group="4-10" />
 						<label for="11-17">11-17</label>
-						<input type="checkbox" id="11-17" data-childGroup="11-17" />
+						<input type="checkbox" id="11-17" data-group="11-17" />
 					</div>
 					<div>
 						<label for="totalPeoples"
-							>Jeg har plass til (inkludert barn) kan du invitere?</label
+							>Jeg har plass til
+							<select id="totalPeoples">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6 or mer</option>
+							</select>
+							gjester (inkludert barn)</label
 						>
-						<select id="totalPeoples">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7 or mer</option>
-						</select>
 					</div>
 				</div>
 			</search>
