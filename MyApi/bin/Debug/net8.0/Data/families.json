@@ -22,17 +22,23 @@
   {
     "Id": 2,
     "Surname": "Nilsen",
-    "Title": "En familie som alltid er klar for \u00E5 l\u00E6re om nye kulturer.",
-    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
+    "Title": "En familie som elsker \u00E5 l\u00E6re om nye kulturer",
+    "Description": "Vi har oppdatert v\u00E5r beskrivelse! N\u00E5 elsker vi \u00E5 utforske kultur gjennom b\u00E5de mat og musikk.",
     "TotalPeople": 4,
-    "Children": false,
-    "ChildGroup": [],
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17"
+    ],
     "Allergies": [],
     "FoodPref": [
-      "vegetarisk"
+      "vegetarisk",
+      "halal"
     ],
     "OtherTraits": [
-      "milj\u00F8bevisst"
+      "milj\u00F8bevisst",
+      "familieorientert",
+      "musikkinteressert"
     ],
     "Image": "2_foto.jpg"
   },
