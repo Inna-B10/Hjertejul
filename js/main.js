@@ -62,7 +62,7 @@ function filterFamilies() {
 				allergy => !family.allergies.includes(allergy)
 			)
 			const matchesChildGroup = activeFilters.childGroup.every(group =>
-				family.group.includes(group)
+				family.childGroup.includes(group)
 			)
 
 			return (
