@@ -1,7 +1,9 @@
-// import families from '../data/families.json' with {type:'json'}
 import cardFamily from './cardFamily.js'
+import { API_URL } from './constants.js'
 
-const API_URL = 'data/families.json'
+// const API_URL = 'data/families.json'
+// const API_URL = 'http://localhost:5111/api'
+
 let families
 export const output = document.getElementById('output')
 const searchInput = document.getElementById('search')
@@ -10,9 +12,18 @@ const filters = document.querySelectorAll('#filters input[type=checkbox]')
 filters.forEach(filter => filter.addEventListener('change', filterFamilies))
 searchInput.addEventListener('input', filterFamilies)
 
-async function fetchFamilies() {
+async function fetchFamilies(id = null) {
+	let url
+	// get all families
+	if (id === null) {
+		url = `${API_URL}/Families`
+	}
+	//get family by id
+	else {
+		url = `${API_URL}/Families/${id}`
+	}
 	try {
-		const response = await fetch(API_URL)
+		const response = await fetch(url)
 		if (!response.ok) throw new Error('Error loading data!')
 		families = await response.json()
 		renderFamilies(families)
@@ -34,6 +45,8 @@ function renderFamilies(array) {
 
 function filterFamilies() {
 	const searchValue = searchInput.value.toLowerCase().trim()
+
+	// collect all checked checkboxes
 	const activeFilters = {
 		trait: Array.from(filters)
 			.filter(checkbox => checkbox.checked && checkbox.dataset.trait)
@@ -49,22 +62,30 @@ function filterFamilies() {
 	const filteredFamilies =
 		families &&
 		families.filter(family => {
+			// --------------------------------- Search
 			const matchesSearch =
 				family.title.toLowerCase().trim().includes(searchValue) ||
 				family.description.toLowerCase().trim().includes(searchValue) ||
 				family.surname.toLowerCase().trim().includes(searchValue)
 
+			// --------------------------------- Traits
 			const matchesTraits = activeFilters.trait.every(
 				trait =>
 					family.otherTraits.includes(trait) || family.foodPref.includes(trait)
 			)
+
+			// -------------------------------- Allergies
 			const matchesAllergies = activeFilters.allergies.every(
 				allergy => !family.allergies.includes(allergy)
 			)
-			const matchesChildGroup = activeFilters.childGroup.every(group =>
-				family.childGroup.includes(group)
-			)
 
+			// ------------------------------- ChildGroup
+			const uniqueGroups = [...new Set(family.childGroup)]
+			const matchesChildGroup =
+				uniqueGroups.every(group => activeFilters.childGroup.includes(group)) &&
+				activeFilters.childGroup.some(group => uniqueGroups.includes(group))
+
+			// --------------------------------- Result
 			return (
 				matchesSearch && matchesTraits && matchesAllergies && matchesChildGroup
 			)
