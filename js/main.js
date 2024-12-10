@@ -6,6 +6,7 @@ let families
 export const output = document.getElementById('output')
 const searchInput = document.getElementById('search')
 const filters = document.querySelectorAll('#filters input[type=checkbox]')
+
 filters.forEach(filter => filter.addEventListener('change', filterFamilies))
 searchInput.addEventListener('input', filterFamilies)
 
@@ -33,23 +34,40 @@ function renderFamilies(array) {
 
 function filterFamilies() {
 	const searchValue = searchInput.value.toLowerCase().trim()
-	const activeFilters = Array.from(filters)
-		.filter(checkbox => checkbox.checked)
-		.map(checkbox => checkbox.dataset.trait)
+	const activeFilters = {
+		trait: Array.from(filters)
+			.filter(checkbox => checkbox.checked && checkbox.dataset.trait)
+			.map(checkbox => checkbox.dataset.trait),
+		allergies: Array.from(filters)
+			.filter(checkbox => checkbox.checked && checkbox.dataset.allergies)
+			.map(checkbox => checkbox.dataset.allergies),
+		childGroup: Array.from(filters)
+			.filter(checkbox => checkbox.checked && checkbox.dataset.group)
+			.map(checkbox => checkbox.dataset.group),
+	}
 
 	const filteredFamilies =
-		// families &&
+		families &&
 		families.filter(family => {
 			const matchesSearch =
 				family.title.toLowerCase().trim().includes(searchValue) ||
 				family.description.toLowerCase().trim().includes(searchValue) ||
 				family.surname.toLowerCase().trim().includes(searchValue)
-			const matchesFilters = activeFilters.every(
+
+			const matchesTraits = activeFilters.trait.every(
 				trait =>
 					family.otherTraits.includes(trait) || family.foodPref.includes(trait)
 			)
-			console.log(matchesSearch)
-			return matchesFilters && matchesSearch
+			const matchesAllergies = activeFilters.allergies.every(
+				allergy => !family.allergies.includes(allergy)
+			)
+			const matchesChildGroup = activeFilters.childGroup.every(group =>
+				family.group.includes(group)
+			)
+
+			return (
+				matchesSearch && matchesTraits && matchesAllergies && matchesChildGroup
+			)
 		})
 	renderFamilies(filteredFamilies)
 }

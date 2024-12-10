@@ -6,10 +6,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
 		"totalPeople": 2,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": ["skalldyr", "nøtter"],
 		"foodPref": ["vegetarisk"],
-		"otherTraits": ["utendørsentusiast"],
+		"otherTraits": ["dyrevennlig", "alkoholtoleranse", "røyktoleranse"],
 		"image": "1_foto.jpg"
 	},
 	{
@@ -19,10 +19,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
 		"totalPeople": 4,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": [],
 		"foodPref": ["vegetarisk"],
-		"otherTraits": ["miljøbevisst"],
+		"otherTraits": ["barnevennlig", "dyrevennlig"],
 		"image": "2_foto.jpg"
 	},
 	{
@@ -32,10 +32,15 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos laborum praesentium ad? Officia quod laborum assumenda quos suscipit nostrum ipsa quia ipsam placeat? Voluptate neque quam beatae dolorum corporis veritatis explicabo accusamus illum? Necessitatibus ipsam, veritatis dicta iusto vel quis quasi consequatur repellat, veniam facilis quod debitis optio.",
 		"totalPeople": 3,
 		"children": true,
-		"childGroup": ["4-10"],
-		"allergies": ["gluten"],
+		"group": ["4-10"],
+		"allergies": [],
 		"foodPref": [],
-		"otherTraits": ["tåler røyking", "smoker"],
+		"otherTraits": [
+			"barnevennlig",
+			"røyktoleranse",
+			"røyker",
+			"alkoholtoleranse"
+		],
 		"image": "3_foto.jpg"
 	},
 	{
@@ -43,12 +48,12 @@
 		"surname": "Eriksen",
 		"title": "En familie som ønsker å skape nye minner sammen med andre.",
 		"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti veritatis natus commodi nisi voluptas minima dignissimos? Illum iste possimus error cumque sed odio nobis autem necessitatibus, expedita nostrum atque enim sit perferendis esse soluta unde magni officia omnis. Quidem ullam dolorum sed.",
-		"totalPeople": 4,
+		"totalPeople": 3,
 		"children": true,
-		"childGroup": ["4-10"],
-		"allergies": ["skalldyr", "gluten"],
+		"group": ["4-10"],
+		"allergies": ["skalldyr"],
 		"foodPref": [],
-		"otherTraits": ["tåler røyking", "musikkinteressert", "matglad"],
+		"otherTraits": ["røyktoleranse", "alkoholtoleranse", "barnevennlig"],
 		"image": "4_foto.jpg"
 	},
 	{
@@ -58,10 +63,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, tempore obcaecati dolores sit nesciunt, possimus dolor facilis, quis culpa quo pariatur excepturi placeat! Facere mollitia aut quibusdam nostrum, sapiente ad doloremque. Voluptatibus cupiditate quas dicta",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["11-17", "11-17"],
+		"group": ["11-17", "11-17"],
 		"allergies": ["eggs"],
 		"foodPref": ["halal"],
-		"otherTraits": ["tåler røyking", "humoristisk", "smoker"],
+		"otherTraits": ["barnevennlig", "røyktoleranse", "humoristisk", "røyker"],
 		"image": "5_foto.jpg"
 	},
 	{
@@ -71,10 +76,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita praesentium rerum tempore reprehenderit iste sequi consectetur fuga, incidunt magnam delectus error, ipsam quas ipsa nihil voluptates earum.",
 		"totalPeople": 2,
 		"children": true,
-		"childGroup": ["0-3"],
+		"group": ["0-3"],
 		"allergies": ["nøtter"],
 		"foodPref": ["halal"],
-		"otherTraits": ["kulturinteressert"],
+		"otherTraits": ["barnevennlig"],
 		"image": "6_foto.jpg"
 	},
 	{
@@ -84,10 +89,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nulla aliquam, eveniet accusantium obcaecati possimus, dolore quam beatae suscipit iste, saepe placeat? Aliquam temporibus dicta enim, neque sed expedita voluptatibus amet cum.",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10", "4-10"],
+		"group": ["4-10", "4-10"],
 		"allergies": ["eggs"],
 		"foodPref": ["halal"],
-		"otherTraits": ["glad i barn", "smoker", "tåler røyking"],
+		"otherTraits": ["barnevennlig", "røyker", "røyktoleranse"],
 		"image": "7_foto.jpg"
 	},
 	{
@@ -97,10 +102,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quos sapiente natus facilis maxime excepturi totam labore.",
 		"totalPeople": 3,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": ["laktose", "gluten"],
 		"foodPref": ["vegetarisk"],
-		"otherTraits": ["tåler røyking", "humoristisk", "utendørsentusiast"],
+		"otherTraits": ["røyktoleranse", "alkoholtoleranse"],
 		"image": "8_foto.jpg"
 	},
 	{
@@ -110,10 +115,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil itaque veniam autem deleniti consectetur. Voluptas inventore minus perspiciatis expedita numquam. Sequi dicta magni fugiat asperiores veniam officia aspernatur officiis quis fugit, fuga mollitia excepturi ad harum! Laboriosam expedita velit perferendis debitis, culpa iste in! Eum.",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10"],
+		"group": ["4-10"],
 		"allergies": ["skalldyr", "gluten"],
 		"foodPref": ["halal"],
-		"otherTraits": ["utendørsentusiast", "glad i barn", "elsker tradisjoner"],
+		"otherTraits": ["barnevennlig"],
 		"image": "9_foto.jpg"
 	},
 	{
@@ -121,12 +126,12 @@
 		"surname": "Pedersen",
 		"title": "En rolig familie som setter pris på en avslappet atmosfære.",
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem accusamus, nulla error distinctio placeat eum quia magnam ab, est asperiores maxime vel sapiente sit.",
-		"totalPeople": 6,
+		"totalPeople": 5,
 		"children": true,
-		"childGroup": ["4-10", "4-10", "0-3"],
+		"group": ["4-10", "4-10", "0-3"],
 		"allergies": ["gluten"],
-		"foodPref": ["halal", "laktosefri"],
-		"otherTraits": ["utendørsentusiast", "humoristisk"],
+		"foodPref": ["laktosefri"],
+		"otherTraits": [],
 		"image": "10_foto.jpg"
 	},
 	{
@@ -136,10 +141,15 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus enim consequatur, totam temporibus nisi aut fugiat hic doloremque. In delectus cumque tempore dolor molestiae itaque! Vero quas quaerat veniam nemo ad accusantium aliquam harum corrupti maiores eaque rem delectus beatae consequatur repellat autem animi sapiente, eligendi laboriosam commodi.",
 		"totalPeople": 3,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": ["gluten"],
 		"foodPref": [],
-		"otherTraits": ["samarbeidende", "humoristisk", "smoker", "tåler røyking"],
+		"otherTraits": [
+			"kan hjelpe med matlagging",
+			"røyker",
+			"røyktoleranse",
+			"alkoholtoleranse"
+		],
 		"image": "11_foto.jpg"
 	},
 	{
@@ -149,10 +159,10 @@
 		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum deserunt officia commodi nemo, sit numquam sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 		"totalPeople": 3,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": ["eggs"],
-		"foodPref": ["vegetarisk"],
-		"otherTraits": ["tåler røyking"],
+		"foodPref": [],
+		"otherTraits": ["røyktoleranse", "alkoholtoleranse"],
 		"image": "12_foto.jpg"
 	},
 	{
@@ -162,10 +172,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus consequatur vero quaerat incidunt quidem quae eum ut, totam mollitia, veritatis itaque eligendi dolorem, dolore id ipsum praesentium. Voluptas harum quae vel.",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10", "11-17", "11-17"],
+		"group": ["4-10", "11-17", "11-17"],
 		"allergies": ["gluten"],
 		"foodPref": ["vegetarisk"],
-		"otherTraits": ["matglad", "kunstnerisk", "smoker", "tåler røyking"],
+		"otherTraits": ["røyker", "røyktoleranse"],
 		"image": "13_foto.jpg"
 	},
 	{
@@ -173,12 +183,12 @@
 		"surname": "Nilsen",
 		"title": "En rolig familie som setter pris på en avslappet atmosfære.",
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id totam optio inventore ea vitae facere, molestias corrupti aut expedita quidem est explicabo, quaerat sequi quam beatae.",
-		"totalPeople": 3,
+		"totalPeople": 2,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": [],
-		"foodPref": ["vegetarisk", "halal"],
-		"otherTraits": ["innovativ", "matglad", "tåler røyking", "smoker"],
+		"foodPref": [],
+		"otherTraits": ["røyktoleranse", "røyker", "alkoholtoleranse"],
 		"image": "14_foto.jpg"
 	},
 	{
@@ -188,10 +198,10 @@
 		"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi laborum beatae fugiat natus repellat id suscipit? Corporis laboriosam repudiandae ex officia aliquam, aliquid blanditiis veniam et placeat cum vero sed libero fugit sunt quia reiciendis error enim.",
 		"totalPeople": 5,
 		"children": true,
-		"childGroup": ["4-10", "4-10"],
-		"allergies": ["gluten"],
+		"group": ["4-10", "4-10", "0-3", "11-17"],
+		"allergies": [],
 		"foodPref": ["halal"],
-		"otherTraits": ["matglad", "innovativ", "humoristisk"],
+		"otherTraits": [],
 		"image": "15_foto.jpg"
 	},
 	{
@@ -201,10 +211,10 @@
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse odio, atque expedita iste repudiandae perspiciatis pariatur non quam nam est inventore delectus ratione aspernatur aliquam ex a vel recusandae!",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10"],
+		"group": ["4-10", "0-3"],
 		"allergies": ["honning"],
 		"foodPref": [],
-		"otherTraits": ["musikkinteressert", "humoristisk", "gjerne sosial"],
+		"otherTraits": ["alkoholtoleranse"],
 		"image": "16_foto.jpg"
 	},
 	{
@@ -214,10 +224,10 @@
 		"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident minus beatae suscipit eligendi enim doloremque rerum placeat, impedit reprehenderit nobis voluptates.",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["11-17", "4-10"],
+		"group": ["11-17", "4-10"],
 		"allergies": [],
-		"foodPref": ["halal"],
-		"otherTraits": ["innovativ", "musikkinteressert"],
+		"foodPref": [],
+		"otherTraits": ["alkoholtoleranse"],
 		"image": "17_foto.jpg"
 	},
 	{
@@ -225,12 +235,12 @@
 		"surname": "Andersen",
 		"title": "En rolig familie som setter pris på en avslappet atmosfære.",
 		"description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, dolor aliquam molestiae perspiciatis quis asperiores amet debitis sit odio laudantium impedit itaque autem libero quaerat. Iste, necessitatibus nulla autem nesciunt deserunt officia tempora ab cumque ut animi veritatis, fuga dignissimos eligendi!",
-		"totalPeople": 5,
+		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10", "11-17"],
-		"allergies": ["gluten"],
+		"group": ["4-10", "11-17"],
+		"allergies": [],
 		"foodPref": ["vegetarisk"],
-		"otherTraits": ["sporty"],
+		"otherTraits": ["alkoholtoleranse"],
 		"image": "18_foto.jpg"
 	},
 	{
@@ -240,10 +250,10 @@
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ex voluptate officia debitis doloribus consectetur illum, necessitatibus, nam asperiores, quasi veniam possimus dolore",
 		"totalPeople": 3,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": [],
-		"foodPref": ["vegetarisk"],
-		"otherTraits": ["tåler røyking", "kulturinteressert", "utendørsentusiast"],
+		"foodPref": [],
+		"otherTraits": ["røyktoleranse", "drikker alkohol", "alkoholtoleranse"],
 		"image": "19_foto.jpg"
 	},
 	{
@@ -253,10 +263,10 @@
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa consequuntur molestiae unde quasi praesentium assumenda molestias at, repellendus, animi inventore fuga porro doloribus quisquam labore ab facere repellat illum? Ab nihil iusto rem corrupti molestias modi dignissimos.",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10", "4-10"],
+		"group": ["4-10", "4-10"],
 		"allergies": ["gluten"],
 		"foodPref": ["laktosefri"],
-		"otherTraits": ["utendørsentusiast", "innovativ"],
+		"otherTraits": [],
 		"image": "20_foto.jpg"
 	},
 	{
@@ -266,10 +276,10 @@
 		"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dolorem vitae earum consequuntur maxime libero nesciunt nisi officiis provident, voluptas ducimus",
 		"totalPeople": 2,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": [],
-		"foodPref": ["vegetarisk"],
-		"otherTraits": ["utendørsentusiast", "miljøbevisst", "tåler røyking"],
+		"foodPref": [],
+		"otherTraits": ["røyktoleranse", "drikker alkohol", "alkoholtoleranse"],
 		"image": "21_foto.jpg"
 	},
 	{
@@ -279,10 +289,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nesciunt quam labore ex sit, vero expedita ea ducimus, ipsum odit itaque accusantium voluptatem corrupti magnam debitis quo sequi amet porro odio eum possimus harum officiis",
 		"totalPeople": 3,
 		"children": true,
-		"childGroup": ["4-10"],
+		"group": ["4-10"],
 		"allergies": [],
 		"foodPref": [],
-		"otherTraits": ["elsker tradisjoner", "kulturinteressert"],
+		"otherTraits": [],
 		"image": "22_foto.jpg"
 	},
 	{
@@ -292,14 +302,14 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eaque ad laborum laboriosam necessitatibus ipsam consectetur corporis voluptate dolores tempora sint quibusdam vero explicabo consequuntur, fugit placeat ipsum. Quasi natus quae tempora magni illum repudiandae debitis veritatis itaque.",
 		"totalPeople": 2,
 		"children": false,
-		"childGroup": [],
+		"group": [],
 		"allergies": ["gluten", "nøtter"],
 		"foodPref": ["vegetarisk"],
 		"otherTraits": [
-			"positiv innstilling",
-			"kunstnerisk",
-			"miljøbevisst",
-			"tåler røyking"
+			"røyker",
+			"røyktoleranse",
+			"drikker alkohol",
+			"alkoholtoleranse"
 		],
 		"image": "23_foto.jpg"
 	},
@@ -310,10 +320,10 @@
 		"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat omnis qui, ipsa incidunt hic quidem ab dolores eligendi delectus esse unde, porro quia cupiditate, sunt quasi dolore nostrum!",
 		"totalPeople": 2,
 		"children": true,
-		"childGroup": ["4-10"],
+		"group": ["4-10"],
 		"allergies": ["gluten"],
 		"foodPref": ["laktosefri"],
-		"otherTraits": ["positiv innstilling", "tåler røyking"],
+		"otherTraits": ["røyktoleranse"],
 		"image": "24_foto.jpg"
 	},
 	{
@@ -323,10 +333,10 @@
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum ipsa nihil incidunt iusto assumenda minima similique nesciunt totam.",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10", "11-17"],
+		"group": ["4-10", "11-17"],
 		"allergies": ["skalldyr"],
 		"foodPref": ["halal", "laktosefri"],
-		"otherTraits": ["sporty", "samarbeidende", "gjerne sosial"],
+		"otherTraits": [],
 		"image": "25_foto.jpg"
 	},
 	{
@@ -336,10 +346,15 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis enim amet! Officia neque possimus quos facilis, distinctio esse vero suscipit, quo nam deserunt omnis blanditiis odio iure aut? Provident, accusantium reprehenderit!",
 		"totalPeople": 4,
 		"children": false,
-		"childGroup": [],
-		"allergies": ["gluten"],
+		"group": [],
+		"allergies": [],
 		"foodPref": [],
-		"otherTraits": ["gjerne sosial", "smoker", "tåler røyking"],
+		"otherTraits": [
+			"kan hjelpe med matlagging",
+			"røyker",
+			"røyktoleranse",
+			"alkoholtoleranse"
+		],
 		"image": "26_foto.jpg"
 	},
 	{
@@ -349,10 +364,10 @@
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, aut quo velit repellat voluptates, modi in sapiente eum, est ea unde ab enim suscipit temporibus fugiat eius. Sequi reiciendis quo incidunt est dolor, a ab! Odio fugit, recusandae dolores debitis a pariatur reprehenderit, harum accusamus, officia placeat possimus.",
 		"totalPeople": 2,
 		"children": true,
-		"childGroup": ["11-17"],
+		"group": ["11-17"],
 		"allergies": ["sitrus"],
 		"foodPref": [],
-		"otherTraits": ["matglad", "tåler røyking"],
+		"otherTraits": ["røyktoleranse", "drikker alkohol", "alkoholtoleranse"],
 		"image": "27_foto.jpg"
 	},
 	{
@@ -362,10 +377,10 @@
 		"description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem cumque laudantium dignissimos tempore repellat cum quis quas? Cum consequuntur aliquid harum!",
 		"totalPeople": 4,
 		"children": true,
-		"childGroup": ["4-10", "11-17", "11-17"],
+		"group": ["4-10", "11-17", "11-17"],
 		"allergies": ["nøtter"],
-		"foodPref": ["vegetarisk"],
-		"otherTraits": ["matglad", "humoristisk", "samarbeidende", "tåler røyking"],
+		"foodPref": [],
+		"otherTraits": ["røyktoleranse"],
 		"image": "28_foto.jpg"
 	},
 	{
@@ -373,12 +388,12 @@
 		"surname": "Karlsen",
 		"title": "En familie som elsker dyr og tar med seg mye glede.",
 		"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius officia libero eveniet, ab eligendi omnis similique error inventore voluptatibus? Facere nemo assumenda quia, sint asperiores maxime architecto natus numquam tenetur, corrupti sunt quaerat vero obcaecati! Reprehenderit voluptates mollitia illo dignissimos. Minus, aliquam.",
-		"totalPeople": 4,
+		"totalPeople": 5,
 		"children": true,
-		"childGroup": ["4-10", "11-17", "4-10"],
+		"group": ["4-10", "11-17", "4-10"],
 		"allergies": [],
-		"foodPref": ["halal", "vegetarisk"],
-		"otherTraits": ["sporty"],
+		"foodPref": [],
+		"otherTraits": [],
 		"image": "29_foto.jpg"
 	},
 	{
@@ -388,10 +403,16 @@
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vero aperiam quisquam iure dolorem alias porro reiciendis delectus corporis non minus id reprehenderit quos, error rerum pariatur ullam excepturi!",
 		"totalPeople": 2,
 		"children": true,
-		"childGroup": ["4-10"],
-		"allergies": ["gluten"],
-		"foodPref": ["halal"],
-		"otherTraits": ["kunstnerisk", "matglad", "smoker"],
+		"group": ["4-10"],
+		"allergies": [],
+		"foodPref": [],
+		"otherTraits": [
+			"kan hjelpe med matlagging",
+			"røyker",
+			"røyktoleranse",
+			"drikker alkohol",
+			"alkoholtoleranse"
+		],
 		"image": "30_foto.jpg"
 	}
 ]
