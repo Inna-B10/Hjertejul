@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0R1fOJ/HRxY=",
+  "dgSpecHash": "A+SQkI6OWtg=",
   "success": true,
-  "projectFilePath": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.09 Hjertejul/C-BackendEndpoints/MyApi/MyApi.csproj",
+  "projectFilePath": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.11 Hjertejul/Hjertejul/MyApi/MyApi.csproj",
   "expectedPackageFiles": [
     "/Users/hansmartinaustestad/.nuget/packages/microsoft.aspnetcore.openapi/8.0.8/microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
     "/Users/hansmartinaustestad/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

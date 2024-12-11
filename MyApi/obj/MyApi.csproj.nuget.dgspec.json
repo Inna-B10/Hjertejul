@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.09 Hjertejul/C-BackendEndpoints/MyApi/MyApi.csproj": {}
+    "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.11 Hjertejul/Hjertejul/MyApi/MyApi.csproj": {}
   },
   "projects": {
-    "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.09 Hjertejul/C-BackendEndpoints/MyApi/MyApi.csproj": {
+    "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.11 Hjertejul/Hjertejul/MyApi/MyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.09 Hjertejul/C-BackendEndpoints/MyApi/MyApi.csproj",
+        "projectUniqueName": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.11 Hjertejul/Hjertejul/MyApi/MyApi.csproj",
         "projectName": "MyApi",
-        "projectPath": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.09 Hjertejul/C-BackendEndpoints/MyApi/MyApi.csproj",
+        "projectPath": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.11 Hjertejul/Hjertejul/MyApi/MyApi.csproj",
         "packagesPath": "/Users/hansmartinaustestad/.nuget/packages/",
-        "outputPath": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.09 Hjertejul/C-BackendEndpoints/MyApi/obj/",
+        "outputPath": "/Users/hansmartinaustestad/Documents/Kodehode/2024.12.11 Hjertejul/Hjertejul/MyApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/hansmartinaustestad/.nuget/NuGet/NuGet.Config"
