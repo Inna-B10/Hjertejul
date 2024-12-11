@@ -27,6 +27,39 @@ export function showModalCard(family) {
 	const familyTitle = createTitle('h3', family.title)
 
 	const desc = createDesc(family.description)
+	const list = createNode('ul', {})
+
+	//create an array of data to subsequently create list items
+	const items = [
+		{ text: `Antall gjester: ${family.totalPeople}` },
+		{
+			text:
+				'Barn i aldersgruppe: ' +
+				(family.childGroup.length > 0 ? family.childGroup : 'ikke barn'),
+		},
+		{
+			text: `Allergier: ${family.allergies}`,
+			condition: family.allergies.length > 0,
+		},
+		{
+			text: `Matpreferanser: ${family.foodPref}`,
+			condition: family.foodPref.length > 0,
+		},
+		{
+			text: `Andre vaner: ${family.otherTraits}`,
+			condition: family.otherTraits.length > 0,
+		},
+	]
+
+	//create only those elements that have data
+	items.forEach(({ text, condition = true }) => {
+		if (condition) {
+			const item = createNode('li', {})
+			text = text.split(',').join(', ')
+			item.innerText = text
+			list.appendChild(item)
+		}
+	})
 
 	const closeButton = createNode('button', {
 		class: 'close-button',
@@ -34,7 +67,7 @@ export function showModalCard(family) {
 	closeButton.innerText = 'X'
 	closeButton.addEventListener('click', closeModalCard)
 
-	modalOutput.append(img, familyTitle, desc, closeButton)
+	modalOutput.append(img, familyTitle, desc, list, closeButton)
 
 	modal.style.display = 'block'
 	overlay.style.display = 'block'
