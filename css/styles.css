@@ -47,15 +47,15 @@ button {
   display: block;
   border: none;
   cursor: pointer;
-}
-
-#send-button {
-  margin: 1em auto 0;
+  background-color: #0A2C1D;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
   font-size: 18px;
-  background-color: #0A2C1D;
+}
+
+#send-button {
+  margin: 1em auto 0;
 }
 
 /* #family-form, */
