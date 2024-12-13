@@ -13,7 +13,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-newyear_garland/
+# newyear_garland/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
