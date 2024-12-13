@@ -4,13 +4,9 @@ let families
 export const output = document.getElementById('output')
 if (output) {
 	async function getData() {
-		// Дождемся результата fetchFamilies
-		console.log('Функция fetchFamilies вызвана без ID')
 		families = await fetchFamilies()
 
-		// Убедимся, что families - это массив
 		if (Array.isArray(families) && families.length > 0) {
-			console.log('render families')
 			renderFamilies(families)
 		} else {
 			output.innerText = 'Error fetching data!'

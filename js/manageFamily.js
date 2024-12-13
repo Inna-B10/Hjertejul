@@ -27,7 +27,6 @@ if (outputForm) {
 	}
 
 	function renderForm(data) {
-		console.log(data)
 		outputForm.innerText = ''
 
 		const form = createNode('form', {
@@ -52,15 +51,15 @@ if (outputForm) {
 		const select = createNode('select', {
 			name: 'totalPeople',
 		})
-		//TODO add attribute selected to data.totalPeople
+
 		for (let i = 1; i <= 6; i++) {
 			const option = createNode('option', {
 				value: i,
-				selected: i === Number(data?.totalPeople),
 			})
 			option.innerText = i
 			select.appendChild(option)
 		}
+		select.value = data?.totalPeople
 		totalPeopleLabel.appendChild(select)
 		form.appendChild(totalPeopleLabel)
 
@@ -281,12 +280,10 @@ if (outputForm) {
 			})
 			.then(() => {
 				displayMessage('Data lagret vellykket!', 'success')
-				// alert('Data lagret vellykket!')
 				renderForm()
 			})
 			.catch(error => {
 				displayMessage(`Error: ${error.message}`, 'error')
-				// alert(`Error: ${error.message}`, 'error')
 			})
 	}
 
@@ -308,18 +305,16 @@ if (outputForm) {
 				// })
 				.then(() => {
 					alert('Data slettet vellykket!')
-					// setTimeout(() => {
 					window.location.replace(
 						'./index.html?timestamp=' + new Date().getTime()
 					)
-					// }, 100)
 				})
 		}
 	}
 
 	function displayMessage(message, type) {
 		const messageContainer = document.getElementById('message-container')
-		console.log(messageContainer)
+
 		messageContainer.innerText = message
 		messageContainer.className = type // 'success' or 'error'
 		setTimeout(() => {
