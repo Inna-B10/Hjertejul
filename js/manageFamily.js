@@ -282,6 +282,7 @@ if (outputForm) {
 			.then(() => {
 				displayMessage('Data lagret vellykket!', 'success')
 				// alert('Data lagret vellykket!')
+				renderForm()
 			})
 			.catch(error => {
 				displayMessage(`Error: ${error.message}`, 'error')
