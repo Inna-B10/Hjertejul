@@ -51,15 +51,15 @@ if (outputForm) {
 		const select = createNode('select', {
 			name: 'totalPeople',
 		})
-		//TODO add attribute selected to data.totalPeople
+
 		for (let i = 1; i <= 6; i++) {
 			const option = createNode('option', {
 				value: i,
-				selected: i === Number(data?.totalPeople),
 			})
 			option.innerText = i
 			select.appendChild(option)
 		}
+		select.value = data?.totalPeople
 		totalPeopleLabel.appendChild(select)
 		form.appendChild(totalPeopleLabel)
 
