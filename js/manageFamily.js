@@ -27,7 +27,6 @@ if (outputForm) {
 	}
 
 	function renderForm(data) {
-		console.log(data)
 		outputForm.innerText = ''
 
 		const form = createNode('form', {
@@ -281,12 +280,10 @@ if (outputForm) {
 			})
 			.then(() => {
 				displayMessage('Data lagret vellykket!', 'success')
-				// alert('Data lagret vellykket!')
 				renderForm()
 			})
 			.catch(error => {
 				displayMessage(`Error: ${error.message}`, 'error')
-				// alert(`Error: ${error.message}`, 'error')
 			})
 	}
 
@@ -308,18 +305,16 @@ if (outputForm) {
 				// })
 				.then(() => {
 					alert('Data slettet vellykket!')
-					// setTimeout(() => {
 					window.location.replace(
 						'./index.html?timestamp=' + new Date().getTime()
 					)
-					// }, 100)
 				})
 		}
 	}
 
 	function displayMessage(message, type) {
 		const messageContainer = document.getElementById('message-container')
-		console.log(messageContainer)
+
 		messageContainer.innerText = message
 		messageContainer.className = type // 'success' or 'error'
 		setTimeout(() => {
