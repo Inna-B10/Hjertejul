@@ -11,11 +11,11 @@ body {
   /* min-width: 481px; */
   margin: 0;
   padding: 0;
-  background-image: url('./images/christmas.webp'); /* Arka plan resmi */
-  background-size: cover; /* Resmi tam olarak kapsayacak şekilde boyutlandır */
-  background-repeat: no-repeat; /* Resmin tekrarlanmasını engelle */
-  background-attachment: scroll; /* Kaydırıldığında arka plan sabit kalsın */
-  background-position: center; /* Arka planı ortala */
+  background-image: url('./images/christmas.webp'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  background-position: center; 
   color:#fff;
 
 }
@@ -32,28 +32,28 @@ h1 {
 
 /* Navbar */
 .navbar {
-  position: fixed; /* Navbar'ı sabit tutmak için */
-  top: 0; /* Sayfanın üst kısmına sabitler */
-  left: 0; /* Sol tarafta başlar */
-  width: 100%; /* Tam genişlikte */
-  background-color: #0A2C1D; /* Navbar arka plan rengi */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  background-color: #0A2C1D; 
   color: white;
-  z-index: 1000; /* Navbar'ın üstte görünmesini sağlar */
+  z-index: 1000; 
   padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar Menüsü */
 .navbar ul {
   display: flex;
-  justify-content: center; /* Menü öğelerini ortalar */
+  justify-content: center; 
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .navbar ul li {
-  margin: 0 15px; /* Menü öğeleri arasına boşluk ekler */
+  margin: 0 15px; 
 }
 
 .navbar ul li a {
@@ -64,32 +64,32 @@ h1 {
 }
 
 .navbar ul li a:hover {
-  background-color: #575757; /* Menü öğesi üzerine gelindiğinde renk değişimi */
+  background-color: #575757;
 }
 
-/* Sayfanın İçeriği */
+
 body {
-  padding-top: 60px; /* Navbar sabit olduğu için üstten boşluk bırakıyoruz */
+  padding-top: 60px;
 }
 
-/* Introduction Bölümü */
+/* Introduction */
 #introduction {
-  height: 100vh; /* Tam sayfa yüksekliği */
+  height: 100vh; 
   display: flex;
-  justify-content: center; /* Yatayda merkezleme */
-  align-items: center; /* Dikeyde merkezleme */
-  background-image: url('./images/first_image.jpg'); /* Arka plan olarak yalnızca bir resmi ekliyoruz */
-  background-size: cover; /* Resmin tam sayfa boyutunda olmasını sağlar */
-  background-position: center; /* Resmi ortalar */
-  background-repeat: no-repeat; /* Resmin tekrarlanmasını engeller */
-  color: white; /* Yazı rengi beyaz */
-  background-attachment: fixed; /* Resmin sabit kalmasını sağlar */
+  justify-content: center; 
+  align-items: center; 
+  background-image: url('./images/first_image.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white; 
+  background-attachment: fixed; 
 }
 
 #introduction h1 {
-  font-size: 3rem; /* Yazı boyutu */
-  color: red; /* Kırmızı yazı rengi */
-  text-align: center; /* Yazıyı ortalar */
+  font-size: 3rem; 
+  color: red; 
+  text-align: center; 
   margin: 0;
 }
 
@@ -113,35 +113,34 @@ section h1 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* Ana container */
+/* main container */
 .content-container {
-  display: flex; /* Divleri yan yana hizalamak için flexbox kullan */
-  justify-content: center; /* Elemanları yatayda ortala */
-  align-items: center; /* Elemanları dikeyde ortala */
-  gap: 20px; /* Aralarındaki boşluk */
-  margin-top: 20px; /* Üstten boşluk bırak */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* Div boyutları */
 .home_text,
 .image-container {
-  flex: 1; /* İki eleman eşit genişlikte olacak */
-  max-width: 60%; /* İki elemanın genişliği toplamda %100 olacak */
-  text-align: center; /* İçeriği ortala */
+  flex: 1; 
+  max-width: 60%; 
+  text-align: center; /
 }
-
 /* Resim */
 .image-container img {
-  width: 100%; /* Resmin kapsayıcı genişliğe uymasını sağla */
-  height: auto; /* Oranlarını koru */
-  border-radius: 8px; /* İsteğe bağlı olarak köşeleri yuvarlat */
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
 }
 
-/* Metin */
+/* Text*/
 .home_text p {
-  font-size: 1rem; /* Metin boyutunu ayarla */
-  line-height: 1.5; /* Satır aralığı */
-  color: white; /* Metin rengi */
+  font-size: 1rem;
+  line-height: 1.5; 
+  color: white; 
 }
 /* Filtreler */
 #content-section{
@@ -191,7 +190,7 @@ section h1 {
 .family-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* İçeriği kartın altına ve üstüne yayar */
+  justify-content: space-between; 
   height: 450px; 
   background-color: white;
   border: 2px solid #f20b0b;
@@ -411,13 +410,13 @@ button {
 .contact-section h2 {
   margin-bottom: 10px;
   font-size: 2rem;
-  text-align: center;  /* Başlığı sayfaya ortala */
+  text-align: center; 
 }
 
 .contact-section p {
   margin-bottom: 20px;
   font-size: 1rem;
-  text-align: center;  /* Paragrafı sayfaya ortala */
+  text-align: center;  
 }
 
 /* Form Layout */
@@ -428,10 +427,9 @@ form {
   gap: 20px;
   max-width: 400px;
   margin: 0 auto;
-  background-color: rgba(0, 128, 0, 0.2);  /* Saydam yeşil arka plan (rgba kullanarak saydamlık eklenmiştir) */
+  background-color: rgba(0, 128, 0, 0.2);  
   padding: 20px;
-  border-radius: 8px;  /* Köşeleri yuvarlat */
-}
+  border-radius: 8px; 
 
 form label {
   font-size: 1rem;
@@ -446,7 +444,7 @@ form textarea {
   border: none;
   border-radius: 4px;
   background-color: #f8d7da; /* Soft red background for input fields */
-  color: #333; /* Text color */
+  color: #333; 
 }
 
 /* Focus Effect for Input and Textarea */
