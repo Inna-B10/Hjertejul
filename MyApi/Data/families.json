@@ -664,19 +664,6 @@
     "Image": "33_foto.jpg"
   },
   {
-    "Id": 34,
-    "Surname": "fsdf",
-    "Title": "sdfsd",
-    "Description": "sdfsd",
-    "TotalPeople": 6,
-    "Children": false,
-    "ChildGroup": [],
-    "Allergies": [],
-    "FoodPref": [],
-    "OtherTraits": [],
-    "Image": "sdfsd"
-  },
-  {
     "Id": 35,
     "Surname": "345edgd",
     "Title": "45erdgfgd",
@@ -688,19 +675,6 @@
     "FoodPref": [],
     "OtherTraits": [],
     "Image": "[o[p;k"
-  },
-  {
-    "Id": 36,
-    "Surname": "iyuiy",
-    "Title": "yuiyui",
-    "Description": "yuiyui",
-    "TotalPeople": 6,
-    "Children": false,
-    "ChildGroup": [],
-    "Allergies": [],
-    "FoodPref": [],
-    "OtherTraits": [],
-    "Image": "yuiyui"
   },
   {
     "Id": 37,
