@@ -6,6 +6,7 @@ export const allergiesOptions = [
 	'nøtter',
 	'gluten',
 	'honning',
+	'sitrus',
 	'dyr',
 ]
 export const foodPrefOptions = [

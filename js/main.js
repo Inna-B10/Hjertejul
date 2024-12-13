@@ -9,10 +9,12 @@ if (output) {
 		families = await fetchFamilies()
 
 		// Убедимся, что families - это массив
-		if (Array.isArray(families)) {
+		if (Array.isArray(families) && families.length > 0) {
+			console.log('render families')
 			renderFamilies(families)
 		} else {
-			console.error('fetchFamilies вернул данные не в виде массива:', families)
+			output.innerText = 'Error fetching data!'
+			throw new Error('Error: no families fetched!')
 		}
 	}
 	getData()

@@ -29,8 +29,8 @@ Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 
 ## TODO
 
-- [ ] auto-rename image file?
 - [ ] upload image?
+- [ ] auto-rename image file? (if upload)
 - [ ] check image format(jpg,png...)?
 - [ ] return NoContent() change to response,response.status, response.statusText
 - [ ] [FIXME] select in renderForm()

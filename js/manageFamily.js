@@ -79,12 +79,14 @@ if (outputForm) {
 		//# ------------------------ description
 		const descLabel = createNode('label', {})
 		descLabel.innerText = 'Om familien: '
-		const desc = createNode('input', {
-			type: 'text',
+		const desc = createNode('textarea', {
+			rows: '4',
+			cols: '50',
 			name: 'description',
-			value: data?.description ? data.description : '',
 			required: true,
 		})
+		desc.textContent = data?.description ? data.description : ''
+
 		descLabel.appendChild(desc)
 		form.appendChild(descLabel)
 
@@ -205,14 +207,16 @@ if (outputForm) {
 		saveButton.innerText = 'Lagre'
 		form.appendChild(saveButton)
 
-		//# ------------------------ deleteButton
-		const deleteButton = createNode('button', {
-			id: 'delete-button',
-			type: 'submit',
-			'data-action': 'delete',
-		})
-		deleteButton.innerText = 'Slette'
-		form.appendChild(deleteButton)
+		if (data?.id) {
+			//# ------------------------ deleteButton
+			const deleteButton = createNode('button', {
+				id: 'delete-button',
+				type: 'submit',
+				'data-action': 'delete',
+			})
+			deleteButton.innerText = 'Slette'
+			form.appendChild(deleteButton)
+		}
 
 		//# ------------------------ add form to the container
 		outputForm.appendChild(form)
@@ -304,8 +308,9 @@ if (outputForm) {
 				.then(() => {
 					alert('Data slettet vellykket!')
 					// setTimeout(() => {
-					window.location.href =
-						`${API_URL}/index.html?timestamp=` + new Date().getTime()
+					window.location.replace(
+						'index.html?timestamp=' + new Date().getTime()
+					)
 					// }, 100) // задержка в миллисекундах
 				})
 		}
@@ -319,6 +324,6 @@ if (outputForm) {
 		setTimeout(() => {
 			messageContainer.innerText = ''
 			messageContainer.className = ''
-		}, 15000) // disappear after 5 sec
+		}, 5000) // disappear after 5 sec
 	}
 }
