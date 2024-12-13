@@ -65,7 +65,7 @@ export function showModalCard(family) {
 	const editButton = createNode('button', {})
 	editButton.innerText = 'rediger'
 	editButton.onclick = () => {
-		window.location.href = `./manageFamily.html?id=${family.id}`
+		window.location.href = `./Hjertejul/manageFamily.html?id=${family.id}`
 	}
 	// modalOutput.append(img, familyTitle, desc, list, closeButton, editButton)
 	modalOutput.append(familyTitle, desc, list, closeButton, editButton)
