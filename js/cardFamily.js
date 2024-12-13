@@ -1,3 +1,4 @@
+
 import { showModalCard } from './cardFamilyModal.js'
 import {
 	createDesc,
@@ -7,6 +8,7 @@ import {
 } from './createElements.js'
 import { output } from './main.js'
 import { truncateText } from './utils.js'
+
 
 export default function cardFamily(family) {
 	const card = createNode('div', {
@@ -29,3 +31,5 @@ export default function cardFamily(family) {
 	card.append(img, familyTitle, desc)
 	output.appendChild(card)
 }
+
+
