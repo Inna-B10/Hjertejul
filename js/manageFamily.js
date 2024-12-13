@@ -19,6 +19,9 @@ if (outputForm) {
 			family = await fetchFamilies(id)
 			if (family) {
 				renderForm(family)
+			} else {
+				outputForm.innerText = 'Error fetching data!'
+				throw new Error('Error: no families fetched!')
 			}
 		}
 		initPage()
@@ -35,7 +38,7 @@ if (outputForm) {
 
 		//# ------------------------ surname
 		const surnameLabel = createNode('label', {})
-		surnameLabel.innerText = 'Surname: '
+		surnameLabel.innerText = 'Familienavn: '
 		const surnameInput = createNode('input', {
 			type: 'text',
 			name: 'surname',
@@ -59,7 +62,7 @@ if (outputForm) {
 			option.innerText = i
 			select.appendChild(option)
 		}
-		select.value = data?.totalPeople
+		select.value = data?.totalPeople || 6
 		totalPeopleLabel.appendChild(select)
 		form.appendChild(totalPeopleLabel)
 
@@ -77,7 +80,7 @@ if (outputForm) {
 
 		//# ------------------------ description
 		const descLabel = createNode('label', {})
-		descLabel.innerText = 'Om familien: '
+		descLabel.innerText = 'Beskrivelse: '
 		const desc = createNode('textarea', {
 			rows: '4',
 			cols: '50',
@@ -263,6 +266,15 @@ if (outputForm) {
 			image: formData.get('image'),
 		}
 
+		if (updatedData.childGroup.length + 1 > updatedData.totalPeople) {
+			// displayMessage(
+			// 	'Antall gjester totalt kan ikke være mindre eller lik antall barn',
+			// 	'error'
+			// )
+			alert('Antall gjester totalt kan ikke være mindre eller likt antall barn')
+			throw new Error('Totalt gjester <= antall barn')
+		}
+
 		const url = `${API_URL}/Families/${id || ''}`
 
 		fetch(url, {
@@ -274,11 +286,13 @@ if (outputForm) {
 		})
 			.then(response => {
 				if (!response.ok) {
+					console.log(`Error ${response.status}: ${response.statusText}`)
 					throw new Error(`Error ${response.status}: ${response.statusText}`)
 				}
 				return response.json()
 			})
 			.then(() => {
+				alert('Data lagret vellykket!')
 				displayMessage('Data lagret vellykket!', 'success')
 				renderForm()
 			})
@@ -297,12 +311,13 @@ if (outputForm) {
 					'Content-Type': 'application/json',
 				},
 			})
-				// .then(response => {
-				// 	if (!response.ok) {
-				// 		throw new Error(`Error ${response.status}: ${response.statusText}`)
-				// 	}
-				// 	return response.json()
-				// })
+				.then(response => {
+					if (!response.ok) {
+						console.log(`Error ${response.status}: ${response.statusText}`)
+						throw new Error(`Error ${response.status}: ${response.statusText}`)
+					}
+					return response.json()
+				})
 				.then(() => {
 					alert('Data slettet vellykket!')
 					window.location.replace(

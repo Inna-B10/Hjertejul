@@ -14,20 +14,20 @@ namespace MyAPI.Controllers
         private static List<Family> _families = new List<Family>();
 
         public FamiliesController()
-    
+
         {
-            try 
+            try
             {
                 // Korrekt filbane for families.json
                 var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "families.json");
-                
+
                 // Les inn innholdet fra JSON-filen
                 var jsonData = System.IO.File.ReadAllText(filePath);
                 // Debug line, to check if the JSON data was correctly handled
                 Console.WriteLine("JSON-data lastet inn: " + jsonData); // Log JSON dataen
-                
+
                 // Deserialiser JSON-dataen til en liste med familier
-                _families = JsonSerializer.Deserialize<List<Family>>(jsonData, new JsonSerializerOptions 
+                _families = JsonSerializer.Deserialize<List<Family>>(jsonData, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 }) ?? new List<Family>();
@@ -39,12 +39,12 @@ namespace MyAPI.Controllers
                 {
                     Console.WriteLine("_families er tom! Sjekk om JSON-filen er gyldig og at den har innhold.");
                 }
-                else 
+                else
                 {
                     Console.WriteLine($"_families er lastet med {_families.Count} familier!");
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine($"Feil ved lasting av families.json: {ex.Message}");
                 _families = new List<Family>();
@@ -55,6 +55,16 @@ namespace MyAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Family>> GetFamilies()
         {
+            if (_families == null || _families.Count == 0)
+            {
+                return NotFound(new
+                {
+                    Status = "Error",
+                    StatusText = "No families found",
+                    Data = (object)null
+                });
+            }
+
             return Ok(new
             {
                 Status = "Success",
@@ -68,9 +78,9 @@ namespace MyAPI.Controllers
         public ActionResult<Family> GetFamilyById(int id)
         {
             var family = _families.FirstOrDefault(f => f.Id == id);
-            if (family == null) 
+            if (family == null)
                 return NotFound(new { message = $"Family with ID {id} not found" });
-                
+
             return Ok(new
             {
                 Status = "Success",
@@ -83,7 +93,7 @@ namespace MyAPI.Controllers
         [HttpPost]
         public ActionResult<Family> CreateFamily(Family family)
         {
-            if (family == null) 
+            if (family == null)
                 return BadRequest(new { message = "Invalid family data" });
 
             // Hvis listen er tom, starter ID med 1
@@ -106,11 +116,11 @@ namespace MyAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult UpdateFamily(int id, Family updatedFamily)
         {
-            if (updatedFamily == null) 
+            if (updatedFamily == null)
                 return BadRequest(new { message = "Invalid family data" });
 
             var family = _families.FirstOrDefault(f => f.Id == id);
-            if (family == null) 
+            if (family == null)
                 return NotFound(new { message = $"Family with ID {id} not found" });
 
             // Oppdater familiedataene
@@ -142,7 +152,7 @@ namespace MyAPI.Controllers
         public IActionResult DeleteFamily(int id)
         {
             var family = _families.FirstOrDefault(f => f.Id == id);
-            if (family == null) 
+            if (family == null)
                 return NotFound(new { Status = "Error", Message = $"Family with ID {id} not found" });
 
             _families.Remove(family);

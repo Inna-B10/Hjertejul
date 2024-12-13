@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/modalCard.css" />
     <!-- -------------------- Start New Year Script 1 Of 2 --------------------- -->
-    <!-- <script src="./newyear_garland/script.js" defer></script>
-		<link rel="stylesheet" href="./newyear_garland/garland-style.css" /> -->
+    <script src="./newyear_garland/script.js" defer></script>
+		<link rel="stylesheet" href="./newyear_garland/garland-style.css" />
     <!-- ------------------------- End New Year Script ------------------------- -->
   </head>
   <body>
+        <div class="background">
+      <div class="content">
     <!-- -------------------- Start New Year Script 2 Of 2 --------------------- -->
     <div class="b-page_newyear">
       <div class="b-page__content">
@@ -459,221 +461,197 @@
       <ul>
         <li><a href="index.html">Hjem</a></li>
         <li><a href="#content-section">Familie Detaljer</a></li>
-        <li><a href="manage.html">Administrasjon</a></li>
+        <li><a href="manageFamily.html">Administrasjon</a></li>
         <li><a href="#form-section">Kontakt Oss</a></li>
       </ul>
     </nav>
     </header>
-    <section id="introduction">
-      <h1>Gjør julen lysere for flere</h1>
-    </section>
 
-
-    <section id="home-section" class="home-section">
-      <h2 id="hjem-section">Velkommen til Julefeiring Matcher</h2>
-
-      <div class="content-container">
-        <div id="home_text" class="home_text">
-          <p>Finn den perfekte familien for en uforglemmelig julefeiring.</p>
-          <label for="search">Finn nye venner under juletreet</label>
-        </div>
-        <div class="image-container">
-          <img src="./css/images/home_bilde.webp" alt="Julefeiring" />
-        </div>
-      </div>
-    </section>
-
-    <main>
-      <!-- ------------------------------- Filters ------------------------------- -->
-       <section id="content-section">
-   
-          <div id="filters-section" >
-            <search role="search">
-              <div id="filters" class="flex column">
-                <input type="text" id="search" placeholder="Søk etter nøkkelord..." />
-                <div>
-                  <label for="totalPeoples"
-                    >Jeg har plass til
-                    <select id="totalPeoples">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6" selected>6</option>
-                    </select>
-                    gjester (inkludert barn)
-                  </label>
-                </div>
-                <div>
-                  <p>
-                    Minst ett av gjesters barn må være i en av følgende aldersgruppe:
-                    <br />
-                    <small>
-                      <ul>
-                        <li>la stå tomt hvis du ønsker KUN familier uten barn</li>
-                        <li>
-                          velg alt hvis du ønsker familier uten barn ELLER med barn
-                          uansett alderen
-                        </li>
-                      </ul>
-                    </small>
-                  </p>
-                  <label for="0-3">0-3</label>
-                  <input type="checkbox" id="0-3" data-group="0-3" />
-                  <label for="4-10">4-10</label>
-                  <input type="checkbox" id="4-10" data-group="4-10" />
-                  <label for="11-17">11-17</label>
-                  <input type="checkbox" id="11-17" data-group="11-17" />
-                </div>
-                <div>
-                  <p>Gjester foretrekker mat som er:</p>
-                  <label for="vegetarian">Vegetarisk</label>
-                  <input type="checkbox" id="vegetarian" data-food="vegetarisk" />
-                  <label for="halal">Halal</label>
-                  <input type="checkbox" id="halal" data-food="halal" />
-                  <label for="lactosefree">Laktosefri</label>
-                  <input type="checkbox" id="lactosefree" data-food="laktosefri" />
-                  <label for="traditional">Tradisjonell</label>
-                  <input type="checkbox" id="traditional" data-food="tradisjonell" />
-                </div>
-                <div>
-                  <p>Gjester har følgende vaner:</p>
-                  <label for="smoker">Røyker</label>
-                  <input type="checkbox" id="smoker" data-trait="røyker" />
-                  <label for="smok-tolerance">Røyktoleranse</label>
+        <section id="introduction">
+          <h1>Gjør julen lysere for flere</h1>
+        </section>
+        <section id="home-section" class="home-section">
+          <h2 id="hjem-section">Velkommen til Julefeiring Matcher</h2>
+          <div class="content-container">
+            <div id="home_text" class="home_text">
+              <p>Finn den perfekte familien for en uforglemmelig julefeiring.</p>
+              <label for="search">Finn nye venner under juletreet</label>
+            </div>
+            <div class="image-container">
+              <img src="./css/images/home_bilde.webp" alt="Julefeiring" />
+            </div>
+          </div>
+        </section>
+        <main>
+          <!-- ------------------------------- Filters ------------------------------- -->
+           <section id="content-section">
+              <div id="filters-section" >
+                <search role="search">
+                  <div id="filters" class="flex column">
+                    <input type="text" id="search" placeholder="Søk etter nøkkelord..." />
+                    <div>
+                      <label for="totalPeople"
+                        >Jeg har plass til
+                        <select id="totalPeople">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6" selected>6</option>
+                        </select>
+                        gjester (inkludert barn)
+                      </label>
+                    </div>
+                    <div>
+                      <p>
+                        Minst ett av gjesters barn må være i en av følgende aldersgruppe:
+                        <br />
+                        <small>
+                          <ul>
+                            <li>la stå tomt hvis du ønsker KUN familier uten barn</li>
+                            <li>
+                              velg alt hvis du ønsker familier uten barn ELLER med barn
+                              uansett alderen
+                            </li>
+                          </ul>
+                        </small>
+                      </p>
+                      <label for="0-3">0-3</label>
+                      <input type="checkbox" id="0-3" data-group="0-3" />
+                      <label for="4-10">4-10</label>
+                      <input type="checkbox" id="4-10" data-group="4-10" />
+                      <label for="11-17">11-17</label>
+                      <input type="checkbox" id="11-17" data-group="11-17" />
+                    </div>
+                    <div>
+                      <p>Gjester foretrekker mat som er:</p>
+                      <label for="vegetarian">vegetarisk</label>
+                      <input type="checkbox" id="vegetarian" data-food="vegetarisk" />
+                      <label for="halal">halal</label>
+                      <input type="checkbox" id="halal" data-food="halal" />
+                      <label for="lactosefree">laktosefri</label>
+                      <input type="checkbox" id="lactosefree" data-food="laktosefri" />
+                      <label for="traditional">tradisjonell</label>
+                      <input type="checkbox" id="traditional" data-food="tradisjonell" />
+                    </div>
+                    <div>
+                      <p>Gjester har følgende vaner:</p>
+                      <div>
+                        <label for="smoker">røyker</label>
+                        <input type="checkbox" id="smoker" data-trait="røyker" />
+                        <label for="smok-tolerance">røyktoleranse</label>
+                        <input
+                          type="checkbox"
+                          id="smok-tolerance"
+                          data-trait="røyktoleranse"
+                        />
+                        <label for="alcohol">drikker alkohol</label>
+                        <input type="checkbox" id="alcohol" data-trait="drikker alkohol" />
+                        <label for="alcohol">alkoholtoleranse</label>
+                        <input type="checkbox" id="alcohol" data-trait="alkoholtoleranse" />
+                      </div>
+                      <div>
+                  <label for="dyr">dyrevennlig</label>
+                  <input type="checkbox" id="dyr" data-trait="dyrevennlig" />
+                  <label for="barnevennlig">barnevennlig</label>
                   <input
                     type="checkbox"
-                    id="smok-tolerance"
-                    data-trait="røyktoleranse"
-                  />
-                  <label for="alcohol">Drikker alkohol</label>
-                  <input type="checkbox" id="alcohol" data-trait="drikker alkohol" />
-                  <label for="alcohol">Alkoholtoleranse</label>
-                  <input type="checkbox" id="alcohol" data-trait="alkoholtoleranse" />
+                    id="barnevennlig"
+                    data-trait="barnevennlig" />
+                  <label for="matlagging">kan hjelpe med matlagging</label>
+                  <input type="checkbox" id="matlagging" data-trait="matlagging" />
                 </div>
-                <div>
-                  <p>Gjester som IKKE har allergi mot:</p>
-                  <label for="eggs">Egg</label>
-                  <input type="checkbox" id="eggs" data-allergies="eggs" />
-                  <label for="shellfish">Skalldyr</label>
-                  <input type="checkbox" id="shellfish" data-allergies="skalldyr" />
-                  <label for="nuts">Nøtter</label>
-                  <input type="checkbox" id="nuts" data-allergies="nøtter" />
-                  <label for="gluten">Gluten</label>
-                  <input type="checkbox" id="gluten" data-allergies="gluten" />
-                  <label for="honey">Honning</label>
-                  <input type="checkbox" id="honey" data-allergies="honning" />
-                  <label for="animal">Dyr</label>
-                  <input type="checkbox" id="animal" data-allergies="dyr" />
-                </div>
+                    </div>
+                    <div>
+                      <p>Gjester som IKKE har allergi mot:</p>
+                      <label for="egg">egg</label>
+                      <input type="checkbox" id="egg" data-allergies="egg" />
+                      <label for="shellfish">skalldyr</label>
+                      <input type="checkbox" id="shellfish" data-allergies="skalldyr" />
+                      <label for="nuts">nøtter</label>
+                      <input type="checkbox" id="nuts" data-allergies="nøtter" />
+                      <label for="gluten">gluten</label>
+                      <input type="checkbox" id="gluten" data-allergies="gluten" />
+                      <label for="honey">honning</label>
+                      <input type="checkbox" id="honey" data-allergies="honning" />
+                      <label for="animal">dyr</label>
+                      <input type="checkbox" id="animal" data-allergies="dyr" />
+                    </div>
+                  </div>
+                  <button id="resetButton">Tilbakestille</button>
+                </search>
               </div>
-              <button id="resetButton">Tilbakestille</button>
-            </search>
-          </div>
-          <section id="family-section" class="family-section">
-              <h2>family list</h2>
-              <div class="family-list"></div>
-          </section>
+              <section id="family-section" class="family-section">
+                  <h2>family list</h2>
+                  <div class="family-list">
+                    <div id="output"></div>
+                  </div>
+              </section>
+              </section>
+      
+      
+      
+           </section>
+      
+          <!-- ----------------------------- End Filters ----------------------------- -->
+          <section>
+            <div id="overlay"></div>
+            <div id="modal">
+              <div id="modal-output"></div>
+              <form>
+                <textarea name="booking" id="booking" rows="4" cols="50"></textarea>
+                <button id="send-button">Send</button>
+              </form>
+            </div>
           </section>
-            
-          
-        
-       </section>
-     
-	  
-      <!-- ----------------------------- End Filters ----------------------------- -->
-      <section>
-        <div id="overlay"></div>
-        <div id="modal">
-          <div id="modal-output"></div>
-          <form>
-            <textarea name="booking" id="booking" rows="4" cols="50"></textarea>
-            <button id="send-button">Send</button>
+         <!-- ------------------Aile Ekleme ve Düzenleme Modalı --------------------->
+         <section id="family-form-modal" class="hidden">
+          <form id="family-form">
+        <h2>Legg til eller Rediger Familie</h2>
+        <label for="family-name">Familie Navn:</label>
+        <input type="text" id="family-name" required />
+        <label for="family-title">Tittel:</label>
+        <input type="text" id="family-title" required />
+        <label for="family-description">Beskrivelse:</label>
+        <textarea id="family-description" required></textarea>
+        <label for="family-image">Bilde-URL:</label>
+        <input type="url" id="family-image" required />
+        <label for="family-preferences">Preferanser:</label>
+        <input type="text" id="family-preferences" placeholder="Matpreferanser, Allergier, vs." />
+        <button type="submit">Lagre Familie</button>
+        <button type="button" id="close-modal">Lukk</button>
           </form>
-        </div>
-      </section>
-      <section>
-        <div id="output"></div>
-      </section>
-      <!-- <section>
-				<h2>Legg til/rediger familier</h2>
-				<form id="family-form">
-					<input
-						type="text"
-						id="family-name"
-						placeholder="Familienavn"
-						required />
-					<textarea
-						id="family-description"
-						placeholder="Beskrivelse"></textarea>
-					<input
-						type="number"
-						id="family-people"
-						placeholder="Antall mennesker"
-						required />
-					<input
-						type="text"
-						id="family-allergies"
-						placeholder="Allergier (kommaseparert)" />
-					<input type="checkbox" id="family-smoker" /> Røyker
-					<button type="submit">Lagre</button>
-				</form>
-				<ul id="family-management"></ul>
-			</section> -->
- <!-- ------------------Aile Ekleme ve Düzenleme Modalı --------------------->
- <section id="family-form-modal" class="hidden">
-  <form id="family-form">
-    <h2>Legg til eller Rediger Familie</h2>
-    <label for="family-name">Familie Navn:</label>
-    <input type="text" id="family-name" required />
-
-    <label for="family-title">Tittel:</label>
-    <input type="text" id="family-title" required />
-
-    <label for="family-description">Beskrivelse:</label>
-    <textarea id="family-description" required></textarea>
-
-    <label for="family-image">Bilde-URL:</label>
-    <input type="url" id="family-image" required />
-
-    <label for="family-preferences">Preferanser:</label>
-    <input type="text" id="family-preferences" placeholder="Matpreferanser, Allergier, vs." />
-
-    <button type="submit">Lagre Familie</button>
-    <button type="button" id="close-modal">Lukk</button>
-  </form>
-</section>
-
-
-      <!--------------------------kontakt oss---------------------------->
-
-			<section id="form-section" class="contact-section">
-				<h2>Ta kontakt med oss</h2>
-				<p>Har du spørsmål eller ønsker du å samarbeide med oss? Fyll ut skjemaet nedenfor, så tar vi kontakt med deg så snart som mulig!</p>
-			
-				<form id="contact-form">
-				  <label for="name">Navn</label>
-				  <input type="text" id="name" name="name" placeholder="Ditt navn..." required>
-			
-				  <label for="email">E-post</label>
-				  <input type="email" id="email" name="email" placeholder="Din e-postadresse..." required>
-			
-				  <label for="message">Melding</label>
-				  <textarea id="message" name="message" placeholder="Skriv meldingen din her..." rows="5" required></textarea>
-			
-				  <button type="submit">Send</button>
-				</form>
-			
-				<div id="success-message" class="hidden">
-				  <p>Takk for meldingen din! Vi tar kontakt med deg snart.</p>
-				</div>
-			  </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 Julefeiring Matcher</p>
-    </footer>
+        </section>
+          <!--------------------------kontakt oss---------------------------->
+      
+              <section id="form-section" class="contact-section">
+                <h2>Ta kontakt med oss</h2>
+                <p>Har du spørsmål eller ønsker du å samarbeide med oss? Fyll ut skjemaet nedenfor, så tar vi kontakt med deg så snart som mulig!</p>
+      
+                <form id="contact-form">
+                  <label for="name">Navn</label>
+                  <input type="text" id="name" name="name" placeholder="Ditt navn..." required>
+      
+                  <label for="email">E-post</label>
+                  <input type="email" id="email" name="email" placeholder="Din e-postadresse..." required>
+      
+                  <label for="message">Melding</label>
+                  <textarea id="message" name="message" placeholder="Skriv meldingen din her..." rows="5" required></textarea>
+      
+                  <button type="submit">Send</button>
+                </form>
+      
+                <div id="success-message" class="hidden">
+                  <p>Takk for meldingen din! Vi tar kontakt med deg snart.</p>
+                </div>
+                </section>
+        </main>
+        <footer>
+          <p>&copy; 2024 Julefeiring Matcher</p>
+        </footer>
+      </div>
+    </div>
 
     <script type="module" src="./js/main.js"></script>
   </body>

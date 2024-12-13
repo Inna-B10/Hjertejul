@@ -10,16 +10,19 @@ export async function fetchFamilies(id = null) {
 		const response = await fetch(url)
 
 		if (!response.ok) {
-			if (output) output.innerText = 'Error loading data!'
-			if (outputForm) outputForm.innerText = 'Error loading data!'
-			throw new Error('Error loading data!')
+			if (output)
+				output.innerText = `${response.status}: ${response.StatusText}`
+			if (outputForm)
+				outputForm.innerText = `${response.status}: ${response.StatusText}`
+			throw new Error(`${response.status}: Error loading data!`)
 		}
-		const families = await response.json()
+		const data = await response.json()
+		const families = data.data
 
 		return families
 	} catch (error) {
-		console.error('Error loading data:', error)
-		throw new Error('Error loading data:', error)
+		console.error('Error loading data:', error.message)
+		throw new Error('Error loading data:', error.message)
 	}
 }
 

@@ -1,4 +1,9 @@
-import { createDesc, createNode, createTitle } from './createElements.js'
+import {
+	createDesc,
+	createImage,
+	createNode,
+	createTitle,
+} from './createElements.js'
 
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
@@ -12,13 +17,15 @@ export function showModalCard(family) {
 	const modalOutput = document.getElementById('modal-output')
 	modalOutput.innerHTML = ''
 
-	// const img = createImage(
-	// 	`../data/${family.image}`,
-	// 	`Bilde av familien ${family.surname}`,
-	// 	`Bilde av familien ${family.surname}`,
-	// 	'100%',
-	// 	'auto'
-	// )
+	document.body.style.overflow = 'hidden'
+
+	const img = createImage(
+		`./images_family/${family.image}`,
+		`Bilde av familien ${family.surname}`,
+		`Bilde av familien ${family.surname}`,
+		'600px',
+		'auto'
+	)
 	const familyTitle = createTitle('h3', family.title)
 
 	const desc = createDesc(family.description)
@@ -67,8 +74,8 @@ export function showModalCard(family) {
 	editButton.onclick = () => {
 		window.location.href = `./manageFamily.html?id=${family.id}`
 	}
-	// modalOutput.append(img, familyTitle, desc, list, closeButton, editButton)
-	modalOutput.append(familyTitle, desc, list, closeButton, editButton)
+
+	modalOutput.append(img, familyTitle, desc, list, closeButton, editButton)
 
 	modal.style.display = 'block'
 	overlay.style.display = 'block'
@@ -78,6 +85,7 @@ function closeModalCard() {
 	if (textArea.value.trim() !== '') {
 		alert('Din melding er ikke sent ennå!')
 	} else {
+		document.body.style.overflow = ''
 		modal.style.display = 'none'
 		overlay.style.display = 'none'
 	}
