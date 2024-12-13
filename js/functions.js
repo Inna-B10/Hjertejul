@@ -1,23 +1,25 @@
 import cardFamily from './cardFamily.js'
 import { API_URL } from './constants.js'
 import { filters, output, searchInput, selectFilter } from './main.js'
+import { outputForm } from './manageFamily.js'
 
 export async function fetchFamilies(id = null) {
-	// console.log('Функция fetchFamilies вызвана с ID:', id)
-
 	const url = id === null ? `${API_URL}/Families` : `${API_URL}/Families/${id}`
-	// console.log('URL:', url)
 
 	try {
 		const response = await fetch(url)
-		// console.log('Ответ получен:', response)
 
-		if (!response.ok) throw new Error('Error loading data!')
+		if (!response.ok) {
+			if (output) output.innerText = 'Error loading data!'
+			if (outputForm) outputForm.innerText = 'Error loading data!'
+			throw new Error('Error loading data!')
+		}
 		const families = await response.json()
-		// console.log('Данные:', families)
+
 		return families
 	} catch (error) {
 		console.error('Error loading data:', error)
+		throw new Error('Error loading data:', error)
 	}
 }
 

@@ -8,18 +8,14 @@ import {
 import { createNode } from './createElements.js'
 import { fetchFamilies } from './functions.js'
 
-const outputForm = document.getElementById('output-form')
+export const outputForm = document.getElementById('output-form')
 if (outputForm) {
 	const params = new URLSearchParams(window.location.search)
 	const familyId = params.get('id')
 
-	const messageContainer = document.getElementById('message-container')
-	console.log(messageContainer)
-
 	let family
 	if (familyId > 0) {
 		async function initPage(id = familyId) {
-			console.log('Функция fetchFamilies вызвана с ID:', id)
 			family = await fetchFamilies(id)
 			if (family) {
 				renderForm(family)
@@ -27,10 +23,6 @@ if (outputForm) {
 		}
 		initPage()
 	} else {
-		renderForm()
-	}
-
-	function addNewFamily() {
 		renderForm()
 	}
 
@@ -49,6 +41,7 @@ if (outputForm) {
 			type: 'text',
 			name: 'surname',
 			value: data?.surname ? data.surname : '',
+			required: true,
 		})
 		surnameLabel.appendChild(surnameInput)
 		form.appendChild(surnameLabel)
@@ -78,6 +71,7 @@ if (outputForm) {
 			type: 'text',
 			name: 'title',
 			value: data?.title ? data.title : '',
+			required: true,
 		})
 		titleLabel.appendChild(title)
 		form.appendChild(titleLabel)
@@ -89,6 +83,7 @@ if (outputForm) {
 			type: 'text',
 			name: 'description',
 			value: data?.description ? data.description : '',
+			required: true,
 		})
 		descLabel.appendChild(desc)
 		form.appendChild(descLabel)
@@ -196,6 +191,7 @@ if (outputForm) {
 			type: 'text',
 			name: 'image',
 			value: data?.image ? data.image : '',
+			required: true,
 		})
 		imageLabel.appendChild(image)
 		form.appendChild(imageLabel)
@@ -204,16 +200,32 @@ if (outputForm) {
 		const saveButton = createNode('button', {
 			id: 'save-button',
 			type: 'submit',
+			'data-action': 'save',
 		})
 		saveButton.innerText = 'Lagre'
 		form.appendChild(saveButton)
+
+		//# ------------------------ deleteButton
+		const deleteButton = createNode('button', {
+			id: 'delete-button',
+			type: 'submit',
+			'data-action': 'delete',
+		})
+		deleteButton.innerText = 'Slette'
+		form.appendChild(deleteButton)
 
 		//# ------------------------ add form to the container
 		outputForm.appendChild(form)
 
 		form.addEventListener('submit', function (event) {
 			event.preventDefault()
-			saveData(data?.id)
+			const action = event.submitter?.dataset?.action
+
+			if (action === 'save') {
+				saveData(data?.id)
+			} else if (action === 'delete') {
+				deleteData(data?.id)
+			}
 		})
 	}
 
@@ -264,22 +276,49 @@ if (outputForm) {
 				return response.json()
 			})
 			.then(() => {
-				// displayMessage('Data lagret vellykket!', 'success')
-				alert('Data lagret vellykket!')
+				displayMessage('Data lagret vellykket!', 'success')
+				// alert('Data lagret vellykket!')
 			})
 			.catch(error => {
-				// displayMessage(`Error: ${error.message}`, 'error')
-				alert(`Error: ${error.message}`, 'error')
+				displayMessage(`Error: ${error.message}`, 'error')
+				// alert(`Error: ${error.message}`, 'error')
 			})
 	}
 
+	function deleteData(id) {
+		if (confirm('Er du sikker på at du vil slette data?')) {
+			const url = `${API_URL}/Families/${id}`
+
+			fetch(url, {
+				method: 'DELETE',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+				// .then(response => {
+				// 	if (!response.ok) {
+				// 		throw new Error(`Error ${response.status}: ${response.statusText}`)
+				// 	}
+				// 	return response.json()
+				// })
+				.then(() => {
+					alert('Data slettet vellykket!')
+					// setTimeout(() => {
+					window.location.href =
+						`${API_URL}/index.html?timestamp=` + new Date().getTime()
+					// }, 100) // задержка в миллисекундах
+				})
+		}
+	}
+
 	function displayMessage(message, type) {
+		const messageContainer = document.getElementById('message-container')
 		console.log(messageContainer)
-		messageContainer.textContent = message
+		messageContainer.innerText = message
 		messageContainer.className = type // 'success' or 'error'
 		setTimeout(() => {
 			messageContainer.innerText = ''
 			messageContainer.className = ''
-		}, 5000) // disappear after 5 sec
+		}, 15000) // disappear after 5 sec
 	}
 }
