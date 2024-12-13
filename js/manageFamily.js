@@ -9,25 +9,25 @@ import { fetchFamilies } from './functions.js'
 
 const outputForm = document.getElementById('output-form')
 const params = new URLSearchParams(window.location.search)
-const id = params.get('id')
+const familyId = params.get('id')
 
 let family
-if (id > 0) {
-	async function initPage() {
-		console.log('Функция fetchFamilies вызвана с ID:', id)
-		family = await fetchFamilies(id)
-		if (family) {
-			renderForm(family)
-		}
+
+async function initPage(id = familyId) {
+	console.log('Функция fetchFamilies вызвана с ID:', id)
+	family = await fetchFamilies(id)
+	if (family) {
+		renderForm(family)
 	}
-	initPage()
 }
+initPage()
 
 export function addNewFamily() {
 	renderForm()
 }
 
 export function renderForm(data) {
+	console.log(data)
 	outputForm.innerText = ''
 
 	const form = createNode('form', {
@@ -56,7 +56,7 @@ export function renderForm(data) {
 	for (let i = 1; i <= 6; i++) {
 		const option = createNode('option', {
 			value: i,
-			// selected: i == data.totalPeople,
+			selected: i === Number(data.totalPeople),
 		})
 		option.innerText = i
 		select.appendChild(option)
@@ -80,7 +80,7 @@ export function renderForm(data) {
 	descLabel.innerText = 'Om familien: '
 	const desc = createNode('input', {
 		type: 'text',
-		name: 'desc',
+		name: 'description',
 		value: data.description,
 	})
 	descLabel.appendChild(desc)
@@ -98,11 +98,11 @@ export function renderForm(data) {
 		const checkbox = createNode('input', {
 			type: 'checkbox',
 			name: 'childGroup',
-			value: option.toLowerCase(),
+			value: option,
 		})
 
 		// Проверяем, есть ли значение в data.childGroup
-		if (data.childGroup.includes(option.toLowerCase())) {
+		if (data.childGroup.includes(option)) {
 			checkbox.checked = true
 		}
 
@@ -129,8 +129,7 @@ export function renderForm(data) {
 			value: option,
 		})
 
-		// Проверяем, есть ли значение в data.childGroup
-		if (data.allergies.includes(option)) {
+		if (data.allergies.includes(option.toLowerCase())) {
 			checkbox.checked = true
 		}
 
@@ -157,8 +156,7 @@ export function renderForm(data) {
 			value: option,
 		})
 
-		// Проверяем, есть ли значение в data.childGroup
-		if (data.foodPref.includes(option)) {
+		if (data.foodPref.includes(option.toLowerCase())) {
 			checkbox.checked = true
 		}
 
@@ -172,7 +170,7 @@ export function renderForm(data) {
 	form.appendChild(foodPrefLabel)
 	//# ------------------------ otherTraits
 	const otherTraitsLabel = createNode('div', {})
-	otherTraitsLabel.innerText = 'Matpreferanser: '
+	otherTraitsLabel.innerText = 'Vaner: '
 
 	otherTraitsOptions.forEach(option => {
 		// Создаем контейнер для чекбокса
@@ -185,8 +183,7 @@ export function renderForm(data) {
 			value: option,
 		})
 
-		// Проверяем, есть ли значение в data.childGroup
-		if (data.otherTraits.includes(option)) {
+		if (data.otherTraits.includes(option.toLowerCase())) {
 			checkbox.checked = true
 		}
 
@@ -210,6 +207,56 @@ export function renderForm(data) {
 	imageLabel.appendChild(image)
 	form.appendChild(imageLabel)
 
+	//# ------------------------ saveButton
+	const saveButton = createNode('button', {
+		id: 'save-button',
+	})
+	saveButton.innerText = 'Lagre'
+	saveButton.addEventListener('click', () => {
+		saveData(data.id)
+	})
+
+	form.appendChild(saveButton)
+
 	// Добавляем форму в контейнер
 	outputForm.appendChild(form)
+}
+
+function saveData(id = null) {
+	const form = document.getElementById('add-edit-form')
+
+	const formData = new FormData(form)
+	const updatedData = {
+		surname: formData.get('surname'),
+		title: formData.get('title'),
+		description: formData.get('description'),
+		totalPeople: Number(formData.get('totalPeople')),
+		childGroup: Array.from(formData.getAll('childGroup')),
+		allergies: formData.get('allergies')
+			? formData
+					.get('allergies')
+					.split(',')
+					.map(item => item.trim())
+			: [],
+		foodPref: formData.get('foodPref')
+			? formData
+					.get('foodPref')
+					.split(',')
+					.map(item => item.trim())
+			: [],
+		otherTraits: formData.get('otherTraits')
+			? formData
+					.get('otherTraits')
+					.split(',')
+					.map(item => item.trim())
+			: [],
+		image: formData.get('image'),
+	}
+
+	console.log('Updated Data:', updatedData)
+	//
+	// 	const url = `${API_URL}/Families/${id || ''}`
+	// 	const newUrl = `http://127.0.0.1:5500/manageFamily.html?id=${id}`
+	// 	window.history.pushState({ id }, '', newUrl)
+	// 	initPage(id)
 }
