@@ -1,477 +1,692 @@
 [
-	{
-		"Id": 1,
-		"Surname": "Lunde",
-		"Title": "En eventyrlysten familie som liker \u00E5 m\u00F8te nye mennesker",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
-		"TotalPeople": 2,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": ["skalldyr", "n\u00F8tter"],
-		"FoodPref": ["vegetarisk"],
-		"OtherTraits": ["dyrevennlig", "alkoholtoleranse", "r\u00F8yktoleranse"],
-		"Image": "1_foto.jpg"
-	},
-	{
-		"Id": 2,
-		"Surname": "Nilsen",
-		"Title": "En familie som alltid er klar for \u00E5 l\u00E6re om nye kulturer.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
-		"TotalPeople": 6,
-		"Children": false,
-		"ChildGroup": ["0-3"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [],
-		"Image": "2_foto.jpg"
-	},
-	{
-		"Id": 3,
-		"Surname": "Johansen",
-		"Title": "En familie p\u00E5 fire som \u00F8nsker \u00E5 feire jul sammen med andre.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos laborum praesentium ad? Officia quod laborum assumenda quos suscipit nostrum ipsa quia ipsam placeat? Voluptate neque quam beatae dolorum corporis veritatis explicabo accusamus illum? Necessitatibus ipsam, veritatis dicta iusto vel quis quasi consequatur repellat, veniam facilis quod debitis optio.",
-		"TotalPeople": 3,
-		"Children": true,
-		"ChildGroup": ["4-10"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [
-			"barnevennlig",
-			"r\u00F8yktoleranse",
-			"r\u00F8yker",
-			"alkoholtoleranse"
-		],
-		"Image": "3_foto.jpg"
-	},
-	{
-		"Id": 4,
-		"Surname": "Eriksen",
-		"Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
-		"Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti veritatis natus commodi nisi voluptas minima dignissimos? Illum iste possimus error cumque sed odio nobis autem necessitatibus, expedita nostrum atque enim sit perferendis esse soluta unde magni officia omnis. Quidem ullam dolorum sed.",
-		"TotalPeople": 3,
-		"Children": true,
-		"ChildGroup": ["4-10"],
-		"Allergies": ["skalldyr"],
-		"FoodPref": [],
-		"OtherTraits": ["r\u00F8yktoleranse", "alkoholtoleranse", "barnevennlig"],
-		"Image": "4_foto.jpg"
-	},
-	{
-		"Id": 5,
-		"Surname": "Solberg",
-		"Title": "En kreativ familie som liker \u00E5 lage sine egne julegaver.",
-		"Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, tempore obcaecati dolores sit nesciunt, possimus dolor facilis, quis culpa quo pariatur excepturi placeat! Facere mollitia aut quibusdam nostrum, sapiente ad doloremque. Voluptatibus cupiditate quas dicta",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["11-17", "11-17"],
-		"Allergies": ["egg"],
-		"FoodPref": ["halal"],
-		"OtherTraits": ["barnevennlig", "r\u00F8yktoleranse", "r\u00F8yker"],
-		"Image": "5_foto.jpg"
-	},
-	{
-		"Id": 6,
-		"Surname": "Karlsen",
-		"Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
-		"Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita praesentium rerum tempore reprehenderit iste sequi consectetur fuga, incidunt magnam delectus error, ipsam quas ipsa nihil voluptates earum.",
-		"TotalPeople": 2,
-		"Children": true,
-		"ChildGroup": ["0-3"],
-		"Allergies": ["n\u00F8tter"],
-		"FoodPref": ["halal"],
-		"OtherTraits": ["barnevennlig"],
-		"Image": "6_foto.jpg"
-	},
-	{
-		"Id": 7,
-		"Surname": "Hansen",
-		"Title": "En kreativ familie som liker \u00E5 lage sine egne julegaver.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nulla aliquam, eveniet accusantium obcaecati possimus, dolore quam beatae suscipit iste, saepe placeat? Aliquam temporibus dicta enim, neque sed expedita voluptatibus amet cum.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "4-10"],
-		"Allergies": ["egg"],
-		"FoodPref": ["halal"],
-		"OtherTraits": ["barnevennlig", "r\u00F8yker", "r\u00F8yktoleranse"],
-		"Image": "7_foto.jpg"
-	},
-	{
-		"Id": 8,
-		"Surname": "Kristiansen",
-		"Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quos sapiente natus facilis maxime excepturi totam labore.",
-		"TotalPeople": 1,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": ["gluten"],
-		"FoodPref": ["vegetarisk", "laktosefri"],
-		"OtherTraits": ["r\u00F8yktoleranse", "alkoholtoleranse"],
-		"Image": "8_foto.jpg"
-	},
-	{
-		"Id": 9,
-		"Surname": "Kristiansen",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil itaque veniam autem deleniti consectetur. Voluptas inventore minus perspiciatis expedita numquam. Sequi dicta magni fugiat asperiores veniam officia aspernatur officiis quis fugit, fuga mollitia excepturi ad harum! Laboriosam expedita velit perferendis debitis, culpa iste in! Eum.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10"],
-		"Allergies": ["skalldyr", "gluten"],
-		"FoodPref": ["halal"],
-		"OtherTraits": ["barnevennlig"],
-		"Image": "9_foto.jpg"
-	},
-	{
-		"Id": 10,
-		"Surname": "Pedersen",
-		"Title": "En rolig familie som setter pris p\u00E5 en avslappet atmosf\u00E6re.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem accusamus, nulla error distinctio placeat eum quia magnam ab, est asperiores maxime vel sapiente sit.",
-		"TotalPeople": 5,
-		"Children": true,
-		"ChildGroup": ["4-10", "4-10", "0-3"],
-		"Allergies": ["gluten"],
-		"FoodPref": ["laktosefri"],
-		"OtherTraits": [],
-		"Image": "10_foto.jpg"
-	},
-	{
-		"Id": 11,
-		"Surname": "Pedersen",
-		"Title": "En kreativ familie som liker \u00E5 lage sine egne julegaver.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus enim consequatur, totam temporibus nisi aut fugiat hic doloremque. In delectus cumque tempore dolor molestiae itaque! Vero quas quaerat veniam nemo ad accusantium aliquam harum corrupti maiores eaque rem delectus beatae consequatur repellat autem animi sapiente, eligendi laboriosam commodi.",
-		"TotalPeople": 3,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": ["gluten"],
-		"FoodPref": [],
-		"OtherTraits": [
-			"kan hjelpe med matlagging",
-			"r\u00F8yker",
-			"r\u00F8yktoleranse",
-			"alkoholtoleranse"
-		],
-		"Image": "11_foto.jpg"
-	},
-	{
-		"Id": 12,
-		"Surname": "Holm",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum deserunt officia commodi nemo, sit numquam sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		"TotalPeople": 3,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": ["egg"],
-		"FoodPref": [],
-		"OtherTraits": ["r\u00F8yktoleranse", "alkoholtoleranse"],
-		"Image": "12_foto.jpg"
-	},
-	{
-		"Id": 13,
-		"Surname": "Lunde",
-		"Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus consequatur vero quaerat incidunt quidem quae eum ut, totam mollitia, veritatis itaque eligendi dolorem, dolore id ipsum praesentium. Voluptas harum quae vel.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "11-17", "11-17"],
-		"Allergies": ["gluten"],
-		"FoodPref": ["vegetarisk"],
-		"OtherTraits": ["r\u00F8yker", "r\u00F8yktoleranse"],
-		"Image": "13_foto.jpg"
-	},
-	{
-		"Id": 14,
-		"Surname": "Nilsen",
-		"Title": "En rolig familie som setter pris p\u00E5 en avslappet atmosf\u00E6re.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id totam optio inventore ea vitae facere, molestias corrupti aut expedita quidem est explicabo, quaerat sequi quam beatae.",
-		"TotalPeople": 2,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": ["r\u00F8yktoleranse", "r\u00F8yker", "alkoholtoleranse"],
-		"Image": "14_foto.jpg"
-	},
-	{
-		"Id": 15,
-		"Surname": "Halvorsen",
-		"Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
-		"Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi laborum beatae fugiat natus repellat id suscipit? Corporis laboriosam repudiandae ex officia aliquam, aliquid blanditiis veniam et placeat cum vero sed libero fugit sunt quia reiciendis error enim.",
-		"TotalPeople": 5,
-		"Children": true,
-		"ChildGroup": ["4-10", "4-10", "0-3", "11-17"],
-		"Allergies": [],
-		"FoodPref": ["halal"],
-		"OtherTraits": [],
-		"Image": "15_foto.jpg"
-	},
-	{
-		"Id": 16,
-		"Surname": "Berg",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse odio, atque expedita iste repudiandae perspiciatis pariatur non quam nam est inventore delectus ratione aspernatur aliquam ex a vel recusandae!",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "0-3"],
-		"Allergies": ["honning"],
-		"FoodPref": [],
-		"OtherTraits": ["alkoholtoleranse"],
-		"Image": "16_foto.jpg"
-	},
-	{
-		"Id": 17,
-		"Surname": "Myhre",
-		"Title": "En familie som \u00F8nsker \u00E5 dele sin kj\u00E6rlighet for matlaging.",
-		"Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident minus beatae suscipit eligendi enim doloremque rerum placeat, impedit reprehenderit nobis voluptates.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["11-17", "4-10"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": ["alkoholtoleranse"],
-		"Image": "17_foto.jpg"
-	},
-	{
-		"Id": 18,
-		"Surname": "Andersen",
-		"Title": "En rolig familie som setter pris p\u00E5 en avslappet atmosf\u00E6re.",
-		"Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, dolor aliquam molestiae perspiciatis quis asperiores amet debitis sit odio laudantium impedit itaque autem libero quaerat. Iste, necessitatibus nulla autem nesciunt deserunt officia tempora ab cumque ut animi veritatis, fuga dignissimos eligendi!",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "11-17"],
-		"Allergies": [],
-		"FoodPref": ["vegetarisk"],
-		"OtherTraits": ["alkoholtoleranse"],
-		"Image": "18_foto.jpg"
-	},
-	{
-		"Id": 19,
-		"Surname": "Kristiansen",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ex voluptate officia debitis doloribus consectetur illum, necessitatibus, nam asperiores, quasi veniam possimus dolore",
-		"TotalPeople": 3,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [
-			"r\u00F8yktoleranse",
-			"drikker alkohol",
-			"alkoholtoleranse"
-		],
-		"Image": "19_foto.jpg"
-	},
-	{
-		"Id": 20,
-		"Surname": "Larsen",
-		"Title": "En familie som elsker dyr og tar med seg mye glede.",
-		"Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa consequuntur molestiae unde quasi praesentium assumenda molestias at, repellendus, animi inventore fuga porro doloribus quisquam labore ab facere repellat illum? Ab nihil iusto rem corrupti molestias modi dignissimos.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "4-10"],
-		"Allergies": ["gluten"],
-		"FoodPref": ["laktosefri"],
-		"OtherTraits": [],
-		"Image": "20_foto.jpg"
-	},
-	{
-		"Id": 21,
-		"Surname": "Hansen",
-		"Title": "En eventyrlysten familie som liker \u00E5 m\u00F8te nye mennesker.",
-		"Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dolorem vitae earum consequuntur maxime libero nesciunt nisi officiis provident, voluptas ducimus",
-		"TotalPeople": 2,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [
-			"r\u00F8yktoleranse",
-			"drikker alkohol",
-			"alkoholtoleranse"
-		],
-		"Image": "21_foto.jpg"
-	},
-	{
-		"Id": 22,
-		"Surname": "Kristiansen",
-		"Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
-		"Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nesciunt quam labore ex sit, vero expedita ea ducimus, ipsum odit itaque accusantium voluptatem corrupti magnam debitis quo sequi amet porro odio eum possimus harum officiis",
-		"TotalPeople": 3,
-		"Children": true,
-		"ChildGroup": ["4-10"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [],
-		"Image": "22_foto.jpg"
-	},
-	{
-		"Id": 23,
-		"Surname": "Moe",
-		"Title": "En familie som elsker dyr og tar med seg mye glede.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eaque ad laborum laboriosam necessitatibus ipsam consectetur corporis voluptate dolores tempora sint quibusdam vero explicabo consequuntur, fugit placeat ipsum. Quasi natus quae tempora magni illum repudiandae debitis veritatis itaque.",
-		"TotalPeople": 2,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": ["gluten", "n\u00F8tter"],
-		"FoodPref": ["vegetarisk"],
-		"OtherTraits": [
-			"r\u00F8yker",
-			"r\u00F8yktoleranse",
-			"drikker alkohol",
-			"alkoholtoleranse"
-		],
-		"Image": "23_foto.jpg"
-	},
-	{
-		"Id": 24,
-		"Surname": "Karlsen",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat omnis qui, ipsa incidunt hic quidem ab dolores eligendi delectus esse unde, porro quia cupiditate, sunt quasi dolore nostrum!",
-		"TotalPeople": 2,
-		"Children": true,
-		"ChildGroup": ["4-10"],
-		"Allergies": ["gluten"],
-		"FoodPref": ["laktosefri"],
-		"OtherTraits": ["r\u00F8yktoleranse"],
-		"Image": "24_foto.jpg"
-	},
-	{
-		"Id": 25,
-		"Surname": "Olsen",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum ipsa nihil incidunt iusto assumenda minima similique nesciunt totam.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "11-17"],
-		"Allergies": ["skalldyr"],
-		"FoodPref": ["halal", "laktosefri"],
-		"OtherTraits": [],
-		"Image": "25_foto.jpg"
-	},
-	{
-		"Id": 26,
-		"Surname": "Larsen",
-		"Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis enim amet! Officia neque possimus quos facilis, distinctio esse vero suscipit, quo nam deserunt omnis blanditiis odio iure aut? Provident, accusantium reprehenderit!",
-		"TotalPeople": 6,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": ["egg"],
-		"FoodPref": ["tradisjonell"],
-		"OtherTraits": ["r\u00F8yker"],
-		"Image": "26_foto.jpg"
-	},
-	{
-		"Id": 27,
-		"Surname": "Olsen",
-		"Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
-		"Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, aut quo velit repellat voluptates, modi in sapiente eum, est ea unde ab enim suscipit temporibus fugiat eius. Sequi reiciendis quo incidunt est dolor, a ab! Odio fugit, recusandae dolores debitis a pariatur reprehenderit, harum accusamus, officia placeat possimus.",
-		"TotalPeople": 2,
-		"Children": true,
-		"ChildGroup": ["11-17"],
-		"Allergies": ["sitrus"],
-		"FoodPref": [],
-		"OtherTraits": [
-			"r\u00F8yktoleranse",
-			"drikker alkohol",
-			"alkoholtoleranse"
-		],
-		"Image": "27_foto.jpg"
-	},
-	{
-		"Id": 28,
-		"Surname": "Berg",
-		"Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
-		"Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem cumque laudantium dignissimos tempore repellat cum quis quas? Cum consequuntur aliquid harum!",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "11-17", "11-17"],
-		"Allergies": ["n\u00F8tter"],
-		"FoodPref": [],
-		"OtherTraits": ["r\u00F8yktoleranse"],
-		"Image": "28_foto.jpg"
-	},
-	{
-		"Id": 29,
-		"Surname": "Karlsen",
-		"Title": "En familie som elsker dyr og tar med seg mye glede.",
-		"Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius officia libero eveniet, ab eligendi omnis similique error inventore voluptatibus? Facere nemo assumenda quia, sint asperiores maxime architecto natus numquam tenetur, corrupti sunt quaerat vero obcaecati! Reprehenderit voluptates mollitia illo dignissimos. Minus, aliquam.",
-		"TotalPeople": 5,
-		"Children": true,
-		"ChildGroup": ["4-10", "11-17", "4-10"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [],
-		"Image": "29_foto.jpg"
-	},
-	{
-		"Id": 30,
-		"Surname": "Pedersen",
-		"Title": "En familie som elsker dyr og tar med seg mye glede.",
-		"Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vero aperiam quisquam iure dolorem alias porro reiciendis delectus corporis non minus id reprehenderit quos, error rerum pariatur ullam excepturi!",
-		"TotalPeople": 2,
-		"Children": true,
-		"ChildGroup": ["4-10"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": [
-			"kan hjelpe med matlagging",
-			"r\u00F8yker",
-			"r\u00F8yktoleranse",
-			"drikker alkohol",
-			"alkoholtoleranse"
-		],
-		"Image": "30_foto.jpg"
-	},
-	{
-		"Id": 31,
-		"Surname": "Berg",
-		"Title": "En familie som elsker \u00E5 lage mat sammen",
-		"Description": "Vi er en familie p\u00E5 5 som elsker \u00E5 eksperimentere p\u00E5 kj\u00F8kkenet. Vi er \u00E5pne for nye smaker og tradisjoner.",
-		"TotalPeople": 5,
-		"Children": true,
-		"ChildGroup": ["0-3", "4-10"],
-		"Allergies": ["n\u00F8tter"],
-		"FoodPref": ["vegetarisk"],
-		"OtherTraits": ["kan hjelpe med matlagging"],
-		"Image": "31_foto.jpg"
-	},
-	{
-		"Id": 32,
-		"Surname": "Halvorsen",
-		"Title": "En eventyrlysten familie med stor kj\u00E6rlighet for naturen",
-		"Description": "Vi er en familie p\u00E5 4 som elsker friluftsliv og utend\u00F8rsaktiviteter. Skogsturer og sn\u00F8leker er en stor del av v\u00E5r hverdag, spesielt i ferietider.",
-		"TotalPeople": 4,
-		"Children": true,
-		"ChildGroup": ["4-10", "11-17"],
-		"Allergies": ["gluten"],
-		"FoodPref": ["halal", "vegetarisk"],
-		"OtherTraits": ["barnevennlig", "dyrevennlig"],
-		"Image": "32_foto.jpg"
-	},
-	{
-		"Id": 33,
-		"Surname": "Anderssen",
-		"Title": "En aktiv familie som liker tradisjoner",
-		"Description": " Officia neque possimus quos facilis, distinctio esse vero suscipit, quo nam deserunt omnis blanditiis odio iure aut? Provident, accusantium reprehenderit!",
-		"TotalPeople": 3,
-		"Children": false,
-		"ChildGroup": ["4-10"],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": ["r\u00F8yktoleranse"],
-		"Image": "33_foto.jpg"
-	},
-	{
-		"Id": 34,
-		"Surname": "fdsdf",
-		"Title": "sdfsd",
-		"Description": "dsfsdf",
-		"TotalPeople": 6,
-		"Children": false,
-		"ChildGroup": [],
-		"Allergies": [],
-		"FoodPref": [],
-		"OtherTraits": ["r\u00F8yktoleranse"],
-		"Image": "sdfsd"
-	}
+  {
+    "Id": 1,
+    "Surname": "Lunde",
+    "Title": "En eventyrlysten familie som liker \u00E5 m\u00F8te nye mennesker",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
+    "TotalPeople": 2,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [
+      "skalldyr",
+      "n\u00F8tter"
+    ],
+    "FoodPref": [
+      "vegetarisk"
+    ],
+    "OtherTraits": [
+      "dyrevennlig",
+      "alkoholtoleranse",
+      "r\u00F8yktoleranse"
+    ],
+    "Image": "1_foto.jpg"
+  },
+  {
+    "Id": 2,
+    "Surname": "Nilsen",
+    "Title": "En familie som alltid er klar for \u00E5 l\u00E6re om nye kulturer.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quae saepe tempore incidunt blanditiis excepturi illum accusamus minima totam ea, fugiat suscipit maxime cumque, alias commodi ducimus aut harum possimus!",
+    "TotalPeople": 6,
+    "Children": false,
+    "ChildGroup": [
+      "0-3"
+    ],
+    "Allergies": [
+      "dyr"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [],
+    "Image": "2_foto.jpg"
+  },
+  {
+    "Id": 3,
+    "Surname": "Johansen",
+    "Title": "En familie p\u00E5 fire som \u00F8nsker \u00E5 feire jul sammen med andre.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos laborum praesentium ad? Officia quod laborum assumenda quos suscipit nostrum ipsa quia ipsam placeat? Voluptate neque quam beatae dolorum corporis veritatis explicabo accusamus illum? Necessitatibus ipsam, veritatis dicta iusto vel quis quasi consequatur repellat, veniam facilis quod debitis optio.",
+    "TotalPeople": 3,
+    "Children": true,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "barnevennlig",
+      "r\u00F8yktoleranse",
+      "r\u00F8yker",
+      "alkoholtoleranse"
+    ],
+    "Image": "3_foto.jpg"
+  },
+  {
+    "Id": 4,
+    "Surname": "Eriksen",
+    "Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
+    "Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti veritatis natus commodi nisi voluptas minima dignissimos? Illum iste possimus error cumque sed odio nobis autem necessitatibus, expedita nostrum atque enim sit perferendis esse soluta unde magni officia omnis. Quidem ullam dolorum sed.",
+    "TotalPeople": 3,
+    "Children": true,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [
+      "skalldyr"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "alkoholtoleranse",
+      "barnevennlig"
+    ],
+    "Image": "4_foto.jpg"
+  },
+  {
+    "Id": 5,
+    "Surname": "Solberg",
+    "Title": "En kreativ familie som liker \u00E5 lage sine egne julegaver.",
+    "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, tempore obcaecati dolores sit nesciunt, possimus dolor facilis, quis culpa quo pariatur excepturi placeat! Facere mollitia aut quibusdam nostrum, sapiente ad doloremque. Voluptatibus cupiditate quas dicta",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "11-17",
+      "11-17"
+    ],
+    "Allergies": [
+      "egg"
+    ],
+    "FoodPref": [
+      "halal"
+    ],
+    "OtherTraits": [
+      "barnevennlig",
+      "r\u00F8yktoleranse",
+      "r\u00F8yker"
+    ],
+    "Image": "5_foto.jpg"
+  },
+  {
+    "Id": 6,
+    "Surname": "Karlsen",
+    "Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
+    "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita praesentium rerum tempore reprehenderit iste sequi consectetur fuga, incidunt magnam delectus error, ipsam quas ipsa nihil voluptates earum.",
+    "TotalPeople": 6,
+    "Children": false,
+    "ChildGroup": [
+      "0-3"
+    ],
+    "Allergies": [
+      "n\u00F8tter"
+    ],
+    "FoodPref": [
+      "halal"
+    ],
+    "OtherTraits": [],
+    "Image": "6_foto.jpg"
+  },
+  {
+    "Id": 7,
+    "Surname": "Hansen",
+    "Title": "En kreativ familie som liker \u00E5 lage sine egne julegaver.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nulla aliquam, eveniet accusantium obcaecati possimus, dolore quam beatae suscipit iste, saepe placeat? Aliquam temporibus dicta enim, neque sed expedita voluptatibus amet cum.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "4-10"
+    ],
+    "Allergies": [
+      "egg"
+    ],
+    "FoodPref": [
+      "halal"
+    ],
+    "OtherTraits": [
+      "barnevennlig",
+      "r\u00F8yker",
+      "r\u00F8yktoleranse"
+    ],
+    "Image": "7_foto.jpg"
+  },
+  {
+    "Id": 8,
+    "Surname": "Kristiansen",
+    "Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quos sapiente natus facilis maxime excepturi totam labore.",
+    "TotalPeople": 1,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [
+      "vegetarisk",
+      "laktosefri"
+    ],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "alkoholtoleranse"
+    ],
+    "Image": "8_foto.jpg"
+  },
+  {
+    "Id": 9,
+    "Surname": "Kristiansen",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil itaque veniam autem deleniti consectetur. Voluptas inventore minus perspiciatis expedita numquam. Sequi dicta magni fugiat asperiores veniam officia aspernatur officiis quis fugit, fuga mollitia excepturi ad harum! Laboriosam expedita velit perferendis debitis, culpa iste in! Eum.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [
+      "skalldyr",
+      "gluten"
+    ],
+    "FoodPref": [
+      "halal"
+    ],
+    "OtherTraits": [
+      "barnevennlig"
+    ],
+    "Image": "9_foto.jpg"
+  },
+  {
+    "Id": 10,
+    "Surname": "Pedersen",
+    "Title": "En rolig familie som setter pris p\u00E5 en avslappet atmosf\u00E6re.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem accusamus, nulla error distinctio placeat eum quia magnam ab, est asperiores maxime vel sapiente sit.",
+    "TotalPeople": 5,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "4-10",
+      "0-3"
+    ],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [
+      "laktosefri"
+    ],
+    "OtherTraits": [],
+    "Image": "10_foto.jpg"
+  },
+  {
+    "Id": 11,
+    "Surname": "Pedersen",
+    "Title": "En kreativ familie som liker \u00E5 lage sine egne julegaver.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus enim consequatur, totam temporibus nisi aut fugiat hic doloremque. In delectus cumque tempore dolor molestiae itaque! Vero quas quaerat veniam nemo ad accusantium aliquam harum corrupti maiores eaque rem delectus beatae consequatur repellat autem animi sapiente, eligendi laboriosam commodi.",
+    "TotalPeople": 3,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [
+      "kan hjelpe med matlagging",
+      "r\u00F8yker",
+      "r\u00F8yktoleranse",
+      "alkoholtoleranse"
+    ],
+    "Image": "11_foto.jpg"
+  },
+  {
+    "Id": 12,
+    "Surname": "Holm",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum deserunt officia commodi nemo, sit numquam sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "TotalPeople": 3,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [
+      "egg"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "alkoholtoleranse"
+    ],
+    "Image": "12_foto.jpg"
+  },
+  {
+    "Id": 13,
+    "Surname": "Lunde",
+    "Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus consequatur vero quaerat incidunt quidem quae eum ut, totam mollitia, veritatis itaque eligendi dolorem, dolore id ipsum praesentium. Voluptas harum quae vel.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17",
+      "11-17"
+    ],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [
+      "vegetarisk"
+    ],
+    "OtherTraits": [
+      "r\u00F8yker",
+      "r\u00F8yktoleranse"
+    ],
+    "Image": "13_foto.jpg"
+  },
+  {
+    "Id": 14,
+    "Surname": "Nilsen",
+    "Title": "En rolig familie som setter pris p\u00E5 en avslappet atmosf\u00E6re.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id totam optio inventore ea vitae facere, molestias corrupti aut expedita quidem est explicabo, quaerat sequi quam beatae.",
+    "TotalPeople": 2,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "r\u00F8yker",
+      "alkoholtoleranse"
+    ],
+    "Image": "14_foto.jpg"
+  },
+  {
+    "Id": 15,
+    "Surname": "Halvorsen",
+    "Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
+    "Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi laborum beatae fugiat natus repellat id suscipit? Corporis laboriosam repudiandae ex officia aliquam, aliquid blanditiis veniam et placeat cum vero sed libero fugit sunt quia reiciendis error enim.",
+    "TotalPeople": 5,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "4-10",
+      "0-3",
+      "11-17"
+    ],
+    "Allergies": [],
+    "FoodPref": [
+      "halal"
+    ],
+    "OtherTraits": [],
+    "Image": "15_foto.jpg"
+  },
+  {
+    "Id": 16,
+    "Surname": "Berg",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse odio, atque expedita iste repudiandae perspiciatis pariatur non quam nam est inventore delectus ratione aspernatur aliquam ex a vel recusandae!",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "0-3"
+    ],
+    "Allergies": [
+      "honning"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [
+      "alkoholtoleranse"
+    ],
+    "Image": "16_foto.jpg"
+  },
+  {
+    "Id": 17,
+    "Surname": "Myhre",
+    "Title": "En familie som \u00F8nsker \u00E5 dele sin kj\u00E6rlighet for matlaging.",
+    "Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At provident minus beatae suscipit eligendi enim doloremque rerum placeat, impedit reprehenderit nobis voluptates.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "11-17",
+      "4-10"
+    ],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "alkoholtoleranse"
+    ],
+    "Image": "17_foto.jpg"
+  },
+  {
+    "Id": 18,
+    "Surname": "Andersen",
+    "Title": "En rolig familie som setter pris p\u00E5 en avslappet atmosf\u00E6re.",
+    "Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, dolor aliquam molestiae perspiciatis quis asperiores amet debitis sit odio laudantium impedit itaque autem libero quaerat. Iste, necessitatibus nulla autem nesciunt deserunt officia tempora ab cumque ut animi veritatis, fuga dignissimos eligendi!",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17"
+    ],
+    "Allergies": [],
+    "FoodPref": [
+      "vegetarisk"
+    ],
+    "OtherTraits": [
+      "alkoholtoleranse"
+    ],
+    "Image": "18_foto.jpg"
+  },
+  {
+    "Id": 19,
+    "Surname": "Kristiansen",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ex voluptate officia debitis doloribus consectetur illum, necessitatibus, nam asperiores, quasi veniam possimus dolore",
+    "TotalPeople": 3,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "drikker alkohol",
+      "alkoholtoleranse"
+    ],
+    "Image": "19_foto.jpg"
+  },
+  {
+    "Id": 20,
+    "Surname": "Larsen",
+    "Title": "En familie som elsker dyr og tar med seg mye glede.",
+    "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa consequuntur molestiae unde quasi praesentium assumenda molestias at, repellendus, animi inventore fuga porro doloribus quisquam labore ab facere repellat illum? Ab nihil iusto rem corrupti molestias modi dignissimos.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "4-10"
+    ],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [
+      "laktosefri"
+    ],
+    "OtherTraits": [],
+    "Image": "20_foto.jpg"
+  },
+  {
+    "Id": 21,
+    "Surname": "Hansen",
+    "Title": "En eventyrlysten familie som liker \u00E5 m\u00F8te nye mennesker.",
+    "Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dolorem vitae earum consequuntur maxime libero nesciunt nisi officiis provident, voluptas ducimus",
+    "TotalPeople": 2,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "drikker alkohol",
+      "alkoholtoleranse"
+    ],
+    "Image": "21_foto.jpg"
+  },
+  {
+    "Id": 22,
+    "Surname": "Kristiansen",
+    "Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
+    "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nesciunt quam labore ex sit, vero expedita ea ducimus, ipsum odit itaque accusantium voluptatem corrupti magnam debitis quo sequi amet porro odio eum possimus harum officiis",
+    "TotalPeople": 3,
+    "Children": true,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [],
+    "Image": "22_foto.jpg"
+  },
+  {
+    "Id": 23,
+    "Surname": "Moe",
+    "Title": "En familie som elsker dyr og tar med seg mye glede.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eaque ad laborum laboriosam necessitatibus ipsam consectetur corporis voluptate dolores tempora sint quibusdam vero explicabo consequuntur, fugit placeat ipsum. Quasi natus quae tempora magni illum repudiandae debitis veritatis itaque.",
+    "TotalPeople": 2,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [
+      "gluten",
+      "n\u00F8tter"
+    ],
+    "FoodPref": [
+      "vegetarisk"
+    ],
+    "OtherTraits": [
+      "r\u00F8yker",
+      "r\u00F8yktoleranse",
+      "drikker alkohol",
+      "alkoholtoleranse"
+    ],
+    "Image": "23_foto.jpg"
+  },
+  {
+    "Id": 24,
+    "Surname": "Karlsen",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat omnis qui, ipsa incidunt hic quidem ab dolores eligendi delectus esse unde, porro quia cupiditate, sunt quasi dolore nostrum!",
+    "TotalPeople": 2,
+    "Children": true,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [
+      "laktosefri"
+    ],
+    "OtherTraits": [
+      "r\u00F8yktoleranse"
+    ],
+    "Image": "24_foto.jpg"
+  },
+  {
+    "Id": 25,
+    "Surname": "Olsen",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias nostrum ipsa nihil incidunt iusto assumenda minima similique nesciunt totam.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17"
+    ],
+    "Allergies": [
+      "skalldyr"
+    ],
+    "FoodPref": [
+      "halal",
+      "laktosefri"
+    ],
+    "OtherTraits": [],
+    "Image": "25_foto.jpg"
+  },
+  {
+    "Id": 26,
+    "Surname": "Larsen",
+    "Title": "En aktiv familie som liker utend\u00F8rsaktiviteter.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis enim amet! Officia neque possimus quos facilis, distinctio esse vero suscipit, quo nam deserunt omnis blanditiis odio iure aut? Provident, accusantium reprehenderit!",
+    "TotalPeople": 6,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [
+      "egg"
+    ],
+    "FoodPref": [
+      "tradisjonell"
+    ],
+    "OtherTraits": [
+      "r\u00F8yker"
+    ],
+    "Image": "26_foto.jpg"
+  },
+  {
+    "Id": 27,
+    "Surname": "Olsen",
+    "Title": "En familie som elsker \u00E5 tilbringe tid sammen rundt bordet.",
+    "Description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, aut quo velit repellat voluptates, modi in sapiente eum, est ea unde ab enim suscipit temporibus fugiat eius. Sequi reiciendis quo incidunt est dolor, a ab! Odio fugit, recusandae dolores debitis a pariatur reprehenderit, harum accusamus, officia placeat possimus.",
+    "TotalPeople": 2,
+    "Children": true,
+    "ChildGroup": [
+      "11-17"
+    ],
+    "Allergies": [
+      "sitrus"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse",
+      "drikker alkohol",
+      "alkoholtoleranse"
+    ],
+    "Image": "27_foto.jpg"
+  },
+  {
+    "Id": 28,
+    "Surname": "Berg",
+    "Title": "En familie som \u00F8nsker \u00E5 skape nye minner sammen med andre.",
+    "Description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quidem cumque laudantium dignissimos tempore repellat cum quis quas? Cum consequuntur aliquid harum!",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17",
+      "11-17"
+    ],
+    "Allergies": [
+      "n\u00F8tter"
+    ],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse"
+    ],
+    "Image": "28_foto.jpg"
+  },
+  {
+    "Id": 29,
+    "Surname": "Karlsen",
+    "Title": "En familie som elsker dyr og tar med seg mye glede.",
+    "Description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius officia libero eveniet, ab eligendi omnis similique error inventore voluptatibus? Facere nemo assumenda quia, sint asperiores maxime architecto natus numquam tenetur, corrupti sunt quaerat vero obcaecati! Reprehenderit voluptates mollitia illo dignissimos. Minus, aliquam.",
+    "TotalPeople": 5,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17",
+      "4-10"
+    ],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [],
+    "Image": "29_foto.jpg"
+  },
+  {
+    "Id": 30,
+    "Surname": "Pedersen",
+    "Title": "En familie som elsker dyr og tar med seg mye glede.",
+    "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vero aperiam quisquam iure dolorem alias porro reiciendis delectus corporis non minus id reprehenderit quos, error rerum pariatur ullam excepturi!",
+    "TotalPeople": 2,
+    "Children": true,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "kan hjelpe med matlagging",
+      "r\u00F8yker",
+      "r\u00F8yktoleranse",
+      "drikker alkohol",
+      "alkoholtoleranse"
+    ],
+    "Image": "30_foto.jpg"
+  },
+  {
+    "Id": 31,
+    "Surname": "Berg",
+    "Title": "En familie som elsker \u00E5 lage mat sammen",
+    "Description": "Vi er en familie p\u00E5 5 som elsker \u00E5 eksperimentere p\u00E5 kj\u00F8kkenet. Vi er \u00E5pne for nye smaker og tradisjoner.",
+    "TotalPeople": 5,
+    "Children": true,
+    "ChildGroup": [
+      "0-3",
+      "4-10"
+    ],
+    "Allergies": [
+      "n\u00F8tter"
+    ],
+    "FoodPref": [
+      "vegetarisk"
+    ],
+    "OtherTraits": [
+      "kan hjelpe med matlagging"
+    ],
+    "Image": "31_foto.jpg"
+  },
+  {
+    "Id": 32,
+    "Surname": "Halvorsen",
+    "Title": "En eventyrlysten familie med stor kj\u00E6rlighet for naturen",
+    "Description": "Vi er en familie p\u00E5 4 som elsker friluftsliv og utend\u00F8rsaktiviteter. Skogsturer og sn\u00F8leker er en stor del av v\u00E5r hverdag, spesielt i ferietider.",
+    "TotalPeople": 4,
+    "Children": true,
+    "ChildGroup": [
+      "4-10",
+      "11-17"
+    ],
+    "Allergies": [
+      "gluten"
+    ],
+    "FoodPref": [
+      "halal",
+      "vegetarisk"
+    ],
+    "OtherTraits": [
+      "barnevennlig",
+      "dyrevennlig"
+    ],
+    "Image": "32_foto.jpg"
+  },
+  {
+    "Id": 33,
+    "Surname": "Anderssen",
+    "Title": "En aktiv familie som liker tradisjoner",
+    "Description": " Officia neque possimus quos facilis, distinctio esse vero suscipit, quo nam deserunt omnis blanditiis odio iure aut? Provident, accusantium reprehenderit!",
+    "TotalPeople": 3,
+    "Children": false,
+    "ChildGroup": [
+      "4-10"
+    ],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [
+      "r\u00F8yktoleranse"
+    ],
+    "Image": "33_foto.jpg"
+  },
+  {
+    "Id": 35,
+    "Surname": "345edgd",
+    "Title": "45erdgfgd",
+    "Description": "lesklfsvml g",
+    "TotalPeople": 6,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [],
+    "Image": "[o[p;k"
+  },
+  {
+    "Id": 37,
+    "Surname": "rtert",
+    "Title": "erte",
+    "Description": "fgdfcbcf",
+    "TotalPeople": 6,
+    "Children": false,
+    "ChildGroup": [],
+    "Allergies": [],
+    "FoodPref": [],
+    "OtherTraits": [],
+    "Image": "cbcvbv"
+  }
 ]
