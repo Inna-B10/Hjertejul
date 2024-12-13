@@ -3,41 +3,23 @@ import { API_URL } from './constants.js'
 import { filters, output, searchInput, selectFilter } from './main.js'
 
 export async function fetchFamilies(id = null) {
-	console.log('Функция fetchFamilies вызвана с ID:', id)
+	// console.log('Функция fetchFamilies вызвана с ID:', id)
 
 	const url = id === null ? `${API_URL}/Families` : `${API_URL}/Families/${id}`
-	console.log('URL:', url)
+	// console.log('URL:', url)
 
 	try {
 		const response = await fetch(url)
-		console.log('Ответ получен:', response)
+		// console.log('Ответ получен:', response)
 
 		if (!response.ok) throw new Error('Error loading data!')
 		const families = await response.json()
-		console.log('Данные:', families)
+		// console.log('Данные:', families)
 		return families
-
-		// id ? editFamily(families) : renderFamilies(families)
 	} catch (error) {
-		console.error('Ошибка при загрузке данных:', error)
+		console.error('Error loading data:', error)
 	}
 }
-// export async function fetchFamilies(id = null) {
-// 	console.log(id)
-//
-// 	// get all families or get family by id
-// 	const url = id === null ? `${API_URL}/Families` : `${API_URL}/Families/${id}`
-// 	try {
-// 		const response = await fetch(url)
-// 		if (!response.ok) throw new Error('Error loading data!')
-// 		families = await response.json()
-// 		console.log(id)
-// 		id ? editFamily(families) : renderFamilies(families)
-// 	} catch (error) {
-// 		console.error(error)
-// 		throw new Error('Error fetching data!')
-// 	}
-// }
 
 export function renderFamilies(array) {
 	if (array) {

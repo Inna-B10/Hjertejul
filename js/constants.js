@@ -1,22 +1,22 @@
 export const API_URL = 'http://localhost:5111/api'
 export const childGroupOptions = ['0-3', '4-10', '11-17']
 export const allergiesOptions = [
-	'Egg',
-	'Skalldyr',
-	'Nøtter',
-	'Gluten',
-	'Honning',
-	'Dyr',
+	'egg',
+	'skalldyr',
+	'nøtter',
+	'gluten',
+	'honning',
+	'dyr',
 ]
 export const foodPrefOptions = [
-	'Vegetarisk',
-	'Halal',
-	'Laktosefri',
-	'Tradisjonell',
+	'vegetarisk',
+	'halal',
+	'laktosefri',
+	'tradisjonell',
 ]
 export const otherTraitsOptions = [
-	'Røyker',
-	'Røyktoleranse',
-	'Drikker alkohol',
-	'Alkoholtoleranse',
+	'røyker',
+	'røyktoleranse',
+	'drikker alkohol',
+	'alkoholtoleranse',
 ]
