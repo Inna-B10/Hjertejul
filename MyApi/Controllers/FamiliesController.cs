@@ -55,7 +55,12 @@ namespace MyAPI.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Family>> GetFamilies()
         {
-            return Ok(_families);
+            return Ok(new
+            {
+                Status = "Success",
+                StatusText = "Families retrieved successfully",
+                Data = _families
+            });
         }
 
         // GET /api/families/{id}
@@ -66,7 +71,12 @@ namespace MyAPI.Controllers
             if (family == null) 
                 return NotFound(new { message = $"Family with ID {id} not found" });
                 
-            return Ok(family);
+            return Ok(new
+            {
+                Status = "Success",
+                StatusText = "Family retrieved successfully",
+                Data = family
+            });
         }
 
         // POST /api/families
@@ -84,7 +94,12 @@ namespace MyAPI.Controllers
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "families.json");
             System.IO.File.WriteAllText(filePath, JsonSerializer.Serialize(_families, new JsonSerializerOptions { WriteIndented = true }));
 
-            return CreatedAtAction(nameof(GetFamilyById), new { id = family.Id }, family);
+            return CreatedAtAction(nameof(GetFamilyById), new { id = family.Id }, new
+            {
+                Status = "Success",
+                StatusText = "Family retrieved successfully",
+                Data = family
+            });
         }
 
         // PUT /api/families/{id}
@@ -103,7 +118,8 @@ namespace MyAPI.Controllers
             family.Title = updatedFamily.Title ?? family.Title;
             family.Description = updatedFamily.Description ?? family.Description;
             family.TotalPeople = updatedFamily.TotalPeople;
-            family.Children = updatedFamily.Children;
+            // Removed by frontend request
+            // family.Children = updatedFamily.Children;
             family.ChildGroup = updatedFamily.ChildGroup ?? family.ChildGroup;
             family.Allergies = updatedFamily.Allergies ?? family.Allergies;
             family.FoodPref = updatedFamily.FoodPref ?? family.FoodPref;
@@ -113,7 +129,12 @@ namespace MyAPI.Controllers
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "families.json");
             System.IO.File.WriteAllText(filePath, JsonSerializer.Serialize(_families, new JsonSerializerOptions { WriteIndented = true }));
 
-            return NoContent();
+            return Ok(new
+            {
+                Status = "Success",
+                StatusText = "Family retrieved successfully",
+                Data = updatedFamily
+            });
         }
 
         // DELETE /api/families/{id}
@@ -122,14 +143,19 @@ namespace MyAPI.Controllers
         {
             var family = _families.FirstOrDefault(f => f.Id == id);
             if (family == null) 
-                return NotFound(new { message = $"Family with ID {id} not found" });
+                return NotFound(new { Status = "Error", Message = $"Family with ID {id} not found" });
 
             _families.Remove(family);
 
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "families.json");
             System.IO.File.WriteAllText(filePath, JsonSerializer.Serialize(_families, new JsonSerializerOptions { WriteIndented = true }));
 
-            return NoContent();
+            return Ok(new
+            {
+                Status = "Success",
+                Message = "Family deleted successfully",
+                DeletedFamilyId = id
+            });
         }
     }
 }

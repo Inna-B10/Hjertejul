@@ -17,7 +17,8 @@ namespace MyAPI.Models
         public string? Description { get; set; }
         [Range(1, 20, ErrorMessage = "TotalPeople must be between 1 and 20")]
         public int TotalPeople { get; set; }
-        public bool Children { get; set; }
+        // Children Removed by frontend request
+        // public bool Children { get; set; }
         public List<string>? ChildGroup { get; set; }
         public List<string>? Allergies { get; set; }
         public List<string>? FoodPref { get; set; }
