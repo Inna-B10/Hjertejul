@@ -309,9 +309,9 @@ if (outputForm) {
 					alert('Data slettet vellykket!')
 					// setTimeout(() => {
 					window.location.replace(
-						'index.html?timestamp=' + new Date().getTime()
+						'./index.html?timestamp=' + new Date().getTime()
 					)
-					// }, 100) // задержка в миллисекундах
+					// }, 100)
 				})
 		}
 	}
