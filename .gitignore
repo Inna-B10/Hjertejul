@@ -12,7 +12,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-newyear_garland/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -31,8 +30,8 @@ mono_crash.*
 **/[Aa][Rr][Mm]/
 **/[Aa][Rr][Mm]64/
 **/bld/
-**/[Bb]in/
-**/[Oo]bj/
+**/[Bb]in/*
+**/[Oo]bj/*
 **/[Ll]og/
 **/[Ll]ogs/
 
