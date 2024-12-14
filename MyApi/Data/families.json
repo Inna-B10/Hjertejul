@@ -613,21 +613,5 @@
       "dyrevennlig"
     ],
     "Image": "32_foto.jpeg"
-  },
-  {
-    "Id": 33,
-    "Surname": "Anderssen",
-    "Title": "En aktiv familie som liker tradisjoner",
-    "Description": " Officia neque possimus quos facilis, distinctio esse vero suscipit, quo nam deserunt omnis blanditiis odio iure aut? Provident, accusantium reprehenderit!",
-    "TotalPeople": 3,
-    "ChildGroup": [
-      "4-10"
-    ],
-    "Allergies": [],
-    "FoodPref": [],
-    "OtherTraits": [
-      "r\u00F8yktoleranse"
-    ],
-    "Image": "33_foto.jpeg"
   }
 ]

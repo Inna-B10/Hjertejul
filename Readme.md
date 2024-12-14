@@ -32,6 +32,7 @@ Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 - [ ] upload image?
 - [ ] auto-rename image file? (if upload)
 - [ ] check image format(jpg,png...)?
-- [ ] return NoContent() change to response,response.status, response.statusText
-- [ ] [FIXME] select in renderForm()
-- [ ] redirect after deleting
+- [x] return NoContent() change to response,response.status, response.statusText
+- [x] [FIXME] select in renderForm()
+- [x] redirect after deleting
+- [ ] design
