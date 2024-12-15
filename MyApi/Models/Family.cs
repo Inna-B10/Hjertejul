@@ -15,7 +15,11 @@ namespace MyAPI.Models
                 [Required(ErrorMessage = "Title is required")]
                 public string Title { get; set; } = string.Empty;
                 [MaxLength(1000, ErrorMessage = "Description cannot exceed 1000 characters")]
+
+                [Required(ErrorMessage = "Description is required")]
                 public string Description { get; set; } = string.Empty;
+
+                [Required(ErrorMessage = "TotalPeople is required")]
                 [Range(1, 20, ErrorMessage = "TotalPeople must be between 1 and 20")]
                 public int TotalPeople { get; set; }
                 // Children Removed by frontend request
