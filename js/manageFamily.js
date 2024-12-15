@@ -5,7 +5,7 @@ import {
 	foodPrefOptions,
 	otherTraitsOptions,
 } from './constants.js'
-import { createNode } from './createElements.js'
+import { createHeading, createNode } from './createElements.js'
 import { fetchFamilies } from './functions.js'
 
 export const outputForm = document.getElementById('output-form')
@@ -37,20 +37,24 @@ if (outputForm) {
 		})
 
 		//# ------------------------ surname
-		const surnameLabel = createNode('label', {})
-		surnameLabel.innerText = 'Familienavn: '
+		const surnameHeading = createHeading('h2', '')
+		const surnameLabel = createHeading('label', 'Familienavn: ', {
+			for: 'surname',
+		})
 		const surnameInput = createNode('input', {
 			type: 'text',
 			name: 'surname',
 			value: data?.surname ? data.surname : '',
 			required: true,
 		})
-		surnameLabel.appendChild(surnameInput)
-		form.appendChild(surnameLabel)
+		surnameHeading.appendChild(surnameLabel)
+		form.append(surnameHeading, surnameInput)
 
 		//# ------------------------ totalPeople
-		const totalPeopleLabel = createNode('label', {})
-		totalPeopleLabel.innerText = 'Antall gjester: '
+		const totalPeopleHeading = createHeading('h2', '')
+		const totalPeopleLabel = createHeading('label', 'Antall gjester: ', {
+			for: 'totalPeople',
+		})
 		const select = createNode('select', {
 			name: 'totalPeople',
 		})
@@ -64,38 +68,44 @@ if (outputForm) {
 		}
 		select.value = data?.totalPeople || 6
 		totalPeopleLabel.appendChild(select)
-		form.appendChild(totalPeopleLabel)
+		totalPeopleHeading.appendChild(totalPeopleLabel)
+		form.appendChild(totalPeopleHeading)
 
 		//# ------------------------ title
-		const titleLabel = createNode('label', {})
-		titleLabel.innerText = 'Tittel: '
+		const titleHeading = createHeading('h2', '')
+		const titleLabel = createHeading('label', 'Tittel: ', {
+			for: 'title',
+		})
 		const title = createNode('input', {
 			type: 'text',
 			name: 'title',
 			value: data?.title ? data.title : '',
 			required: true,
 		})
-		titleLabel.appendChild(title)
-		form.appendChild(titleLabel)
+		titleHeading.appendChild(titleLabel)
+		form.append(titleHeading, title)
 
 		//# ------------------------ description
-		const descLabel = createNode('label', {})
-		descLabel.innerText = 'Beskrivelse: '
+		const descHeading = createHeading('h2', '')
+		const descLabel = createHeading('label', 'Beskrivelse: ', {
+			for: 'description',
+		})
 		const desc = createNode('textarea', {
-			rows: '4',
+			rows: '10',
 			cols: '50',
 			name: 'description',
 			required: true,
 		})
 		desc.textContent = data?.description ? data.description : ''
-
-		descLabel.appendChild(desc)
-		form.appendChild(descLabel)
+		descHeading.appendChild(descLabel)
+		form.append(descHeading, desc)
 
 		//# ------------------------ childGroup
-		const childGroupLabel = createNode('div', {})
-		childGroupLabel.innerText = 'Barn i aldersgruppe: '
+		const childGroupLabel = createHeading('h2', 'Barn i aldersgruppe: ')
 
+		const divGroups = createNode('div', {
+			class: 'checkboxes-row',
+		})
 		childGroupOptions.forEach(option => {
 			const label = createNode('label', {})
 
@@ -110,16 +120,18 @@ if (outputForm) {
 			}
 
 			label.appendChild(checkbox)
-			label.appendChild(document.createTextNode(option))
+			label.appendChild(document.createTextNode(`-${option}`))
 
-			childGroupLabel.appendChild(label)
+			divGroups.appendChild(label)
 		})
-		form.appendChild(childGroupLabel)
+		form.append(childGroupLabel, divGroups)
 
 		//# ------------------------ allergies
-		const allergiesLabel = createNode('div', {})
-		allergiesLabel.innerText = 'Allergier: '
+		const allergiesLabel = createHeading('h2', 'Allergier: ', {})
 
+		const divAllergies = createNode('div', {
+			class: 'checkboxes-row',
+		})
 		allergiesOptions.forEach(option => {
 			const label = createNode('label', {})
 
@@ -134,15 +146,18 @@ if (outputForm) {
 			}
 
 			label.appendChild(checkbox)
-			label.appendChild(document.createTextNode(option))
+			label.appendChild(document.createTextNode(`-${option}`))
 
-			allergiesLabel.appendChild(label)
+			divAllergies.appendChild(label)
 		})
-		form.appendChild(allergiesLabel)
+		form.append(allergiesLabel, divAllergies)
 
 		//# ------------------------ foodPref
-		const foodPrefLabel = createNode('div', {})
-		foodPrefLabel.innerText = 'Matpreferanser: '
+		const foodPrefLabel = createHeading('h2', 'Matpreferanser: ', {})
+
+		const divFood = createNode('div', {
+			class: 'checkboxes-row',
+		})
 
 		foodPrefOptions.forEach(option => {
 			const label = createNode('label', {})
@@ -158,15 +173,18 @@ if (outputForm) {
 			}
 
 			label.appendChild(checkbox)
-			label.appendChild(document.createTextNode(option))
+			label.appendChild(document.createTextNode(`-${option}`))
 
-			foodPrefLabel.appendChild(label)
+			divFood.appendChild(label)
 		})
-		form.appendChild(foodPrefLabel)
+		form.append(foodPrefLabel, divFood)
 
 		//# ------------------------ otherTraits
-		const otherTraitsLabel = createNode('div', {})
-		otherTraitsLabel.innerText = 'Vaner: '
+		const otherTraitsLabel = createHeading('h2', 'Vaner: ', {})
+
+		const divTraits = createNode('div', {
+			class: 'checkboxes-row',
+		})
 
 		otherTraitsOptions.forEach(option => {
 			const label = createNode('label', {})
@@ -182,23 +200,27 @@ if (outputForm) {
 			}
 
 			label.appendChild(checkbox)
-			label.appendChild(document.createTextNode(option))
+			label.appendChild(document.createTextNode(`-${option}`))
 
-			otherTraitsLabel.appendChild(label)
+			divTraits.appendChild(label)
 		})
-		form.appendChild(otherTraitsLabel)
+		form.append(otherTraitsLabel, divTraits)
 
 		//# ------------------------ image
-		const imageLabel = createNode('label', {})
-		imageLabel.innerText = 'Bilde: '
+		const imageHeading = createHeading('h2', '')
+
+		const imageLabel = createHeading('label', 'Bilde: ', {
+			for: 'image',
+		})
+
 		const image = createNode('input', {
 			type: 'text',
 			name: 'image',
 			value: data?.image ? data.image : '',
 			required: true,
 		})
-		imageLabel.appendChild(image)
-		form.appendChild(imageLabel)
+		imageHeading.appendChild(imageLabel)
+		form.append(imageHeading, image)
 
 		//# ------------------------ saveButton
 		const saveButton = createNode('button', {

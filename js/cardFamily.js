@@ -1,16 +1,16 @@
 import { showModalCard } from './cardFamilyModal.js'
 import {
 	createDesc,
+	createHeading,
 	createImage,
 	createNode,
-	createTitle,
 } from './createElements.js'
 import { output } from './main.js'
 import { truncateText } from './utils.js'
 
 export default function cardFamily(family) {
 	const card = createNode('div', {
-		class: 'flex column card',
+		class: 'family-card',
 	})
 	card.addEventListener('click', () => {
 		showModalCard(family)
@@ -19,10 +19,10 @@ export default function cardFamily(family) {
 		`./images_family/${family.image}`,
 		`Bilde av familien ${family.surname}`,
 		`Bilde av familien ${family.surname}`,
-		'300px',
+		'100%',
 		'auto'
 	)
-	const familyTitle = createTitle('h3', family.title)
+	const familyTitle = createHeading('h3', family.title)
 
 	const desc = createDesc(truncateText(family.description))
 

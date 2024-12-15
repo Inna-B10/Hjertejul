@@ -1,8 +1,8 @@
 import {
 	createDesc,
+	createHeading,
 	createImage,
 	createNode,
-	createTitle,
 } from './createElements.js'
 
 const modal = document.getElementById('modal')
@@ -23,10 +23,10 @@ export function showModalCard(family) {
 		`./images_family/${family.image}`,
 		`Bilde av familien ${family.surname}`,
 		`Bilde av familien ${family.surname}`,
-		'600px',
+		'100%',
 		'auto'
 	)
-	const familyTitle = createTitle('h3', family.title)
+	const familyTitle = createHeading('h3', family.title)
 
 	const desc = createDesc(family.description)
 	const list = createNode('ul', {})
