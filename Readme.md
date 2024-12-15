@@ -24,3 +24,17 @@ Dataen må kunne lastes inn i minnet, og kunne lagres tilbake som JSON når det 
 Endepunktene til backenden skal støtte standard CRUD operasjonene frontend delen krever.
 
 Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
+
+---
+
+## TODO
+
+- [ ] upload image?
+- [ ] auto-rename image file? (if upload)
+- [ ] check image format(jpg,png...)?
+- [x] return NoContent() change to response,response.status, response.statusText
+- [x] [FIXME] select in renderForm()
+- [x] redirect after deleting
+- [ ] design
+- [ ] text
+- [ ] clean up code, DRY!

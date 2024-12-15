@@ -16,8 +16,8 @@ export function createImage(src, alt, title, width, height) {
 	})
 }
 
-export function createTitle(tag, text) {
-	const title = createNode(tag, {})
+export function createHeading(tag, text, attr) {
+	const title = createNode(tag, attr)
 	title.innerText = text
 	return title
 }
@@ -27,5 +27,5 @@ export function createDesc(text) {
 		class: 'desc',
 	})
 	desc.innerText = text
-	return text
+	return desc
 }
