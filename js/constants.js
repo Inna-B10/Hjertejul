@@ -22,5 +22,5 @@ export const otherTraitsOptions = [
 	'alkoholtoleranse',
 	'barnevennlig',
 	'dyrevennlig',
-	'kan hjelpe med matlagging',
+	'kan hjelpe med matlaging',
 ]
