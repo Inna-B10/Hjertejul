@@ -25,8 +25,6 @@ Endepunktene til backenden skal støtte standard CRUD operasjonene frontend dele
 
 Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 
-# Prosjektnavn
-
 Dette prosjektet er basert på design laget i [Figma](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1).
 
 ## 🎨 Designforhåndsvisning  
