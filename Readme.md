@@ -26,7 +26,7 @@ Endepunktene til backenden skal støtte standard CRUD operasjonene frontend dele
 Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 
 ### Designforhåndsvisning
-[![Figma Design](images/figma-preview.png)]([https://www.figma.com/file/XXXXXX/Your-Design-Name](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1))
+[![Figma Design]]([https://www.figma.com/file/XXXXXX/Your-Design-Name](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1))
 
 
 ## TODO
