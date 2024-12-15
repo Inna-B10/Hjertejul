@@ -1,7 +1,6 @@
 import cardFamily from './cardFamily.js'
 import { API_URL } from './constants.js'
 import { filters, output, searchInput, selectFilter } from './main.js'
-import { outputForm } from './manageFamily.js'
 
 export async function fetchFamilies(id = null) {
 	const url = id === null ? `${API_URL}/Families` : `${API_URL}/Families/${id}`
@@ -10,10 +9,11 @@ export async function fetchFamilies(id = null) {
 		const response = await fetch(url)
 
 		if (!response.ok) {
-			if (output)
-				output.innerText = `${response.status}: ${response.StatusText}`
-			if (outputForm)
-				outputForm.innerText = `${response.status}: ${response.StatusText}`
+			// if (output)
+			// 	output.innerText = `${response.status}: ${response.StatusText}`
+			// if (outputForm)
+			// 	outputForm.innerText = `${response.status}: ${response.StatusText}`
+			displayMessage(`${response.status}: ${response.StatusText}`, 'error')
 			throw new Error(`${response.status}: Error loading data!`)
 		}
 		const data = await response.json()
@@ -117,10 +117,10 @@ export function displayMessage(message, type) {
 
 	messageContainer.innerText = message
 	messageContainer.className = type // 'success' or 'error'
-	setTimeout(() => {
-		messageContainer.innerText = ''
-		messageContainer.className = ''
-	}, 5000) // disappear after 5 sec
+	// setTimeout(() => {
+	// 	messageContainer.innerText = ''
+	// 	messageContainer.className = ''
+	// }, 5000) // disappear after 5 sec
 }
 
 export function saveData(id = null) {
@@ -180,7 +180,7 @@ export function saveData(id = null) {
 			return response.json()
 		})
 		.then(() => {
-			alert('Data lagret vellykket!')
+			// alert('Data lagret vellykket!')
 			displayMessage('Data lagret vellykket!', 'success')
 			renderForm()
 		})
@@ -201,16 +201,23 @@ export function deleteData(id) {
 		})
 			.then(response => {
 				if (!response.ok) {
-					console.log(`Error ${response.status}: ${response.statusText}`)
+					displayMessage(
+						`Error ${response.status}: ${response.statusText}`,
+						'error'
+					)
+					// console.log(`Error ${response.status}: ${response.statusText}`)
 					throw new Error(`Error ${response.status}: ${response.statusText}`)
 				}
 				return response.json()
 			})
 			.then(() => {
-				alert('Data slettet vellykket!')
-				window.location.replace(
-					'./index.html?timestamp=' + new Date().getTime()
-				)
+				// alert('Data slettet vellykket!')
+				displayMessage('Data slettet vellykket!', 'success')
+				setTimeout(() => {
+					window.location.replace(
+						'./index.html?timestamp=' + new Date().getTime()
+					)
+				}, 5000)
 			})
 	}
 }
