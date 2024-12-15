@@ -39,17 +39,14 @@
     "Surname": "Johansen",
     "Title": "En familie p\u00E5 fire som \u00F8nsker \u00E5 feire jul sammen med andre.",
     "Description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dignissimos laborum praesentium ad? Officia quod laborum assumenda quos suscipit nostrum ipsa quia ipsam placeat? Voluptate neque quam beatae dolorum corporis veritatis explicabo accusamus illum? Necessitatibus ipsam, veritatis dicta iusto vel quis quasi consequatur repellat, veniam facilis quod debitis optio.",
-    "TotalPeople": 3,
+    "TotalPeople": 4,
     "ChildGroup": [
       "4-10"
     ],
     "Allergies": [],
     "FoodPref": [],
     "OtherTraits": [
-      "barnevennlig",
-      "r\u00F8yktoleranse",
-      "r\u00F8yker",
-      "alkoholtoleranse"
+      "r\u00F8yker"
     ],
     "Image": "3_foto.jpeg"
   },

@@ -27,10 +27,18 @@
   z-index: 999;
 }
 
+#modal-output {
+
+  ul,
+  .desc {
+    padding: 10px;
+  }
+}
+
 .close-button {
   position: absolute;
-  top: -5px;
-  right: 5px;
+  top: -19px;
+  right: 3px;
   padding: 5px 10px;
   color: white;
   border: 1px solid #fff;
@@ -40,9 +48,10 @@ h3 {
   text-align: center;
 }
 
+/* 
 .desc {
   padding: 10px;
-}
+} */
 
 img {
   border-radius: 8px;

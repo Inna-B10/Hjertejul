@@ -209,7 +209,7 @@ if (outputForm) {
 		//# ------------------------ image
 		const imageHeading = createHeading('h2', '')
 
-		const imageLabel = createHeading('label', 'Bilde: ', {
+		const imageLabel = createHeading('label', 'Bilde-URL: ', {
 			for: 'image',
 		})
 

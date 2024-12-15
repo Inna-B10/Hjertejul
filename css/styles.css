@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Christmas Glitter";
+  src: url('christmas_glitter/Christmas Glitter ttf.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Merry Notes";
+  src: url('merry-notes/Merry Notes.otf') format("opentype");
+}
+
 *,
 ::before,
 ::after {
@@ -7,7 +17,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Merry Notes, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
   min-width: 641px;
   margin: 0;
   padding: 0;
@@ -91,7 +103,6 @@ header {
   color: white;
   text-decoration: none;
   padding: 10px;
-  font-size: 1rem;
 }
 
 .navbar ul li a:hover {
@@ -99,10 +110,10 @@ header {
 }
 
 h1 {
+
   text-align: center;
-  margin-top: 30px;
   font-size: 2rem;
-  color: #0A2C1D;
+  color: #c50018;
 }
 
 /* Introduction */
@@ -115,22 +126,24 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20%;
 
   > h1 {
+    font-family: "Christmas Glitter";
     font-size: 3rem;
-    color: red;
-    text-align: center;
-    margin-top: 40px;
+    color: #c50018;
+    margin-bottom: 20px;
   }
 }
 
 .header-index {
   height: 100vh;
+  /* padding-bottom: 40px; */
 
 
   > p {
-    width: 50%;
-    font-size: 24px;
+    width: 80%;
+    font-size: 20px;
   }
 }
 
@@ -196,28 +209,8 @@ section h1 {
 #content-section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   padding: 20px;
-  margin-top: 100px;
 }
-
-/*#filters-section{
-  margin-top: 6%;
-  flex: 0 0 30%;
-  background-color: rgba(0, 128, 0, 0.2);
-  border: 2px solid #f20b0b;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  overflow-y: auto;
-  height: auto;
-  max-height: 100vh;
-  text-align: center;
-
-
-}*/
-/*family kismi */
-#family-section {}
 
 /* familie section */
 .family-section {
@@ -226,11 +219,12 @@ section h1 {
   border-color: #f20b0b;
 }
 
+#content-section h2,
 .family-section h2 {
   color: #b71c1c;
-  margin-bottom: 20px;
+  margin: 20px 20px 40px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.7rem;
 }
 
 .family-list {
@@ -305,7 +299,7 @@ section h1 {
   border: 2px solid #f20b0b;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 40px 20px 20px;
   overflow-y: auto;
   max-height: 100vh;
 }
@@ -321,10 +315,27 @@ section h1 {
   margin-bottom: 5px;
 }
 
+#filters p {
+  color: #10551a;
+  font-weight: bold;
+
+  > label {
+    font-size: inherit;
+  }
+
+  > span {
+    text-decoration: underline;
+  }
+}
+
+
+#filters input[type="text"] {
+  width: 100%;
+}
+
 #filters input[type="text"],
 #filters select,
 #filters input[type="checkbox"] {
-  width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border-radius: 4px;
@@ -333,7 +344,6 @@ section h1 {
 
 #filters input[type="checkbox"] {
   width: auto;
-  margin-right: 10px;
 }
 
 #filters input[type="text"] {
@@ -369,7 +379,7 @@ section h1 {
 button {
   display: block;
   padding: 10px 20px;
-  margin: 10px auto;
+  margin: 20px auto;
   font-size: 18px;
   color: #fff;
   background-color: #d32f2f;
@@ -457,16 +467,18 @@ button:hover {
   gap: 0;
   border: 2px solid #f20b0b;
   margin-bottom: 50px;
+
 }
 
 #add-edit-form label {
   margin-top: 10px;
   font-size: 18px;
-  color: #10551a;
+  color: #fff;
   /* display: block; */
   /* width: 150px; */
   /* float: left; */
 }
+
 
 
 #add-edit-form input,
@@ -486,8 +498,9 @@ button:hover {
 
 #add-edit-form h2 {
   font-size: 18px;
+  letter-spacing: 2px;
   margin-top: 10px;
-  color: #10551a;
+  color: #fff;
 }
 
 /* Family Detail Section */
@@ -515,23 +528,25 @@ button:hover {
 
 /* Contact Section */
 .contact-section {
-
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 50px 20px;
 
 }
 
 .contact-section h2 {
-  margin-bottom: 10px;
-  font-size: 2rem;
-  text-align: center;
+  color: #b71c1c;
 }
 
 .contact-section p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+  font-size: smaller
+}
+
+.contact-section label {
+  margin-bottom: -10px;
+  font-size: 18px;
 }
 
 /* Form Layout */
@@ -568,8 +583,6 @@ form textarea {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #f8d7da;
-  /* Soft red background for input fields */
   color: #333;
 }
 
@@ -578,17 +591,9 @@ form input:focus,
 form textarea:focus {
   outline: 2px solid #10551a;
   /* Green outline on focus */
-  background-color: #f1c6c6;
+  background-color: #f8d7da;
   /* Lighter red background on focus */
 }
-
-/* Submit Button Styling */
-
-
-/* Button Hover Effect */
-/* form button:hover {
-  background-color: #10551a;
-} */
 
 /* Success Message */
 #success-message {
@@ -644,6 +649,19 @@ footer {
   /* margin-top: 20px; */
 }
 
+#hilsen {
+  width: 50%;
+  max-width: 500px;
+  margin: 100px auto 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #c50018;
+
+  > h3 {
+    font-family: 'Christmas Glitter';
+  }
+}
+
 @media only screen and (min-width: 641px) {
 
   search,
@@ -657,6 +675,9 @@ footer {
 }
 
 @media only screen and (min-width:961px) {
+  body {
+    font-size: 24px;
+  }
 
   search,
   #output {
@@ -669,6 +690,15 @@ footer {
 
   .header-admin {
     height: 50vh;
+  }
+
+  .header-index {
+    /* padding-bottom: 60px; */
+
+    > p {
+      width: 60%;
+      font-size: 24px;
+    }
   }
 }
 
