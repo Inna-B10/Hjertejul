@@ -59,7 +59,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 0 1em 1em;
 }
 
 section {
@@ -202,7 +202,7 @@ header {
 }
 
 .navbar ul li a {
-  color: white;
+  color: #f9eb4c;
   text-decoration: none;
   padding: 10px;
 }
@@ -214,7 +214,9 @@ header {
 h1 {
   text-align: center;
   font-size: 2rem;
-  color: #c50018;
+  /* color: #c50018; */
+  color: #f9eb4c;
+  text-shadow: 1px 0 3px #0a2c1d;
 }
 
 /* ------------------------------ Introduction ------------------------------ */
@@ -233,6 +235,7 @@ h1 {
     font-family: "Christmas Glitter";
     font-size: 3rem;
     color: #c50018;
+    text-shadow: none;
     margin-bottom: 20px;
   }
 }
@@ -241,7 +244,7 @@ h1 {
 #content-section {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0 20px 20px;
 }
 
 /*family kismi buraya kdar ablamdan aldim*/
@@ -338,7 +341,8 @@ h1 {
 
 #content-section h2,
 .family-section h2 {
-  color: #b71c1c;
+  color: #f9eb4c;
+  text-shadow: 1px 0 3px #0a2c1d;
   margin: 20px 20px 40px;
   text-align: center;
   font-size: 2.7rem;
@@ -450,7 +454,9 @@ h1 {
 }
 
 .contact-section h2 {
-  color: #b71c1c;
+  /* color: #b71c1c; */
+  color: #f9eb4c;
+  text-shadow: 0 0 3px #0a2c1d;
 }
 
 .contact-section p {
