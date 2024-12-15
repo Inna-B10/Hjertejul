@@ -36,3 +36,5 @@ Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 - [x] [FIXME] select in renderForm()
 - [x] redirect after deleting
 - [ ] design
+- [ ] text
+- [ ] clean up code, DRY!

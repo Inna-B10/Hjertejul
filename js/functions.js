@@ -30,10 +30,15 @@ export function renderFamilies(array) {
 	if (array) {
 		if (output) {
 			output.innerText = ''
+
+			if (array.length > 0) {
+				array.forEach(family => {
+					cardFamily(family)
+				})
+			} else {
+				output.innerText = 'Ingen familie funnet basert på dine kriterier'
+			}
 		}
-		array.forEach(family => {
-			cardFamily(family)
-		})
 	}
 }
 
@@ -55,7 +60,6 @@ export function filterFamilies(families) {
 			.filter(checkbox => checkbox.checked && checkbox.dataset.group)
 			.map(checkbox => checkbox.dataset.group),
 	}
-	console.log(activeFilters)
 	const filteredFamilies = families?.filter(family => {
 		// --------------------------------- Check totalPeople first
 		if (family.totalPeople > Number(selectFilter.value)) {
@@ -107,4 +111,106 @@ export function filterFamilies(families) {
 	})
 
 	renderFamilies(filteredFamilies)
+}
+export function displayMessage(message, type) {
+	const messageContainer = document.getElementById('message-container')
+
+	messageContainer.innerText = message
+	messageContainer.className = type // 'success' or 'error'
+	setTimeout(() => {
+		messageContainer.innerText = ''
+		messageContainer.className = ''
+	}, 5000) // disappear after 5 sec
+}
+
+export function saveData(id = null) {
+	const form = document.getElementById('add-edit-form')
+
+	const formData = new FormData(form)
+	const updatedData = {
+		surname: formData.get('surname'),
+		title: formData.get('title'),
+		description: formData.get('description'),
+		totalPeople: Number(formData.get('totalPeople')),
+		childGroup: Array.from(formData.getAll('childGroup')),
+		allergies: formData.get('allergies')
+			? formData
+					.get('allergies')
+					.split(',')
+					.map(item => item.trim())
+			: [],
+		foodPref: formData.get('foodPref')
+			? formData
+					.get('foodPref')
+					.split(',')
+					.map(item => item.trim())
+			: [],
+		otherTraits: formData.get('otherTraits')
+			? formData
+					.get('otherTraits')
+					.split(',')
+					.map(item => item.trim())
+			: [],
+		image: formData.get('image'),
+	}
+
+	if (updatedData.childGroup.length + 1 > updatedData.totalPeople) {
+		// displayMessage(
+		// 	'Antall gjester totalt kan ikke være mindre eller lik antall barn',
+		// 	'error'
+		// )
+		alert('Antall gjester totalt kan ikke være mindre eller likt antall barn')
+		throw new Error('Totalt gjester <= antall barn')
+	}
+
+	const url = `${API_URL}/Families/${id || ''}`
+
+	fetch(url, {
+		method: id ? 'PUT' : 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(updatedData),
+	})
+		.then(response => {
+			if (!response.ok) {
+				console.log(`Error ${response.status}: ${response.statusText}`)
+				throw new Error(`Error ${response.status}: ${response.statusText}`)
+			}
+			return response.json()
+		})
+		.then(() => {
+			alert('Data lagret vellykket!')
+			displayMessage('Data lagret vellykket!', 'success')
+			renderForm()
+		})
+		.catch(error => {
+			displayMessage(`Error: ${error.message}`, 'error')
+		})
+}
+
+export function deleteData(id) {
+	if (confirm('Er du sikker på at du vil slette data?')) {
+		const url = `${API_URL}/Families/${id}`
+
+		fetch(url, {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+			.then(response => {
+				if (!response.ok) {
+					console.log(`Error ${response.status}: ${response.statusText}`)
+					throw new Error(`Error ${response.status}: ${response.statusText}`)
+				}
+				return response.json()
+			})
+			.then(() => {
+				alert('Data slettet vellykket!')
+				window.location.replace(
+					'./index.html?timestamp=' + new Date().getTime()
+				)
+			})
+	}
 }

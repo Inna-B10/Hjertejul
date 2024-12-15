@@ -1,12 +1,11 @@
 import {
 	allergiesOptions,
-	API_URL,
 	childGroupOptions,
 	foodPrefOptions,
 	otherTraitsOptions,
 } from './constants.js'
 import { createHeading, createNode } from './createElements.js'
-import { fetchFamilies } from './functions.js'
+import { deleteData, fetchFamilies, saveData } from './functions.js'
 
 export const outputForm = document.getElementById('output-form')
 if (outputForm) {
@@ -222,6 +221,11 @@ if (outputForm) {
 		imageHeading.appendChild(imageLabel)
 		form.append(imageHeading, image)
 
+		//# ------------------------ Buttons
+		const manageButtons = createNode('div', {
+			class: 'manageButtons',
+		})
+
 		//# ------------------------ saveButton
 		const saveButton = createNode('button', {
 			id: 'save-button',
@@ -229,18 +233,19 @@ if (outputForm) {
 			'data-action': 'save',
 		})
 		saveButton.innerText = 'Lagre'
-		form.appendChild(saveButton)
+		manageButtons.appendChild(saveButton)
 
+		//# ------------------------ deleteButton
 		if (data?.id) {
-			//# ------------------------ deleteButton
 			const deleteButton = createNode('button', {
 				id: 'delete-button',
 				type: 'submit',
 				'data-action': 'delete',
 			})
 			deleteButton.innerText = 'Slette'
-			form.appendChild(deleteButton)
+			manageButtons.appendChild(deleteButton)
 		}
+		form.appendChild(manageButtons)
 
 		//# ------------------------ add form to the container
 		outputForm.appendChild(form)
@@ -255,108 +260,5 @@ if (outputForm) {
 				deleteData(data?.id)
 			}
 		})
-	}
-
-	function saveData(id = null) {
-		const form = document.getElementById('add-edit-form')
-
-		const formData = new FormData(form)
-		const updatedData = {
-			surname: formData.get('surname'),
-			title: formData.get('title'),
-			description: formData.get('description'),
-			totalPeople: Number(formData.get('totalPeople')),
-			childGroup: Array.from(formData.getAll('childGroup')),
-			allergies: formData.get('allergies')
-				? formData
-						.get('allergies')
-						.split(',')
-						.map(item => item.trim())
-				: [],
-			foodPref: formData.get('foodPref')
-				? formData
-						.get('foodPref')
-						.split(',')
-						.map(item => item.trim())
-				: [],
-			otherTraits: formData.get('otherTraits')
-				? formData
-						.get('otherTraits')
-						.split(',')
-						.map(item => item.trim())
-				: [],
-			image: formData.get('image'),
-		}
-
-		if (updatedData.childGroup.length + 1 > updatedData.totalPeople) {
-			// displayMessage(
-			// 	'Antall gjester totalt kan ikke være mindre eller lik antall barn',
-			// 	'error'
-			// )
-			alert('Antall gjester totalt kan ikke være mindre eller likt antall barn')
-			throw new Error('Totalt gjester <= antall barn')
-		}
-
-		const url = `${API_URL}/Families/${id || ''}`
-
-		fetch(url, {
-			method: id ? 'PUT' : 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(updatedData),
-		})
-			.then(response => {
-				if (!response.ok) {
-					console.log(`Error ${response.status}: ${response.statusText}`)
-					throw new Error(`Error ${response.status}: ${response.statusText}`)
-				}
-				return response.json()
-			})
-			.then(() => {
-				alert('Data lagret vellykket!')
-				displayMessage('Data lagret vellykket!', 'success')
-				renderForm()
-			})
-			.catch(error => {
-				displayMessage(`Error: ${error.message}`, 'error')
-			})
-	}
-
-	function deleteData(id) {
-		if (confirm('Er du sikker på at du vil slette data?')) {
-			const url = `${API_URL}/Families/${id}`
-
-			fetch(url, {
-				method: 'DELETE',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			})
-				.then(response => {
-					if (!response.ok) {
-						console.log(`Error ${response.status}: ${response.statusText}`)
-						throw new Error(`Error ${response.status}: ${response.statusText}`)
-					}
-					return response.json()
-				})
-				.then(() => {
-					alert('Data slettet vellykket!')
-					window.location.replace(
-						'./index.html?timestamp=' + new Date().getTime()
-					)
-				})
-		}
-	}
-
-	function displayMessage(message, type) {
-		const messageContainer = document.getElementById('message-container')
-
-		messageContainer.innerText = message
-		messageContainer.className = type // 'success' or 'error'
-		setTimeout(() => {
-			messageContainer.innerText = ''
-			messageContainer.className = ''
-		}, 5000) // disappear after 5 sec
 	}
 }
