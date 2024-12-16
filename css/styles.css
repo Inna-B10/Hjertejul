@@ -230,7 +230,8 @@ h1 {
   justify-content: center;
   align-items: center;
   padding-top: 20%;
-/*
+
+  /*
   > h1 {
     font-family: "Christmas Glitter";
     font-size: 3rem;
@@ -241,13 +242,14 @@ h1 {
   h1 {
     font-family: "Christmas Glitter", sans-serif;
     font-size: 3rem;
-    background-image: linear-gradient(45deg, #af0b1e,#860c1a, #006400, #FFD700, #FFFFFF);
+    background-image: linear-gradient(45deg, #af0b1e, #860c1a, #006400, #FFD700, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+  }
 }
-}
+
 /* --------------------------------- Filters -------------------------------- */
 #content-section {
   display: flex;
@@ -415,7 +417,6 @@ h1 {
 #add-edit-form label {
   margin-top: 10px;
   font-size: 18px;
-  color: #fff;
 }
 
 #add-edit-form input,
@@ -437,7 +438,8 @@ h1 {
   font-size: 18px;
   letter-spacing: 2px;
   margin-top: 20px;
-  color: #fff;
+  font-weight: normal;
+  color: #f9eb4c;
 }
 
 .checkboxes-row {
@@ -475,16 +477,21 @@ h1 {
   font-size: smaller
 }
 
-.contact-section label {
-  margin-bottom: -10px;
-  font-size: 18px;
+#booking-form label {
+  font-weight: bold;
 }
 
-#contact-form {
+#contact-form,
+#booking-form {
   border: 2px solid #f20b0b;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 40px 20px 20px;
+
+  > label {
+    margin-bottom: -10px;
+    font-size: 18px;
+  }
 }
 
 /* Success Message */

@@ -488,7 +488,6 @@
 						<div id="filters-section">
 							<search role="search">
 								<div id="filters">
-									
 									<div>
 										<p>
 											<label for="totalPeople"
@@ -689,13 +688,35 @@
 						<div id="overlay"></div>
 						<div id="modal">
 							<div id="modal-output"></div>
-							<form id="booking">
+							<form id="booking-form">
+								<label for="name">Navn</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Ditt navn..."
+									required />
+
+								<label for="email">E-post</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Din e-postadresse..."
+									required />
+
+								<label for="message">Melding</label>
 								<textarea
-									name="booking"
-									id="booking"
+									id="message"
+									name="message"
+									placeholder="Skriv meldingen din her..."
 									rows="4"
-									cols="50"></textarea>
-								<button id="send-button">Send</button>
+									cols="50"
+									required></textarea>
+
+								<button type="submit" id="send-button">
+									Send melding til familien
+								</button>
 							</form>
 						</div>
 					</section>

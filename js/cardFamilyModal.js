@@ -8,12 +8,13 @@ import { sendForm } from './functions.js'
 
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
-overlay && overlay.addEventListener('click', e => closeModalCard(e, '#booking'))
+overlay &&
+	overlay.addEventListener('click', e => closeModalCard(e, '#booking-form'))
 
 const sendButton = document.getElementById('send-button')
 sendButton &&
 	sendButton.addEventListener('click', event => {
-		sendForm(event, '#booking')
+		sendForm(event, '#booking-form')
 	})
 
 export function showModalCard(family) {
@@ -29,9 +30,10 @@ export function showModalCard(family) {
 		'100%',
 		'auto'
 	)
-	const familyTitle = createHeading('h3', family.title)
+	const familyTitle = createHeading('h2', family.title)
 
 	const desc = createDesc(family.description)
+	const surname = createHeading('h3', `Familie: ${family.surname}`)
 	const list = createNode('ul', {})
 
 	//create an array of data to subsequently create list items
@@ -70,7 +72,7 @@ export function showModalCard(family) {
 		class: 'close-button',
 	})
 	closeButton.innerText = 'X'
-	closeButton.addEventListener('click', e => closeModalCard(e, '#booking'))
+	closeButton.addEventListener('click', e => closeModalCard(e, '#booking-form'))
 
 	const editButton = createNode('button', {})
 	editButton.innerText = 'rediger'
@@ -78,7 +80,15 @@ export function showModalCard(family) {
 		window.location.href = `./manageFamily.html?id=${family.id}`
 	}
 
-	modalOutput.append(img, familyTitle, desc, list, closeButton, editButton)
+	modalOutput.append(
+		img,
+		familyTitle,
+		desc,
+		surname,
+		list,
+		closeButton,
+		editButton
+	)
 
 	modal.style.display = 'block'
 	overlay.style.display = 'block'
