@@ -29,6 +29,7 @@
 }
 
 #modal-output {
+  margin-top: -30px;
 
   h2,
   h3 {
@@ -46,9 +47,10 @@
 }
 
 .close-button {
-  position: absolute;
-  top: -19px;
-  right: 3px;
+  position: sticky;
+  top: 0;
+  left: 100%;
+  margin: 0;
   padding: 5px 10px;
   color: white;
   border: 1px solid #fff;

@@ -18,6 +18,9 @@ sendButton &&
 	})
 
 export function showModalCard(family) {
+	const closeButton = document.querySelector('.close-button')
+	closeButton.addEventListener('click', e => closeModalCard(e, '#booking-form'))
+
 	const modalOutput = document.getElementById('modal-output')
 	modalOutput.innerHTML = ''
 
@@ -68,27 +71,13 @@ export function showModalCard(family) {
 		}
 	})
 
-	const closeButton = createNode('button', {
-		class: 'close-button',
-	})
-	closeButton.innerText = 'X'
-	closeButton.addEventListener('click', e => closeModalCard(e, '#booking-form'))
-
 	const editButton = createNode('button', {})
 	editButton.innerText = 'rediger'
 	editButton.onclick = () => {
 		window.location.href = `./manageFamily.html?id=${family.id}`
 	}
 
-	modalOutput.append(
-		img,
-		familyTitle,
-		desc,
-		surname,
-		list,
-		closeButton,
-		editButton
-	)
+	modalOutput.append(img, familyTitle, desc, surname, list, editButton)
 
 	modal.style.display = 'block'
 	overlay.style.display = 'block'
