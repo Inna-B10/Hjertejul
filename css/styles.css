@@ -324,12 +324,13 @@ h1 {
 
 /* ---------------------------- Output Container ---------------------------- */
 #output {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 auto;
   padding: 0 1em;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* ----------------------------- Families List  */
