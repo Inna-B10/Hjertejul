@@ -4,14 +4,17 @@ import {
 	createImage,
 	createNode,
 } from './createElements.js'
+import { sendForm } from './functions.js'
 
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')
-overlay && overlay.addEventListener('click', e => closeModalCard(e))
-const textArea = document.getElementById('booking')
+overlay && overlay.addEventListener('click', e => closeModalCard(e, '#booking'))
 
 const sendButton = document.getElementById('send-button')
-sendButton && sendButton.addEventListener('click', sendForm)
+sendButton &&
+	sendButton.addEventListener('click', event => {
+		sendForm(event, '#booking')
+	})
 
 export function showModalCard(family) {
 	const modalOutput = document.getElementById('modal-output')
@@ -67,7 +70,7 @@ export function showModalCard(family) {
 		class: 'close-button',
 	})
 	closeButton.innerText = 'X'
-	closeButton.addEventListener('click', closeModalCard)
+	closeButton.addEventListener('click', e => closeModalCard(e, '#booking'))
 
 	const editButton = createNode('button', {})
 	editButton.innerText = 'rediger'
@@ -81,22 +84,14 @@ export function showModalCard(family) {
 	overlay.style.display = 'block'
 }
 
-function closeModalCard() {
+function closeModalCard(event, idForm) {
+	const form = document.querySelector(idForm)
+	const textArea = form.querySelector('textarea')
 	if (textArea.value.trim() !== '') {
 		alert('Din melding er ikke sent ennå!')
 	} else {
 		document.body.style.overflow = ''
 		modal.style.display = 'none'
 		overlay.style.display = 'none'
-	}
-}
-
-function sendForm(event) {
-	event.preventDefault()
-	if (textArea.value.trim() === '') {
-		alert('Du må skrive noe!')
-	} else {
-		textArea.value = ''
-		alert('Meldingen er sent!')
 	}
 }

@@ -1,4 +1,9 @@
-import { fetchFamilies, filterFamilies, renderFamilies } from './functions.js'
+import {
+	fetchFamilies,
+	filterFamilies,
+	renderFamilies,
+	sendForm,
+} from './functions.js'
 
 let families
 export const output = document.getElementById('output')
@@ -14,6 +19,9 @@ if (output) {
 		}
 	}
 	getData()
+	document.getElementById('contact-form').addEventListener('submit', event => {
+		sendForm(event, '#contact-form')
+	})
 }
 
 export const searchInput = document.getElementById('search')
