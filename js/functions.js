@@ -60,6 +60,7 @@ export function filterFamilies(families) {
 			.filter(checkbox => checkbox.checked && checkbox.dataset.group)
 			.map(checkbox => checkbox.dataset.group),
 	}
+	// console.log(activeFilters)
 	const filteredFamilies = families?.filter(family => {
 		// --------------------------------- Check totalPeople first
 		if (family.totalPeople > Number(selectFilter.value)) {
@@ -79,6 +80,10 @@ export function filterFamilies(families) {
 				? family.foodPref.length === 0
 				: activeFilters.foodPref.every(pref => family.foodPref.includes(pref))
 		// --------------------------------- Traits
+		// const matchesTraits =
+		// 	activeFilters.trait.length === 0
+		// 		? family.trait
+		// 		: activeFilters.trait.every(trait => family.otherTraits.includes(trait))
 		const matchesTraits = activeFilters.trait.every(trait =>
 			family.otherTraits.includes(trait)
 		)
@@ -219,5 +224,17 @@ export function deleteData(id) {
 					)
 				}, 5000)
 			})
+	}
+}
+export function sendForm(event, idForm) {
+	event.preventDefault()
+
+	const form = document.querySelector(idForm)
+	const textArea = form.querySelector('textarea')
+	if (textArea.value.trim() === '') {
+		alert('Du må skrive noe!')
+	} else {
+		alert('Meldingen er sent!')
+		form.reset()
 	}
 }
