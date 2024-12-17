@@ -45,7 +45,7 @@ export function showModalCard(family) {
 		{
 			text:
 				'Barn i aldersgruppe: ' +
-				(family.childGroup.length > 0 ? family.childGroup : 'ikke barn'),
+				(family.childGroup.length > 0 ? family.childGroup : 'uten barn'),
 		},
 		{
 			text: `Allergier: ${family.allergies}`,

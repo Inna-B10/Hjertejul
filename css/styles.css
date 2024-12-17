@@ -232,7 +232,7 @@ h1 {
   h1 {
     font-family: "Christmas Glitter", sans-serif;
     font-size: 4rem;
-    background-image: linear-gradient(45deg, #af0b1e, #860c1a, #006400, #FFD700, #FFFFFF);
+    background-image: linear-gradient(45deg, #c01328, #c50018, #006400, #FFD700, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -330,6 +330,10 @@ h1 {
   margin: 0 auto;
   padding: 0 1em;
   justify-content: space-between;
+
+  > p {
+    margin: 0 auto;
+  }
 }
 
 /* ----------------------------- Families List  */

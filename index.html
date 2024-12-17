@@ -515,18 +515,6 @@
 										<p>
 											Minst ett av gjesters barn må være i en av følgende
 											aldersgruppe:
-											<br />
-											<small>
-												<ul>
-													<li>
-														- la stå tomt hvis du ønsker KUN familier uten barn
-													</li>
-													<li>
-														- velg alt hvis du ønsker familier uten barn ELLER
-														med barn uansett alderen
-													</li>
-												</ul>
-											</small>
 										</p>
 										<label for="0-3"
 											><input type="checkbox" name="0-3" data-group="0-3" />
@@ -539,6 +527,21 @@
 										<label for="11-17"
 											><input type="checkbox" name="11-17" data-group="11-17" />
 											11-17</label
+										>
+										<label for="no child">
+											<input
+												type="checkbox"
+												name="no child"
+												data-group="uten barn" />
+											uten barn</label
+										>
+										<label for="group passer alt">
+											<input
+												type="checkbox"
+												name="group passer alt"
+												data-group="passer alt"
+												checked />
+											passer alt</label
 										>
 									</div>
 									<div>
@@ -568,6 +571,21 @@
 												data-food="tradisjonell" />
 											tradisjonell</label
 										>
+										<label for="no prefers">
+											<input
+												type="checkbox"
+												name="no prefers"
+												data-food="ingen foretrekninger" />
+											ingen foretrekninger</label
+										>
+										<label for="food passer alt">
+											<input
+												type="checkbox"
+												name="food passer alt"
+												data-food="passer alt"
+												checked />
+											passer alt</label
+										>
 									</div>
 									<div>
 										<p>Gjester har følgende vaner:</p>
@@ -579,10 +597,10 @@
 													data-trait="røyker" />
 												røyker,</label
 											>
-											<label for="smok-tolerance">
+											<label for="smoke-tolerance">
 												<input
 													type="checkbox"
-													name="smok-tolerance"
+													name="smoke-tolerance"
 													data-trait="røyktoleranse" />
 												røyktoleranse,</label
 											>
@@ -599,6 +617,14 @@
 													name="alcohol tolerance"
 													data-trait="alkoholtoleranse" />
 												alkoholtoleranse,</label
+											>
+											<label for="trait passer alt">
+												<input
+													type="checkbox"
+													name="trait passer alt"
+													data-trait="passer alt"
+													checked />
+												passer alt</label
 											>
 										</div>
 										<div>

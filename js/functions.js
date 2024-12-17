@@ -1,6 +1,7 @@
 import cardFamily from './cardFamily.js'
 import { API_URL } from './constants.js'
 import { filters, output, searchInput, selectFilter } from './main.js'
+import renderForm from './renderForm.js'
 
 export async function fetchFamilies(id = null) {
 	const url = id === null ? `${API_URL}/Families` : `${API_URL}/Families/${id}`
@@ -9,6 +10,7 @@ export async function fetchFamilies(id = null) {
 		const response = await fetch(url)
 
 		if (!response.ok) {
+			//#TODO check working messages
 			// if (output)
 			// 	output.innerText = `${response.status}: ${response.StatusText}`
 			// if (outputForm)
@@ -36,7 +38,7 @@ export function renderFamilies(array) {
 					cardFamily(family)
 				})
 			} else {
-				output.innerText = 'Ingen familie funnet basert på dine kriterier'
+				output.innerHTML = `<p>Ingen familie funnet basert på dine kriterier</p>`
 			}
 		}
 	}
@@ -50,7 +52,7 @@ export function filterFamilies(families) {
 		foodPref: Array.from(filters)
 			.filter(checkbox => checkbox.checked && checkbox.dataset.food)
 			.map(checkbox => checkbox.dataset.food),
-		trait: Array.from(filters)
+		traits: Array.from(filters)
 			.filter(checkbox => checkbox.checked && checkbox.dataset.trait)
 			.map(checkbox => checkbox.dataset.trait),
 		allergies: Array.from(filters)
@@ -75,18 +77,16 @@ export function filterFamilies(families) {
 			: true // If searchValue is empty, match all families
 
 		// --------------------------------- FoodPref
-		const matchesFoodPref =
-			activeFilters.foodPref.length === 0
-				? family.foodPref.length === 0
-				: activeFilters.foodPref.every(pref => family.foodPref.includes(pref))
+		const matchesFoodPref = activeFilters.foodPref.includes('passer alt')
+			? true
+			: activeFilters.foodPref.includes('ingen foretrekninger')
+			? family.foodPref.length === 0
+			: activeFilters.foodPref.some(pref => family.foodPref.includes(pref))
+
 		// --------------------------------- Traits
-		// const matchesTraits =
-		// 	activeFilters.trait.length === 0
-		// 		? family.trait
-		// 		: activeFilters.trait.every(trait => family.otherTraits.includes(trait))
-		const matchesTraits = activeFilters.trait.every(trait =>
-			family.otherTraits.includes(trait)
-		)
+		const matchesTraits = activeFilters.traits.includes('passer alt')
+			? true
+			: activeFilters.traits.some(trait => family.otherTraits.includes(trait))
 
 		// -------------------------------- Allergies
 		const matchesAllergies = activeFilters.allergies.every(
@@ -94,16 +94,14 @@ export function filterFamilies(families) {
 		)
 
 		// ------------------------------- ChildGroup
-		const uniqueGroups = [...new Set(family.childGroup)]
-		const matchesChildGroup =
-			activeFilters.childGroup.length === 0
-				? uniqueGroups.length === 0 // Show only families with empty childGroup
-				: activeFilters.childGroup.length === 3
-				? family.childGroup
-				: uniqueGroups.some(group =>
-						activeFilters.childGroup.includes(group)
-				  ) &&
-				  activeFilters.childGroup.some(group => uniqueGroups.includes(group))
+		const uniqueGroups = family.childGroup
+			? [...new Set(family.childGroup)]
+			: []
+		const matchesChildGroup = activeFilters.childGroup.includes('passer alt')
+			? true
+			: activeFilters.childGroup.includes('uten barn')
+			? uniqueGroups.length === 0
+			: uniqueGroups.some(group => activeFilters.childGroup.includes(group))
 
 		// --------------------------------- Result
 		return (
@@ -117,6 +115,7 @@ export function filterFamilies(families) {
 
 	renderFamilies(filteredFamilies)
 }
+
 export function displayMessage(message, type) {
 	const messageContainer = document.getElementById('message-container')
 
