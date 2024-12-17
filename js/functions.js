@@ -3,6 +3,7 @@ import { API_URL } from './constants.js'
 import { filters, output, searchInput, selectFilter } from './main.js'
 import renderForm from './renderForm.js'
 
+/* ------------------------------ FetchFamilies ----------------------------- */
 export async function fetchFamilies(id = null) {
 	const url = id === null ? `${API_URL}/Families` : `${API_URL}/Families/${id}`
 
@@ -28,6 +29,7 @@ export async function fetchFamilies(id = null) {
 	}
 }
 
+/* ----------------------------- RenderFamilies ----------------------------- */
 export function renderFamilies(array) {
 	if (array) {
 		if (output) {
@@ -44,25 +46,37 @@ export function renderFamilies(array) {
 	}
 }
 
+/* ----------------------------- FilterFamilies ----------------------------- */
 export function filterFamilies(families) {
 	const searchValue = searchInput.value.toLowerCase().trim()
 
-	// collect all checked checkboxes
+	// ----------------------------- collect all checked checkboxes
 	const activeFilters = {
 		foodPref: Array.from(filters)
-			.filter(checkbox => checkbox.checked && checkbox.dataset.food)
-			.map(checkbox => checkbox.dataset.food),
+			.filter(
+				checkbox => checkbox.checked && checkbox.dataset.category === 'foodPref'
+			)
+			.map(checkbox => checkbox.dataset.group),
 		traits: Array.from(filters)
-			.filter(checkbox => checkbox.checked && checkbox.dataset.trait)
-			.map(checkbox => checkbox.dataset.trait),
+			.filter(
+				checkbox =>
+					checkbox.checked && checkbox.dataset.category === 'otherTraits'
+			)
+			.map(checkbox => checkbox.dataset.group),
 		allergies: Array.from(filters)
-			.filter(checkbox => checkbox.checked && checkbox.dataset.allergies)
-			.map(checkbox => checkbox.dataset.allergies),
+			.filter(
+				checkbox =>
+					checkbox.checked && checkbox.dataset.category === 'allergies'
+			)
+			.map(checkbox => checkbox.dataset.group),
 		childGroup: Array.from(filters)
-			.filter(checkbox => checkbox.checked && checkbox.dataset.group)
+			.filter(
+				checkbox =>
+					checkbox.checked && checkbox.dataset.category === 'childGroup'
+			)
 			.map(checkbox => checkbox.dataset.group),
 	}
-	// console.log(activeFilters)
+
 	const filteredFamilies = families?.filter(family => {
 		// --------------------------------- Check totalPeople first
 		if (family.totalPeople > Number(selectFilter.value)) {
@@ -77,14 +91,14 @@ export function filterFamilies(families) {
 			: true // If searchValue is empty, match all families
 
 		// --------------------------------- FoodPref
-		const matchesFoodPref = activeFilters.foodPref.includes('passer alt')
+		const matchesFoodPref = activeFilters.foodPref.includes('all')
 			? true
-			: activeFilters.foodPref.includes('ingen foretrekninger')
+			: activeFilters.foodPref.includes('nothing')
 			? family.foodPref.length === 0
 			: activeFilters.foodPref.some(pref => family.foodPref.includes(pref))
 
 		// --------------------------------- Traits
-		const matchesTraits = activeFilters.traits.includes('passer alt')
+		const matchesTraits = activeFilters.traits.includes('all')
 			? true
 			: activeFilters.traits.some(trait => family.otherTraits.includes(trait))
 
@@ -97,9 +111,9 @@ export function filterFamilies(families) {
 		const uniqueGroups = family.childGroup
 			? [...new Set(family.childGroup)]
 			: []
-		const matchesChildGroup = activeFilters.childGroup.includes('passer alt')
+		const matchesChildGroup = activeFilters.childGroup.includes('all')
 			? true
-			: activeFilters.childGroup.includes('uten barn')
+			: activeFilters.childGroup.includes('nothing')
 			? uniqueGroups.length === 0
 			: uniqueGroups.some(group => activeFilters.childGroup.includes(group))
 
@@ -116,6 +130,7 @@ export function filterFamilies(families) {
 	renderFamilies(filteredFamilies)
 }
 
+/* ----------------------------- DisplayMessage ----------------------------- */
 export function displayMessage(message, type) {
 	const messageContainer = document.getElementById('message-container')
 
@@ -127,6 +142,7 @@ export function displayMessage(message, type) {
 	// }, 5000) // disappear after 5 sec
 }
 
+/* -------------------------------- SaveData -------------------------------- */
 export function saveData(id = null) {
 	const form = document.getElementById('add-edit-form')
 
@@ -193,6 +209,7 @@ export function saveData(id = null) {
 		})
 }
 
+/* ------------------------------- DeleteData ------------------------------- */
 export function deleteData(id) {
 	if (confirm('Er du sikker på at du vil slette data?')) {
 		const url = `${API_URL}/Families/${id}`
@@ -215,16 +232,18 @@ export function deleteData(id) {
 				return response.json()
 			})
 			.then(() => {
-				// alert('Data slettet vellykket!')
-				displayMessage('Data slettet vellykket!', 'success')
-				setTimeout(() => {
-					window.location.replace(
-						'./index.html?timestamp=' + new Date().getTime()
-					)
-				}, 5000)
+				alert('Data slettet vellykket!')
+				// displayMessage('Data slettet vellykket!', 'success')
+				// setTimeout(() => {
+				// 	window.location.replace(
+				// 		'./index.html?timestamp=' + new Date().getTime()
+				// 	)
+				// }, 5000)
 			})
 	}
 }
+
+/* -------------------------------- SendForm -------------------------------- */
 export function sendForm(event, idForm) {
 	event.preventDefault()
 

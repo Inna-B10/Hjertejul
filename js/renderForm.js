@@ -1,9 +1,4 @@
-import {
-	allergiesOptions,
-	childGroupOptions,
-	foodPrefOptions,
-	otherTraitsOptions,
-} from './constants.js'
+import { allergies, childGroup, foodPref, otherTraits } from './constants.js'
 import { createHeading, createNode } from './createElements.js'
 import { deleteData, saveData } from './functions.js'
 
@@ -85,7 +80,7 @@ export default function renderForm(data) {
 	const divGroups = createNode('div', {
 		class: 'checkboxes-row',
 	})
-	childGroupOptions.forEach(option => {
+	childGroup.forEach(option => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -111,7 +106,7 @@ export default function renderForm(data) {
 	const divAllergies = createNode('div', {
 		class: 'checkboxes-row',
 	})
-	allergiesOptions.forEach(option => {
+	allergies.forEach(option => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -138,7 +133,7 @@ export default function renderForm(data) {
 		class: 'checkboxes-row',
 	})
 
-	foodPrefOptions.forEach(option => {
+	foodPref.forEach(option => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -165,7 +160,7 @@ export default function renderForm(data) {
 		class: 'checkboxes-row',
 	})
 
-	otherTraitsOptions.forEach(option => {
+	otherTraits.forEach(option => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
