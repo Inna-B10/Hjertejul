@@ -18,8 +18,9 @@ if (output) {
 		if (Array.isArray(families) && families.length > 0) {
 			renderFamilies(families)
 		} else {
-			output.innerText = 'Error fetching data!'
-			throw new Error('Error: no families fetched!')
+			output.innerText =
+				'An error has occurred while attempting to connect to the server.'
+			throw new Error('Error: Error fetching data!')
 		}
 	}
 	getData()

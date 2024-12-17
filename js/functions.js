@@ -25,7 +25,7 @@ export async function fetchFamilies(id = null) {
 		return families
 	} catch (error) {
 		console.error('Error loading data:', error.message)
-		throw new Error('Error loading data:', error.message)
+		// throw new Error('Error loading data:', error.message)
 	}
 }
 
