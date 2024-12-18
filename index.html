@@ -468,7 +468,7 @@
 					<nav class="navbar">
 						<ul>
 							<li><a href="index.html">Hjem</a></li>
-							<li><a href="#content-section">Familie Detaljer</a></li>
+							<li><a href="#filters-section">Familie Detaljer</a></li>
 							<li><a href="manageFamily.html">Administrasjon</a></li>
 							<li><a href="#form-section">Kontakt Oss</a></li>
 						</ul>
@@ -490,280 +490,278 @@
 					<!-- ======================================================================= -->
 					<!--                                 FILTERS                                 -->
 					<!-- ======================================================================= -->
-					<section id="content-section">
+					<section id="filters-section">
 						<h2>
 							Bli med på å spre juleglede -<br />
 							sammen skaper vi en varmere jul!
 						</h2>
-						<div id="filters-section">
-							<search role="search">
-								<div id="filters">
-									<div>
-										<p>
-											<!-- ----------------------------- TotalPeople  -->
-											<label for="totalPeople"
-												>Jeg har plass til
-												<select id="totalPeople">
-													<option value="1">1</option>
-													<option value="2">2</option>
-													<option value="3">3</option>
-													<option value="4">4</option>
-													<option value="5">5</option>
-													<option value="6" selected>6</option>
-												</select>
-												gjester (inkludert barn)
-											</label>
-										</p>
-									</div>
-									<div>
-										<p>
-											Minst ett av gjesters barn må være i en av følgende
-											aldersgruppe:
-										</p>
-										<!-- ----------------------------- ChildGroup  -->
-										<label for="group passer alt">
-											<input
-												type="checkbox"
-												id="group passer alt"
-												data-category="childGroup"
-												data-group="all"
-												checked />
-											passer alt</label
-										>
-										<label for="no child">
-											<input
-												type="checkbox"
-												id="no child"
-												data-category="childGroup"
-												data-group="nothing" />
-											uten barn</label
-										>
-										<label for="0-3"
-											><input
-												type="checkbox"
-												id="0-3"
-												data-category="childGroup"
-												data-group="0-3" />
-											0-3,</label
-										>
-										<label for="4-10"
-											><input
-												type="checkbox"
-												id="4-10"
-												data-category="childGroup"
-												data-group="4-10" />
-											4-10,</label
-										>
-										<label for="11-17"
-											><input
-												type="checkbox"
-												id="11-17"
-												data-category="childGroup"
-												data-group="11-17" />
-											11-17</label
-										>
-									</div>
-									<div>
-										<p>Gjester foretrekker mat som er:</p>
-										<!-- ------------------------------ FoodPref  -->
-										<label for="food passer alt">
-											<input
-												type="checkbox"
-												id="food passer alt"
-												data-category="foodPref"
-												data-group="all"
-												checked />
-											passer alt</label
-										>
-										<label for="no prefers">
-											<input
-												type="checkbox"
-												id="no prefers"
-												data-category="foodPref"
-												data-group="nothing" />
-											ingen foretrekninger</label
-										>
-										<label for="vegetarian"
-											><input
-												type="checkbox"
-												id="vegetarian"
-												data-category="foodPref"
-												data-group="vegetarisk" />
-											vegetarisk,</label
-										>
-										<label for="halal"
-											><input
-												type="checkbox"
-												id="halal"
-												data-category="foodPref"
-												data-group="halal" />
-											halal,</label
-										>
-										<label for="lactosefree">
-											<input
-												type="checkbox"
-												id="lactosefree"
-												data-category="foodPref"
-												data-group="laktosefri" />
-											laktosefri,</label
-										>
-										<label for="traditional">
-											<input
-												type="checkbox"
-												id="traditional"
-												data-category="foodPref"
-												data-group="tradisjonell" />
-											tradisjonell</label
-										>
-									</div>
-									<div>
-										<p>Gjester har en eller flere av følgende vaner:</p>
-										<div>
-											<!-- ----------------------------- OtherTraits  -->
-											<label for="trait passer alt">
-												<input
-													type="checkbox"
-													id="trait passer alt"
-													data-category="otherTraits"
-													data-group="all"
-													checked />
-												passer alt</label
-											>
-											<label for="smoker">
-												<input
-													type="checkbox"
-													id="smoker"
-													data-category="otherTraits"
-													data-group="røyker" />
-												røyker,</label
-											>
-											<label for="smoke-tolerance">
-												<input
-													type="checkbox"
-													id="smoke-tolerance"
-													data-category="otherTraits"
-													data-group="røyktoleranse" />
-												røyktoleranse,</label
-											>
-											<label for="alcohol">
-												<input
-													type="checkbox"
-													id="alcohol"
-													data-category="otherTraits"
-													data-group="drikker alkohol" />
-												drikker alkohol,</label
-											>
-											<label for="alcohol tolerance">
-												<input
-													type="checkbox"
-													id="alcohol tolerance"
-													data-category="otherTraits"
-													data-group="alkoholtoleranse" />
-												alkoholtoleranse,</label
-											>
-										</div>
-										<div>
-											<label for="dyr">
-												<input
-													type="checkbox"
-													id="dyr"
-													data-category="otherTraits"
-													data-group="dyrevennlig" />
-												dyrevennlig,</label
-											>
-											<label for="barnevennlig">
-												<input
-													type="checkbox"
-													id="barnevennlig"
-													data-category="otherTraits"
-													data-group="barnevennlig" />
-												barnevennlig,</label
-											>
-											<label for="matlaging">
-												<input
-													type="checkbox"
-													id="matlaging"
-													data-category="otherTraits"
-													data-group="kan hjelpe med matlaging" />
-												kan hjelpe med matlaging</label
-											>
-										</div>
-									</div>
-									<div>
-										<p>Gjester som <span>IKKE</span> har allergi mot:</p>
-										<label for="egg">
-											<input
-												type="checkbox"
-												id="egg"
-												data-category="allergies"
-												data-group="egg" />
-											egg,</label
-										>
-										<label for="shellfish">
-											<input
-												type="checkbox"
-												id="shellfish"
-												data-category="allergies"
-												data-group="skalldyr" />
-											skalldyr,</label
-										>
-										<label for="nuts">
-											<input
-												type="checkbox"
-												id="nuts"
-												data-category="allergies"
-												data-group="nøtter" />
-											nøtter,</label
-										>
-										<label for="gluten">
-											<input
-												type="checkbox"
-												id="gluten"
-												data-category="allergies"
-												data-group="gluten" />
-											gluten,</label
-										>
-										<label for="honey">
-											<input
-												type="checkbox"
-												id="honey"
-												data-category="allergies"
-												data-group="honning" />
-											honning,</label
-										>
-										<label for="citrus">
-											<input
-												type="checkbox"
-												id="citrus"
-												data-category="allergies"
-												data-group="citrus" />
-											sitrus,</label
-										>
-										<label for="animal">
-											<input
-												type="checkbox"
-												id="animal"
-												data-category="allergies"
-												data-group="dyr" />
-											dyr</label
-										>
-									</div>
-									<input
-										type="text"
-										id="search"
-										placeholder="Søk etter nøkkelord..." />
+						<search role="search">
+							<div id="filters">
+								<div>
+									<p>
+										<!-- ----------------------------- TotalPeople  -->
+										<label for="totalPeople"
+											>Jeg har plass til
+											<select id="totalPeople">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6" selected>6</option>
+											</select>
+											gjester (inkludert barn)
+										</label>
+									</p>
 								</div>
+								<div>
+									<p>
+										Minst ett av gjesters barn må være i en av følgende
+										aldersgruppe:
+									</p>
+									<!-- ----------------------------- ChildGroup  -->
+									<label for="group passer alt">
+										<input
+											type="checkbox"
+											id="group passer alt"
+											data-category="childGroup"
+											data-group="all"
+											checked />
+										passer alt</label
+									>
+									<label for="no child">
+										<input
+											type="checkbox"
+											id="no child"
+											data-category="childGroup"
+											data-group="nothing" />
+										uten barn</label
+									>
+									<label for="0-3"
+										><input
+											type="checkbox"
+											id="0-3"
+											data-category="childGroup"
+											data-group="0-3" />
+										0-3,</label
+									>
+									<label for="4-10"
+										><input
+											type="checkbox"
+											id="4-10"
+											data-category="childGroup"
+											data-group="4-10" />
+										4-10,</label
+									>
+									<label for="11-17"
+										><input
+											type="checkbox"
+											id="11-17"
+											data-category="childGroup"
+											data-group="11-17" />
+										11-17</label
+									>
+								</div>
+								<div>
+									<p>Gjester foretrekker mat som er:</p>
+									<!-- ------------------------------ FoodPref  -->
+									<label for="food passer alt">
+										<input
+											type="checkbox"
+											id="food passer alt"
+											data-category="foodPref"
+											data-group="all"
+											checked />
+										passer alt</label
+									>
+									<label for="no prefers">
+										<input
+											type="checkbox"
+											id="no prefers"
+											data-category="foodPref"
+											data-group="nothing" />
+										ingen foretrekninger</label
+									>
+									<label for="vegetarian"
+										><input
+											type="checkbox"
+											id="vegetarian"
+											data-category="foodPref"
+											data-group="vegetarisk" />
+										vegetarisk,</label
+									>
+									<label for="halal"
+										><input
+											type="checkbox"
+											id="halal"
+											data-category="foodPref"
+											data-group="halal" />
+										halal,</label
+									>
+									<label for="lactosefree">
+										<input
+											type="checkbox"
+											id="lactosefree"
+											data-category="foodPref"
+											data-group="laktosefri" />
+										laktosefri,</label
+									>
+									<label for="traditional">
+										<input
+											type="checkbox"
+											id="traditional"
+											data-category="foodPref"
+											data-group="tradisjonell" />
+										tradisjonell</label
+									>
+								</div>
+								<div>
+									<p>Gjester har en eller flere av følgende vaner:</p>
+									<div>
+										<!-- ----------------------------- OtherTraits  -->
+										<label for="trait passer alt">
+											<input
+												type="checkbox"
+												id="trait passer alt"
+												data-category="otherTraits"
+												data-group="all"
+												checked />
+											passer alt</label
+										>
+										<label for="smoker">
+											<input
+												type="checkbox"
+												id="smoker"
+												data-category="otherTraits"
+												data-group="røyker" />
+											røyker,</label
+										>
+										<label for="smoke-tolerance">
+											<input
+												type="checkbox"
+												id="smoke-tolerance"
+												data-category="otherTraits"
+												data-group="røyktoleranse" />
+											røyktoleranse,</label
+										>
+										<label for="alcohol">
+											<input
+												type="checkbox"
+												id="alcohol"
+												data-category="otherTraits"
+												data-group="drikker alkohol" />
+											drikker alkohol,</label
+										>
+										<label for="alcohol tolerance">
+											<input
+												type="checkbox"
+												id="alcohol tolerance"
+												data-category="otherTraits"
+												data-group="alkoholtoleranse" />
+											alkoholtoleranse,</label
+										>
+									</div>
+									<div>
+										<label for="dyr">
+											<input
+												type="checkbox"
+												id="dyr"
+												data-category="otherTraits"
+												data-group="dyrevennlig" />
+											dyrevennlig,</label
+										>
+										<label for="barnevennlig">
+											<input
+												type="checkbox"
+												id="barnevennlig"
+												data-category="otherTraits"
+												data-group="barnevennlig" />
+											barnevennlig,</label
+										>
+										<label for="matlaging">
+											<input
+												type="checkbox"
+												id="matlaging"
+												data-category="otherTraits"
+												data-group="kan hjelpe med matlaging" />
+											kan hjelpe med matlaging</label
+										>
+									</div>
+								</div>
+								<div>
+									<p>Gjester som <span>IKKE</span> har allergi mot:</p>
+									<label for="egg">
+										<input
+											type="checkbox"
+											id="egg"
+											data-category="allergies"
+											data-group="egg" />
+										egg,</label
+									>
+									<label for="shellfish">
+										<input
+											type="checkbox"
+											id="shellfish"
+											data-category="allergies"
+											data-group="skalldyr" />
+										skalldyr,</label
+									>
+									<label for="nuts">
+										<input
+											type="checkbox"
+											id="nuts"
+											data-category="allergies"
+											data-group="nøtter" />
+										nøtter,</label
+									>
+									<label for="gluten">
+										<input
+											type="checkbox"
+											id="gluten"
+											data-category="allergies"
+											data-group="gluten" />
+										gluten,</label
+									>
+									<label for="honey">
+										<input
+											type="checkbox"
+											id="honey"
+											data-category="allergies"
+											data-group="honning" />
+										honning,</label
+									>
+									<label for="citrus">
+										<input
+											type="checkbox"
+											id="citrus"
+											data-category="allergies"
+											data-group="citrus" />
+										sitrus,</label
+									>
+									<label for="animal">
+										<input
+											type="checkbox"
+											id="animal"
+											data-category="allergies"
+											data-group="dyr" />
+										dyr</label
+									>
+								</div>
+								<input
+									type="text"
+									id="search"
+									placeholder="Søk etter nøkkelord..." />
+
 								<button id="resetButton">Tilbakestille</button>
-							</search>
-						</div>
+							</div>
+						</search>
 					</section>
 
 					<!-- ------------------------------- Output -------------------------------- -->
-					<section id="family-section" class="family-section">
+					<section id="family-section">
 						<h2>Familier som matcher</h2>
-						<div class="family-list">
-							<div id="output"></div>
-						</div>
+
+						<div id="output"></div>
 					</section>
 
 					<!-- -------------------------------- Modal -------------------------------- -->
@@ -851,19 +849,21 @@
 				</footer>
 			</div>
 			<div id="hilsen">
-				<h3>Ho-ho-ho!</h3>
+				<h2><span>Ho-ho-ho!</span></h2>
 				<p>
 					Du har fant den skjulte hilsen fra Julenissen:<br /><br />
 					En klem er den perfekte gaven - <br />én størrelse passer alle,
-					<br />og ingen har noe imot at du leverer den tilbake.<br /><br />
+					<br />og ingen har noe imot at du leverer den tilbake.
+
 					<!-- Glede - av barn, familie og venner <br />
 					Omtanke - i sorg og smerte<br />
 					Drømmer - om fremtid og visjoner<br />
 					Jubler - over mål og fremgang<br />
 					Utfordring - i nye muligheter<br />
-					Løfter - i fellesskap og bønn<br /><br /> -->
+					Løfter - i fellesskap og bønn -->
+					<br /><br />
 				</p>
-				<h3>Riktig God Jul!</h3>
+				<h2>Riktig God Jul!</h2>
 			</div>
 		</div>
 

@@ -20,21 +20,22 @@
 
 body {
   font-family: "Dosis", sans-serif;
-  font-size: 20px;
+  font-size: calc(1rem + ((2vw - 0.48rem) * 0.6944));
+  min-height: 0vw;
   letter-spacing: 1px;
-  min-width: 641px;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
   color: #fff;
   display: flex;
   flex-direction: column;
 }
 
-.background {
+.body-admin {
+  min-height: 100vh;
+}
+
+.background,
+.body-admin {
   position: relative;
-  /* height = 2 screens */
-  height: 200vh;
   background-image: url('./images/christmas_bg.webp');
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,34 +43,50 @@ body {
   background-position: top;
 }
 
+.background {
+  /* height = 2 screens */
+  height: 200vh;
+}
+
 .content {
-  position: relative;
   height: 100vh;
   overflow-y: auto;
 }
 
-.body-admin {
-  background-image: url('./images/christmas_bg.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: top;
-  min-height: 100vh;
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2,
+.body-admin h1 {
+  text-shadow: 1px 0px 2px #fff694;
+  color: #C01328;
+  margin: 20px 20px 40px;
+  text-align: center;
+  font-size: calc(2rem + ((2vw - 0.48rem) * 0.6944));
+}
+
+h2 {
+  -webkit-text-stroke: 1px #c50018;
 }
 
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 1em 1em;
+  padding: 0 1rem 1rem;
+}
+
+footer {
+  background-color: #0A2C1D;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 section {
   flex: 1;
-}
-
-search {
-  padding: 0 1em;
 }
 
 img {
@@ -83,6 +100,10 @@ img {
 
 ul {
   list-style: none;
+}
+
+.hidden {
+  display: none;
 }
 
 /* --------------------------- Form: Default Layout -------------------------- */
@@ -137,7 +158,7 @@ input[type="checkbox"]::before {
   border: 2px solid #10551a;
   padding: 8px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   cursor: pointer;
 }
 
@@ -152,16 +173,6 @@ input:checked::after {
   border: solid #C01328;
   border-width: 0 4px 5px 0;
   transform: rotate(45deg);
-}
-
-/* ------------------------------ Focus Effect */
-select:focus,
-input:not([type="checkbox"]):focus,
-textarea:focus {
-  outline: 2px solid #10551a;
-  /* Green outline on focus */
-  background-color: #f9e5e6;
-  /* Lighter red background on focus */
 }
 
 button {
@@ -181,27 +192,23 @@ button:hover {
   background-color: #f44336;
 }
 
-footer {
-  background-color: #0A2C1D;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
+/* ------------------------------ Focus Effect */
+select:focus,
+input:not([type="checkbox"]):focus,
+textarea:focus {
+  outline: 2px solid #10551a;
+  background-color: #f9e5e6;
 }
+
 
 /* --------------------------------- Header --------------------------------- */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 .header-index {
   height: 100vh;
 
   > p {
     width: 80%;
-    font-size: 20px;
+    font-size: 1.25rem;
+    text-align: center;
   }
 }
 
@@ -220,18 +227,15 @@ header {
   align-items: center;
   width: 100%;
   background-color: #0A2C1D;
-  color: white;
   z-index: 1000;
   padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Navbar Menüsü */
 .navbar ul {
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0;
+  align-items: center;
 }
 
 .navbar ul li {
@@ -249,11 +253,6 @@ header {
   background-color: #575757;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2rem;
-}
-
 /* ------------------------------ Introduction ------------------------------ */
 #introduction {
   background-image: url('./images/header.png');
@@ -268,39 +267,30 @@ h1 {
 
   h1 {
     font-family: "Christmas Glitter", sans-serif;
-    font-size: 4rem;
+    font-size: calc(3rem + ((1vw - 0.48rem) * 0.6944));
+    min-height: 0vw;
     background-image: linear-gradient(45deg, #c01328, #c50018, #006400, #FFD700, #FFFFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    padding: 0 15px;
   }
 }
 
 /* --------------------------------- Filters -------------------------------- */
-#content-section {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px 20px;
-}
-
-/*family kismi buraya kdar ablamdan aldim*/
-#filters-section {
-  background-color: rgba(0, 128, 0, 0.2);
-  /* Hafif yeşil ton */
-  border: 2px solid #f20b0b;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 40px 20px 20px;
-  overflow-y: auto;
-  max-height: 100vh;
-}
-
 #filters {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 1em;
+  background-color: rgba(0, 128, 0, 0.2);
+  border: 2px solid #f20b0b;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px 20px;
+  margin: 0 20px 20px;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 #filters p {
@@ -313,38 +303,18 @@ h1 {
 
 
 #filters input[type="text"] {
-  width: 100%;
-  background-color: #f1f1f1;
-  color: #333;
+  margin-top: 20px;
 }
 
-#filters input[type="text"]:focus {
-  border-color: #0a2c1d;
-  outline: none;
+/* ---------------------------- Families Section ---------------------------- */
+#family-section {
+  padding: 2.5rem 1.25rem;
 }
 
-#filters button {
-  background-color: #b71c1c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
-/* ---------------------------- Output Container ---------------------------- */
 #output {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, auto));
   gap: 20px;
-  margin: 0 auto;
-  padding: 0 1em;
   justify-content: center;
 
   > p {
@@ -352,37 +322,10 @@ h1 {
   }
 }
 
-/* ----------------------------- Families List  */
-.family-section {
-  flex: 1;
-  padding: 20px;
-  border-color: #f20b0b;
-}
-
-.body-admin h1,
-.contact-section h2,
-#content-section h2,
-.family-section h2 {
-  text-shadow: 0px 0px 2px #fff694;
-  color: #c50018;
-  /* text-shadow: 2px 0px 1px #eee;
-  color: #c50018; */
-  margin: 20px 20px 40px;
-  text-align: center;
-  font-size: 2.7rem;
-}
-
-.family-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
 .family-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 450px;
   background-color: white;
   border: 2px solid #f20b0b;
   border-radius: 10px;
@@ -390,12 +333,11 @@ h1 {
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  width: 100%;
 }
 
 .family-card img {
-  max-width: 100%;
-  height: 250px;
+  width: 100%;
+  max-height: 250px;
   object-fit: cover;
   object-position: top;
   border-radius: 10px;
@@ -412,66 +354,8 @@ h1 {
   color: #555;
 }
 
-#send-button {
-  margin: 1em auto 0;
-}
-
-/* ----------------------------- New Family Form ---------------------------- */
-#add-edit-form {
-  align-items: start;
-  gap: 0;
-  border: 2px solid #f20b0b;
-  margin-bottom: 50px;
-
-}
-
-#add-edit-form label {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-#add-edit-form input,
-#add-edit-form textarea {
-  margin-top: 5px;
-  /* padding: 10px; */
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-#add-edit-form button {
-  padding: 10px;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#add-edit-form h2 {
-  font-size: 18px;
-  letter-spacing: 2px;
-  margin-top: 20px;
-  font-weight: normal;
-  color: #f9eb4c;
-}
-
-.checkboxes-row {
-  display: flex;
-  width: 100%;
-  margin-top: -10px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.manageButtons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px
-}
-
-/* ----------------------------- Contact Section ---------------------------- */
+/* -------------------------- Contact+Booking Forms ------------------------- */
 .contact-section {
-  color: white;
   text-align: center;
   padding: 50px 20px;
 }
@@ -482,24 +366,67 @@ h1 {
   font-size: smaller
 }
 
-#booking-form label {
-  font-weight: bold;
-}
-
 #contact-form,
 #booking-form {
   border: 2px solid #f20b0b;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   padding: 40px 20px 20px;
 
   > label {
     margin-bottom: -10px;
-    font-size: 18px;
   }
 }
 
-/* Success Message */
+#booking-form label {
+  font-weight: bold;
+}
+
+/* ----------------------------- New Family/manageFamily Form ---------------------------- */
+#add-edit-form {
+  align-items: start;
+  gap: 0;
+  border: 2px solid #f20b0b;
+  margin-bottom: 50px;
+}
+
+#add-edit-form label {
+  margin: 10px 10px 0 0;
+}
+
+#add-edit-form input,
+#add-edit-form textarea {
+  margin-top: 5px;
+}
+
+#add-edit-form h2 {
+  font-size: 1.2rem;
+  margin: 20px 0 0 0;
+  font-weight: normal;
+  color: #f9eb4c;
+  text-shadow: none;
+  -webkit-text-stroke: 0px;
+}
+
+.checkboxes-row {
+  display: flex;
+  width: 100%;
+  margin-top: -10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  label {
+    font-size: 1.1rem;
+  }
+}
+
+.manageButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+
+/* -------------------------------- Messages -------------------------------- */
 #success-message {
   background-color: #10551a;
   color: #0A2C1D;
@@ -525,17 +452,12 @@ h1 {
   width: fit-content;
 }
 
-/* Hidden Element */
-.hidden {
-  display: none;
-}
-
-
+/* --------------------------------- Hilsen --------------------------------- */
 #hilsen {
-  width: 50%;
+  width: 60%;
   max-width: 500px;
   margin: 100px auto 20px;
-  font-size: 2rem;
+  font-size: larger;
   text-align: center;
   color: #c50018;
 
@@ -543,35 +465,33 @@ h1 {
     font-family: "Merry Notes", sans-serif;
   }
 
-  > h3 {
+  > h2 {
     font-family: 'Christmas Glitter';
+    text-shadow: none;
+
+    > span {
+      text-wrap: nowrap;
+    }
   }
 }
 
-@media only screen and (min-width: 641px) {
-
-  search,
-  #output {
-    padding: 0 1.5em;
-  }
-
-  .family-card {
-    width: 45%;
-  }
-}
-
+/* ---------------------------------- Media --------------------------------- */
 @media only screen and (min-width:961px) {
   body {
-    font-size: 24px;
+    font-size: 1.5rem;
+  }
+
+  #introduction h1 {
+    font-size: calc(4rem + ((1vw - 0.48rem) * 0.6944));
+  }
+
+  #filters p > label {
+    font-size: 1.5rem;
   }
 
   search,
   #output {
-    padding: 0 2em;
-  }
-
-  .family-card {
-    width: 30%;
+    padding: 0 1.5rem;
   }
 
   .header-admin {
@@ -579,12 +499,17 @@ h1 {
   }
 
   .header-index {
-    /* padding-bottom: 60px; */
 
     > p {
       width: 60%;
-      font-size: 24px;
+      font-size: 1.5rem;
     }
+  }
+}
+
+@media only screen and (max-width:621px) {
+  .navbar ul li a {
+    font-size: large;
   }
 }
 
@@ -598,6 +523,6 @@ h1 {
 
   search,
   #output {
-    padding: 0 3em;
+    padding: 0 3rem;
   }
 }
