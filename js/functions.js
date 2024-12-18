@@ -108,14 +108,13 @@ export function filterFamilies(families) {
 		)
 
 		// ------------------------------- ChildGroup
-		const uniqueGroups = family.childGroup
-			? [...new Set(family.childGroup)]
-			: []
 		const matchesChildGroup = activeFilters.childGroup.includes('all')
 			? true
 			: activeFilters.childGroup.includes('nothing')
-			? uniqueGroups.length === 0
-			: uniqueGroups.some(group => activeFilters.childGroup.includes(group))
+			? family.childGroup.length === 0
+			: family.childGroup.some(group =>
+					activeFilters.childGroup.includes(group)
+			  )
 
 		// --------------------------------- Result
 		return (
