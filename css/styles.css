@@ -9,11 +9,13 @@
 }
 
 *,
-::before,
-::after {
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -96,34 +98,69 @@ form {
   border-radius: 8px;
 }
 
-form label {
-  font-size: 1rem;
+label {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.2rem;
   align-self: flex-start;
 }
 
-form input,
-form textarea {
+input:not([type="checkbox"]),
+textarea {
+  width: 100%;
+}
+
+select,
+input,
+textarea {
   padding: 10px;
   border: none;
   border-radius: 4px;
   color: #333;
 }
 
-form input:not([type="checkbox"]),
-textarea {
-  width: 100%;
+select {
+  padding: 6px;
 }
 
 input[type="checkbox"] {
-  margin-left: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+  border: none;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  -webkit-appearance: none;
+  background-color: #f4f3f3;
+  border: 2px solid #10551a;
+  padding: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input:checked::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  width: 8px;
+  height: 22px;
+  border: solid #C01328;
+  border-width: 0 4px 5px 0;
+  transform: rotate(45deg);
 }
 
 /* ------------------------------ Focus Effect */
-form input:focus,
-form textarea:focus {
+select:focus,
+input:not([type="checkbox"]):focus,
+textarea:focus {
   outline: 2px solid #10551a;
   /* Green outline on focus */
-  background-color: #f8d7da;
+  background-color: #f9e5e6;
   /* Lighter red background on focus */
 }
 
@@ -266,35 +303,14 @@ h1 {
   margin-bottom: 1em;
 }
 
-#filters label {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
 #filters p {
   color: #f9eb4c;
-
-  > label {
-    font-size: inherit;
-  }
 
   > span {
     text-decoration: underline;
   }
 }
 
-#filters input[type="text"],
-#filters select,
-#filters input[type="checkbox"] {
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-
-#filters input[type="checkbox"] {
-  width: auto;
-}
 
 #filters input[type="text"] {
   width: 100%;
@@ -417,7 +433,7 @@ h1 {
 #add-edit-form input,
 #add-edit-form textarea {
   margin-top: 5px;
-  padding: 10px;
+  /* padding: 10px; */
   border: 1px solid #ddd;
   border-radius: 4px;
 }

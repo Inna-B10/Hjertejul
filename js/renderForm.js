@@ -80,7 +80,7 @@ export default function renderForm(data) {
 	const divGroups = createNode('div', {
 		class: 'checkboxes-row',
 	})
-	childGroup.forEach(option => {
+	childGroup.forEach((option, index) => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -94,7 +94,10 @@ export default function renderForm(data) {
 		}
 
 		label.appendChild(checkbox)
-		label.appendChild(document.createTextNode(`-${option}`))
+
+		// Add comma only if it's not the last element
+		const labelText = index === childGroup.length - 1 ? option : `${option},`
+		label.appendChild(document.createTextNode(labelText))
 
 		divGroups.appendChild(label)
 	})
@@ -106,7 +109,7 @@ export default function renderForm(data) {
 	const divAllergies = createNode('div', {
 		class: 'checkboxes-row',
 	})
-	allergies.forEach(option => {
+	allergies.forEach((option, index) => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -120,7 +123,8 @@ export default function renderForm(data) {
 		}
 
 		label.appendChild(checkbox)
-		label.appendChild(document.createTextNode(`-${option}`))
+		const labelText = index === allergies.length - 1 ? option : `${option},`
+		label.appendChild(document.createTextNode(labelText))
 
 		divAllergies.appendChild(label)
 	})
@@ -133,7 +137,7 @@ export default function renderForm(data) {
 		class: 'checkboxes-row',
 	})
 
-	foodPref.forEach(option => {
+	foodPref.forEach((option, index) => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -147,7 +151,8 @@ export default function renderForm(data) {
 		}
 
 		label.appendChild(checkbox)
-		label.appendChild(document.createTextNode(`-${option}`))
+		const labelText = index === foodPref.length - 1 ? option : `${option},`
+		label.appendChild(document.createTextNode(labelText))
 
 		divFood.appendChild(label)
 	})
@@ -160,7 +165,7 @@ export default function renderForm(data) {
 		class: 'checkboxes-row',
 	})
 
-	otherTraits.forEach(option => {
+	otherTraits.forEach((option, index) => {
 		const label = createNode('label', {})
 
 		const checkbox = createNode('input', {
@@ -174,7 +179,8 @@ export default function renderForm(data) {
 		}
 
 		label.appendChild(checkbox)
-		label.appendChild(document.createTextNode(`-${option}`))
+		const labelText = index === otherTraits.length - 1 ? option : `${option},`
+		label.appendChild(document.createTextNode(labelText))
 
 		divTraits.appendChild(label)
 	})
