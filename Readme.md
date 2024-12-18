@@ -27,26 +27,29 @@ Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 
 Dette prosjektet er basert på design laget i [Figma](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1).
 
-## 🎨 Designforhåndsvisning  
+## 🎨 Designforhåndsvisning
+
 Klikk på bildet nedenfor for å åpne Figma-designet:
 
 [![Figma Design](images/figma-forhandsvisning.png)](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1)
 
 ---
 
-## Hvordan få tilgang til designet?  
-1. Klikk på lenken eller bildet ovenfor.  
-2. Sørg for at du har en Figma-konto og tilgang til filen.  
-3. Nyt designet!  
+## Hvordan få tilgang til designet?
+
+1. Klikk på lenken eller bildet ovenfor.
+2. Sørg for at du har en Figma-konto og tilgang til filen.
+3. Nyt designet!
 
 ## TODO
 
 - [ ] upload image?
 - [ ] auto-rename image file? (if upload)
 - [ ] check image format(jpg,png...)?
+- [ ] messages to user
 - [x] return NoContent() change to response,response.status, response.statusText
 - [x] [FIXME] select in renderForm()
 - [x] redirect after deleting
-- [ ] design
-- [ ] text
-- [ ] clean up code, DRY!
+- [x] design
+- [x] text
+- [x] clean up code, DRY!
