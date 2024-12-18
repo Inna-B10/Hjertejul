@@ -1,3 +1,4 @@
+import { DATA_URL } from './constants.js'
 import {
 	createDesc,
 	createHeading,
@@ -27,16 +28,16 @@ export function showModalCard(family) {
 	document.body.style.overflow = 'hidden'
 
 	const img = createImage(
-		`./images_family/${family.image}`,
+		`${DATA_URL}/images_family/${family.image}`,
 		`Bilde av familien ${family.surname}`,
 		`Bilde av familien ${family.surname}`,
 		'100%',
 		'auto'
 	)
-	const familyTitle = createHeading('h2', family.title)
+	const familyTitle = createHeading('h3', family.title)
 
 	const desc = createDesc(family.description)
-	const surname = createHeading('h3', `Familie: ${family.surname}`)
+	const surname = createHeading('h4', `Familie: ${family.surname}`)
 	const list = createNode('ul', {})
 
 	//create an array of data to subsequently create list items
