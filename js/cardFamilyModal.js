@@ -1,3 +1,4 @@
+import { DATA_URL } from './constants.js'
 import {
 	createDesc,
 	createHeading,
@@ -27,7 +28,7 @@ export function showModalCard(family) {
 	document.body.style.overflow = 'hidden'
 
 	const img = createImage(
-		`./images_family/${family.image}`,
+		`${DATA_URL}/images_family/${family.image}`,
 		`Bilde av familien ${family.surname}`,
 		`Bilde av familien ${family.surname}`,
 		'100%',

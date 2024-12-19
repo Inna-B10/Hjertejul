@@ -1,5 +1,5 @@
 export const API_URL = 'http://localhost:5111/api'
-// export const DATA_URL = './MyApi/data'
+export const DATA_URL = '/MyApi/data'
 export const childGroup = ['0-3', '4-10', '11-17']
 export const allergies = [
 	'egg',
