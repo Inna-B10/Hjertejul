@@ -66,7 +66,7 @@ Klikk på bildet nedenfor for å åpne Figma-designet:
 - [ ] check image format/size (jpg,png...)
 - [ ] pop-up messages to user (instead alerts)
 - [ ] refactoring form on index.html (use constants)
-- [ ] more fails checking on server side
+- [ ] more error checking on server side and send clear message to client side
   ***
 - [x] return NoContent() change to response,response.status, response.statusText
 - [x] [FIXME] select in renderForm()
