@@ -4,8 +4,8 @@ import {
 	filterFamilies,
 	renderFamilies,
 	sendForm,
-} from './functions.js'
-import handleFilterChange from './handleFilterChange.js'
+} from './functions/functions.js'
+import handleFilterChange from './functions/handleFilterChange.js'
 
 export let families
 export const output = document.getElementById('output')

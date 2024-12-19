@@ -1,5 +1,5 @@
+import { families } from '../main.js'
 import { filterFamilies } from './functions.js'
-import { families } from './main.js'
 
 /* --------------------------- HandleFilterChange --------------------------- */
 export default function handleFilterChange(filter, filters, optionsMap) {

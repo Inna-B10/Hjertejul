@@ -1,6 +1,6 @@
-import cardFamily from './cardFamily.js'
-import { API_URL } from './constants.js'
-import { filters, output, searchInput, selectFilter } from './main.js'
+import cardFamily from '../cardFamily/cardFamily.js'
+import { API_URL } from '../constants.js'
+import { filters, output, searchInput, selectFilter } from '../main.js'
 import renderForm from './renderForm.js'
 
 /* ------------------------------ FetchFamilies ----------------------------- */

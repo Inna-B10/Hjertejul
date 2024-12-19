@@ -1,11 +1,11 @@
-import { DATA_URL } from './constants.js'
+import { DATA_URL } from '../constants.js'
 import {
 	createDesc,
 	createHeading,
 	createImage,
 	createNode,
-} from './createElements.js'
-import { sendForm } from './functions.js'
+} from '../functions/createElements.js'
+import { sendForm } from '../functions/functions.js'
 
 const modal = document.getElementById('modal')
 const overlay = document.getElementById('overlay')

@@ -1,4 +1,4 @@
-import { allergies, childGroup, foodPref, otherTraits } from './constants.js'
+import { allergies, childGroup, foodPref, otherTraits } from '../constants.js'
 import { createHeading, createNode } from './createElements.js'
 import { deleteData, saveData } from './functions.js'
 

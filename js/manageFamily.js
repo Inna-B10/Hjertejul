@@ -1,5 +1,5 @@
-import { fetchFamilies } from './functions.js'
-import renderForm from './renderForm.js'
+import { fetchFamilies } from './functions/functions.js'
+import renderForm from './functions/renderForm.js'
 
 export const outputForm = document.getElementById('output-form')
 if (outputForm) {

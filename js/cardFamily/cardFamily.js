@@ -1,13 +1,13 @@
-import { showModalCard } from './cardFamilyModal.js'
-import { DATA_URL } from './constants.js'
+import { DATA_URL } from '../constants.js'
 import {
 	createDesc,
 	createHeading,
 	createImage,
 	createNode,
-} from './createElements.js'
-import { output } from './main.js'
-import { truncateText } from './utils.js'
+} from '../functions/createElements.js'
+import { output } from '../main.js'
+import { truncateText } from '../utils.js'
+import { showModalCard } from './cardFamilyModal.js'
 
 export default function cardFamily(family) {
 	const card = createNode('div', {
