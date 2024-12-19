@@ -1,5 +1,4 @@
 import { showModalCard } from './cardFamilyModal.js'
-import { DATA_URL } from './constants.js'
 import {
 	createDesc,
 	createHeading,
@@ -17,7 +16,7 @@ export default function cardFamily(family) {
 		showModalCard(family)
 	})
 	const img = createImage(
-		`${DATA_URL}/images_family/${family.image}`,
+		`./images_family/${family.image}`,
 		`Bilde av familien ${family.surname}`,
 		`Bilde av familien ${family.surname}`,
 		'100%',
