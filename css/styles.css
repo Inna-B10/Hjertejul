@@ -162,6 +162,12 @@ input[type="checkbox"]::before {
   cursor: pointer;
 }
 
+input[type="checkbox"]:disabled::before {
+  background-color: #929292;
+  border-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
 input:checked::after {
   content: '';
   display: block;
@@ -313,7 +319,7 @@ textarea:focus {
 
 #output {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 300px));
   gap: 20px;
   justify-content: center;
 
