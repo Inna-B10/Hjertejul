@@ -1,3 +1,19 @@
+# Project name: HjerteJul
+
+Javascript API, C#(server part) - Group Project
+
+## Contributors:
+
+[Inna](https://github.com/Inna-B10)  
+[Alissa-Ruya](https://github.com/Alissa-Ruya)  
+[banjohans](https://github.com/banjohans)
+
+## Sketch:
+
+[Excalidraw](https://excalidraw.com/#json=MeUynUAkHuvZ8UY_7l9k2,pxLFEeXIYKJaiEv8RDvJxQ)
+
+## Project Goal:
+
 I denne oppgaven skal dere lage en side som kobler brukeren til vanskeligstilte familier som ønsker noen å feire jul sammen med.
 
 Siden skal kunne matche brukeren med familier basert på et fastsatt sett med egenskaper, som for eksempel størrelse på hus, antall mennesker man ønsker å feire med, allergier, matpreferanser eller andre ting. Man skal ha en oversikt over minst 20 familier, som har følgende info registrert:
@@ -25,7 +41,7 @@ Endepunktene til backenden skal støtte standard CRUD operasjonene frontend dele
 
 Man skal bruke HTML, CSS, Javascript og gjerne JSON til oppgaven.
 
-Dette prosjektet er basert på design laget i [Figma](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1).
+<!-- Dette prosjektet er basert på design laget i [Figma](https://www.figma.com/design/9Xgf40n5pVK5XNO0mIxZed/Untitled?node-id=0-1&t=1fO2N4FjVbge3gR4-1).
 
 ## 🎨 Designforhåndsvisning
 
@@ -39,14 +55,19 @@ Klikk på bildet nedenfor for å åpne Figma-designet:
 
 1. Klikk på lenken eller bildet ovenfor.
 2. Sørg for at du har en Figma-konto og tilgang til filen.
-3. Nyt designet!
+3. Nyt designet! -->
 
-## TODO
+---
 
-- [ ] upload image?
-- [ ] auto-rename image file? (if upload)
-- [ ] check image format(jpg,png...)?
-- [ ] messages to user
+### TODO
+
+- [ ] upload image option
+- [ ] auto-rename image file (if upload): id_familyName
+- [ ] check image format/size (jpg,png...)
+- [ ] pop-up messages to user (instead alerts)
+- [ ] refactoring form on index.html (use constants)
+- [ ] more fails checking on server side
+  ***
 - [x] return NoContent() change to response,response.status, response.statusText
 - [x] [FIXME] select in renderForm()
 - [x] redirect after deleting
