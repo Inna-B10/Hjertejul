@@ -37,6 +37,7 @@ const optionsMap = {
 	allergies,
 	otherTraits,
 }
+
 export const searchInput = document.getElementById('search')
 searchInput &&
 	searchInput.addEventListener('input', () => filterFamilies(families))
@@ -54,16 +55,25 @@ filters &&
 		)
 	)
 
+// Preserve the original state of the checkboxes
+const defaultChecked = Array.from(filters)
+	.filter(checkbox => checkbox.checked)
+	.map(checkbox => checkbox.id)
+
 /* ------------------------------- Reset Form ------------------------------- */
 const resetButton = document.getElementById('resetButton')
 resetButton &&
 	resetButton.addEventListener('click', () => {
+		// reset checkboxes
 		filters.forEach(checkbox => {
-			checkbox.checked = false
+			checkbox.checked = defaultChecked.includes(checkbox.id)
 		})
+
+		// reset select
 		if (selectFilter && selectFilter.options.length > 0) {
 			selectFilter.selectedIndex = selectFilter.options.length - 1
 		}
 		searchInput.value = ''
+
 		renderFamilies(families)
 	})
